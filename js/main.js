@@ -1,5 +1,5 @@
-let dresovi = [majica1, majica2, majica3, majica4, majica5];
-let modeli = [model1, model2, model3, model4, model5];
+let dresovi = [dres1, dres2, dres3, dres4, dres5];
+//let modeli = [model1, model2, model3, model4, model5];
 
 function createContent () {
     let content = `<div id='content'></div>`;
@@ -41,8 +41,8 @@ createContent();
 
 /** Create shirt model at left page */
 function createShirt () {
-    document.getElementById('model').innerHTML = majica5;
-    document.getElementById('majica5').setAttribute('class', 'modelSvg');
+    document.getElementById('model').innerHTML = dres5;
+    document.getElementById('dres5').setAttribute('class', 'modelSvg');
 }
 
 createShirt();
@@ -52,7 +52,7 @@ function createColors () {
     let colorDres = `<div id='colorDres' class='colors'></div>`;
     document.getElementById('color').innerHTML = colorDres;
 
-        let inputColorDres = `<input class='inputColors' type='color'>`;
+        let inputColorDres = `<input id='inputColorDres' class='inputColors' type='color'>`;
         document.getElementById('colorDres').innerHTML = inputColorDres;
 
         let spanColorDres = `<span class='arrowDown'></span>`;
@@ -64,7 +64,7 @@ function createColors () {
     let colorRukav = `<div id='colorRukav' class='colors'></div>`;
     document.getElementById('color').innerHTML += colorRukav;
 
-        let inputColorRukav = `<input class='inputColors' type='color'>`;
+        let inputColorRukav = `<input id='inputColorRukav' class='inputColors' type='color'>`;
         document.getElementById('colorRukav').innerHTML = inputColorRukav;
 
         let spanColorRukav = `<span class='arrowDown'></span>`;
@@ -76,7 +76,7 @@ function createColors () {
     let colorStrafta = `<div id='colorStrafta' class='colors'></div>`;
     document.getElementById('color').innerHTML += colorStrafta;
 
-        let inputColorStrafta = `<input class='inputColors' type='color'>`;
+        let inputColorStrafta = `<input id='inputColorStrafta' class='inputColors' type='color'>`;
         document.getElementById('colorStrafta').innerHTML = inputColorStrafta;
 
         let spanColorStrafta = `<span class='arrowDown'></span>`;
@@ -88,7 +88,7 @@ function createColors () {
     let colorSorc = `<div id='colorSorc' class='colors'></div>`;
     document.getElementById('color').innerHTML += colorSorc;
 
-        let inputColorSorc = `<input class='inputColors' type='color'>`;
+        let inputColorSorc = `<input id='inputColorSorc' class='inputColors' type='color'>`;
         document.getElementById('colorSorc').innerHTML = inputColorSorc;
 
         let spanColorSorc = `<span class='arrowDown'></span>`;
@@ -109,13 +109,60 @@ function createModels () {
 
 createModels();
 
-/** Choose model */
-function chooseModel() {
-    for(let dres in dresovi) {
-        dresovi[dres].addEventListener('click', function() {
-            for (let model in modeli) {
-                document.getElementById('model').innerHTML = modeli[model];
-            } 
-        })
+/** Choose model TODO */
+function chooseModel1() {
+    document.getElementById('model').innerHTML = dresovi[0];
+    document.getElementById('dres1').setAttribute('class', 'modelSvg');
+};
+
+function chooseModel2() {
+    document.getElementById('model').innerHTML = dresovi[1];
+    document.getElementById('dres2').setAttribute('class', 'modelSvg');
+};
+
+function chooseModel3() {
+    document.getElementById('model').innerHTML = dresovi[2];
+    document.getElementById('dres3').setAttribute('class', 'modelSvg');
+};
+
+function chooseModel4() {
+    document.getElementById('model').innerHTML = dresovi[3];
+    document.getElementById('dres4').setAttribute('class', 'modelSvg');
+};
+
+function chooseModel5() {
+    document.getElementById('model').innerHTML = dresovi[4];
+    document.getElementById('dres5').setAttribute('class', 'modelSvg');
+};
+
+
+/** Color dres */
+document.getElementById('inputColorDres').addEventListener('input', () => {
+    for(let i = 1; i < 6; i++) {
+        if(document.getElementById('model').firstChild.id === `dres${i}`) {
+            let color = document.getElementById('inputColorDres').value;
+            document.getElementById(`majicaModel${i}`).setAttribute('fill', color);
+        }
     }
-}
+});
+
+/** Color rukavi */
+document.getElementById('inputColorRukav').addEventListener('input', () => {
+    for(let i = 1; i < 6; i++) {
+        if(document.getElementById('model').firstChild.id === `dres${i}`) {
+            let color = document.getElementById('inputColorRukav').value;
+            document.getElementById(`rukav1model${i}`).setAttribute('fill', color);
+            document.getElementById(`rukav2model${i}`).setAttribute('fill', color);
+        }
+    }
+});
+
+/** Color strafta */
+document.getElementById('inputColorStrafta').addEventListener('input', () => {
+    for(let i = 1; i < 6; i++) {
+        if(document.getElementById('model').firstChild.id === `dres${i}`) {
+            let color = document.getElementById('inputColorStrafta').value;
+            document.getElementById(`straftaModel${i}`).setAttribute('fill', color);
+        }
+    }
+});
