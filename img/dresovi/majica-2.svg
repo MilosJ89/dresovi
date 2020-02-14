@@ -1,0 +1,17 @@
+
+<svg id='majica2' width="414px" height="225px" viewBox="0 0 414 225" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="majica" transform="translate(116.000000, 0.000000)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="181" height="224"></rect>
+        </g>
+        <g id="rukavi" transform="translate(298.000000, 0.000000)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="115" height="56"></rect>
+        </g>
+        <g id="rukavi" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="115" height="56"></rect>
+        </g>
+        <path d="M215,119.958036 C222.023073,111.555431 237.298094,103.731995 243,99.4580359 C259.40557,87.1609661 268.738903,107.660966 271,160.958036 C264,131.958036 254.666667,111.458036 243,99.4580359" id="Path" fill="#4C4444" opacity="0.142438616"></path>
+        <path d="M144.899913,50.1404654 C151.922986,41.7378604 167.198007,33.9144248 172.899913,29.6404654 C189.305483,17.3433956 198.638816,37.8433956 200.899913,91.1404654 C193.899913,62.1404654 184.56658,41.6404654 172.899913,29.6404654" id="Path" fill="#4C4444" opacity="0.142438616" transform="translate(172.899913, 58.661447) rotate(87.000000) translate(-172.899913, -58.661447) "></path>
+        <path d="M136.899913,163.140465 C143.922986,154.73786 159.198007,146.914425 164.899913,142.640465 C181.305483,130.343396 190.638816,150.843396 192.899913,204.140465 C185.899913,175.140465 176.56658,154.640465 164.899913,142.640465" id="Path" fill="#4C4444" opacity="0.142438616" transform="translate(164.899913, 171.661447) rotate(40.000000) translate(-164.899913, -171.661447) "></path>
+    </g>
+</svg>

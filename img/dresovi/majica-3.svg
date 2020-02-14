@@ -1,0 +1,17 @@
+
+<svg id='majica3' width="344px" height="225px" viewBox="0 0 344 225" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="majica" transform="translate(70.000000, 0.000000)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="181" height="224"></rect>
+        </g>
+        <g id="rukavi" transform="translate(280.472588, 57.666383) rotate(37.000000) translate(-280.472588, -57.666383) translate(222.472588, 29.166383)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="115" height="56"></rect>
+        </g>
+        <g id="rukavi" transform="translate(59.560647, 62.470838) rotate(-49.000000) translate(-59.560647, -62.470838) translate(1.560647, 33.970838)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="115" height="56"></rect>
+        </g>
+        <path d="M169,119.958036 C176.023073,111.555431 191.298094,103.731995 197,99.4580359 C213.40557,87.1609661 222.738903,107.660966 225,160.958036 C218,131.958036 208.666667,111.458036 197,99.4580359" id="Path" fill="#4C4444" opacity="0.142438616"></path>
+        <path d="M98.8999133,50.1404654 C105.922986,41.7378604 121.198007,33.9144248 126.899913,29.6404654 C143.305483,17.3433956 152.638816,37.8433956 154.899913,91.1404654 C147.899913,62.1404654 138.56658,41.6404654 126.899913,29.6404654" id="Path" fill="#4C4444" opacity="0.142438616" transform="translate(126.899913, 58.661447) rotate(87.000000) translate(-126.899913, -58.661447) "></path>
+        <path d="M90.8999133,163.140465 C97.9229862,154.73786 113.198007,146.914425 118.899913,142.640465 C135.305483,130.343396 144.638816,150.843396 146.899913,204.140465 C139.899913,175.140465 130.56658,154.640465 118.899913,142.640465" id="Path" fill="#4C4444" opacity="0.142438616" transform="translate(118.899913, 171.661447) rotate(40.000000) translate(-118.899913, -171.661447) "></path>
+    </g>
+</svg>

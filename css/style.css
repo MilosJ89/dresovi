@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('../img/header.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid black;
+    height: 100px;
+}
+
+/* Left page */
+#content {
+    border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 1460px;
+    height: 100%;
+    width: 100%;
+}
+
+.modelSvg {
+    display: block;
+    height: 300px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.colors {
+    display: flex;
+    justify-content: start;
+    margin: 10px;
+    margin-left: 40%;
+}
+
+.text {
+    margin-left: 20px;
+}
+
+.arrowDown {
+    background-image: url('../img/arrow_drop_down-24px.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+/* Right page */
+#paintModel, #chooseModel {
+    width: 50%;
+}
+
+#chooseModel p {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#page {
+    display: flex;
+    justify-content: space-around;
+}
+
+#page button {
+    border: none;
+}
+
+#models {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.majice {
+    height: 200px;
+    width: 200px;
+}
+

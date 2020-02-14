@@ -1,0 +1,17 @@
+
+<svg id='majica4' width="368px" height="278px" viewBox="0 0 368 278" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="majica" transform="translate(91.000000, 53.000000)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="181" height="224"></rect>
+        </g>
+        <g id="rukavi" transform="translate(304.472588, 57.666383) rotate(-37.000000) translate(-304.472588, -57.666383) translate(246.472588, 29.166383)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="115" height="56"></rect>
+        </g>
+        <g id="rukavi" transform="translate(63.250976, 58.166672) rotate(38.000000) translate(-63.250976, -58.166672) translate(5.250976, 29.666672)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="115" height="56"></rect>
+        </g>
+        <path d="M190,172.958036 C197.023073,164.555431 212.298094,156.731995 218,152.458036 C234.40557,140.160966 243.738903,160.660966 246,213.958036 C239,184.958036 229.666667,164.458036 218,152.458036" id="Path" fill="#4C4444" opacity="0.142438616"></path>
+        <path d="M119.899913,103.140465 C126.922986,94.7378604 142.198007,86.9144248 147.899913,82.6404654 C164.305483,70.3433956 173.638816,90.8433956 175.899913,144.140465 C168.899913,115.140465 159.56658,94.6404654 147.899913,82.6404654" id="Path" fill="#4C4444" opacity="0.142438616" transform="translate(147.899913, 111.661447) rotate(87.000000) translate(-147.899913, -111.661447) "></path>
+        <path d="M111.899913,216.140465 C118.922986,207.73786 134.198007,199.914425 139.899913,195.640465 C156.305483,183.343396 165.638816,203.843396 167.899913,257.140465 C160.899913,228.140465 151.56658,207.640465 139.899913,195.640465" id="Path" fill="#4C4444" opacity="0.142438616" transform="translate(139.899913, 224.661447) rotate(40.000000) translate(-139.899913, -224.661447) "></path>
+    </g>
+</svg>
