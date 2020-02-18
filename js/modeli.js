@@ -88,3 +88,21 @@ const model5 = `<svg id='model5' class='majice' onclick='chooseModel5()' viewBox
 </g>
 </svg>`;
 
+const trenerka = `<svg width="479px" height="280px" viewBox="0 0 479 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1.000000, 0.000000)" fill-rule="nonzero">
+        <g id="trenerka" transform="translate(135.000000, 2.000000)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.53021978" y="0.553333333" width="191.93956" height="247.893333"></rect>
+        </g>
+        <g id="rukav1Trenerka" transform="translate(376.462116, 140.692692) rotate(58.000000) translate(-376.462116, -140.692692) translate(231.462116, 109.192692)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.37629125" y="0.230392157" width="288.639535" height="62.6862745"></rect>
+        </g>
+        <g id="rukav2Trenerka" transform="translate(96.717227, 134.479729) rotate(120.000000) translate(-96.717227, -134.479729) translate(-39.782773, 102.479729)" fill="#FFFFFF" stroke="#979797">
+            <rect id="Rectangle" x="0.978543953" y="0.443183612" width="271.825581" height="62.6862745"></rect>
+        </g>
+        <path d="M240,134.555276 C247.399309,125.241763 263.492635,116.570204 269.5,111.832914 C286.78444,98.2027449 296.617773,120.925107 299,180 C291.625,147.856171 281.791667,125.133809 269.5,111.832914" id="Path" fill="#4C4444" opacity="0.142438616"></path>
+        <path d="M164.668648,57.3616254 C172.426487,48.4845573 189.326568,40.2418967 195.63159,35.7320963 C213.772449,22.7564631 224.163937,44.482296 226.806055,100.909595 C218.977293,70.1914912 208.585805,48.4656587 195.63159,35.7320963" id="Path" fill="#4C4444" opacity="0.142438616" transform="translate(195.737352, 66.501394) rotate(87.000000) translate(-195.737352, -66.501394) "></path>
+        <path d="M156.54679,181.791412 C163.919632,172.824678 180.209411,164.688311 186.257212,160.179165 C203.657993,147.205419 214.225752,169.724981 217.960488,227.737853 C209.703539,196.031669 199.135781,173.512107 186.257212,160.179165" id="Path" fill="#4C4444" opacity="0.142438616" transform="translate(187.253639, 192.180166) rotate(40.000000) translate(-187.253639, -192.180166) "></path>
+    </g>
+</g>
+</svg>`;

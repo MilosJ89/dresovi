@@ -25,16 +25,18 @@ function createContent () {
                 let page = `<div id='page'></div>`;
                 document.getElementById('title').innerHTML += page; 
 
-                    let majice = `<button>Majice</button>`;
+                    let majice = `<button onclick='createDresovi()'>Majice</button>`;
                     document.getElementById('page').innerHTML += majice;
 
-                    let trenerke = `<button>Trenerke</button>`;
+                    let trenerke = `<button onclick='createTrenerka()'>Trenerke</button>`;
                     document.getElementById('page').innerHTML += trenerke;
 
             let models = `<div id='models'></div>`;
             document.getElementById('chooseModel').innerHTML += models;
-}
 
+            let btn = `<button id='btn'>Nastavi</button>`;
+            document.getElementById('chooseModel').innerHTML += btn;
+}
 createContent();
 
 
@@ -165,3 +167,112 @@ document.getElementById('inputColorStrafta').addEventListener('input', () => {
         }
     }
 });
+
+/** Page dresovi */
+function createDresovi () {
+    document.getElementById('models').innerHTML = '';
+    
+    createShirt();
+    createModels();
+    createColors();
+
+    /** Choose color dres */
+document.getElementById('inputColorDres').addEventListener('input', () => {
+    for(let i = 1; i < 6; i++) {
+        if(document.getElementById('model').firstChild.id === `model${i}`) {
+            let color = document.getElementById('inputColorDres').value;
+            document.getElementById(`majicaModel${i}`).setAttribute('fill', color);
+        }
+    }
+});
+
+/** Choose color rukav */
+document.getElementById('inputColorRukav').addEventListener('input', () => {
+    for(let i = 1; i < 6; i++) {
+        if(document.getElementById('model').firstChild.id === `model${i}`) {
+            let color = document.getElementById('inputColorRukav').value;
+            document.getElementById(`rukav1Model${i}`).setAttribute('fill', color);
+            document.getElementById(`rukav2Model${i}`).setAttribute('fill', color);
+        }
+    }
+});
+
+/** Choose color strafta */
+document.getElementById('inputColorStrafta').addEventListener('input', () => {
+    for(let i = 1; i < 6; i++) {
+        if(document.getElementById('model').firstChild.id === `model${i}`) {
+            let color = document.getElementById('inputColorStrafta').value;
+            document.getElementById(`straftaModel${i}`).setAttribute('fill', color);
+        }
+    }
+});
+}
+
+/** Page trenerke */
+function createTrenerka () {
+    document.getElementById('model').innerHTML = '';
+    document.getElementById('color').innerHTML = '';
+    document.getElementById('models').innerHTML = '';
+
+    document.getElementById('model').innerHTML = trenerka;
+    document.getElementById('model').setAttribute('class', 'modelSvg');
+
+    document.getElementById('models').innerHTML = trenerka;
+/** Boja trenerke */
+    let bojaTrenerke = `<p class='bojaTrenerke'>Boja trenerke</p>`;
+    document.getElementById('color').innerHTML = bojaTrenerke;
+
+    let colorTrenerka = `<div id='selectTrenerka'></div>`
+    document.getElementById('color').innerHTML += colorTrenerka;
+
+    let kvadrat = `<span id='kvadrat'></span>`;
+    document.getElementById('selectTrenerka').innerHTML += kvadrat;
+
+    let colorParagraph = `<p id='colorParagraph'>Crvena</p>`;
+    document.getElementById('selectTrenerka').innerHTML += colorParagraph;
+
+    let strelica = `<span class='strelica'></span>`;
+    document.getElementById('selectTrenerka').innerHTML += strelica;
+
+        let dropDown = `<div id='dropDown'></div>`;
+        document.getElementById('selectTrenerka').innerHTML += dropDown;
+
+            let colorRed = `<div id='colorRed' onclick='colorRed()'>Crvena</div>`;
+            document.getElementById('dropDown').innerHTML = colorRed;
+
+                let kvadratRed = `<span class='kvadratRed'></span>`;
+                document.getElementById('colorRed').innerHTML += kvadratRed;
+
+            let colorYellow = `<div id='colorYellow' onclick='colorYellow()'>Zuta</div>`;
+            document.getElementById('dropDown').innerHTML += colorYellow;
+
+                let kvadratYellow = `<span class='kvadratYellow'></span>`;
+                document.getElementById('colorYellow').innerHTML += kvadratYellow;
+
+            let colorBlue = `<div id='colorBlue' onclick='colorBlue()'>Plava</div>`;
+            document.getElementById('dropDown').innerHTML += colorBlue;
+
+                let kvadratBlue = `<span class='kvadratBlue'></span>`;
+                document.getElementById('colorBlue').innerHTML += kvadratBlue;
+/** Color rukavi */    
+}
+
+/** Color trenerka */
+function colorRed () {
+    document.getElementById('trenerka').setAttribute('fill', 'red');
+    document.getElementById('colorParagraph').textContent = 'Crvena';
+    document.getElementById('kvadrat').style.background = 'red';
+}
+
+function colorYellow () {
+    document.getElementById('trenerka').setAttribute('fill', 'yellow');
+    document.getElementById('colorParagraph').textContent = 'Zuta';
+    document.getElementById('kvadrat').style.background = 'yellow';
+}
+
+function colorBlue () {
+    document.getElementById('trenerka').setAttribute('fill', 'blue');
+    document.getElementById('colorParagraph').textContent = 'Plava';
+    document.getElementById('kvadrat').style.background = 'blue';
+}
+
