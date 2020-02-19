@@ -15,7 +15,6 @@ header {
 
 /* Left page */
 #content {
-    border: 1px solid black;
     display: flex;
     margin: 0 auto;
     margin-top: 10px;
@@ -24,13 +23,18 @@ header {
     width: 100%;
 }
 
-.modelSvg {
+#model svg {
+    height: 200px;
+    width: 100%;
+}
+
+/* .modelSvg {
     display: block;
     height: 300px;
     margin: 0 auto;
     margin-top: 20px;
     width: 460px;
-}
+} */
 
 .colors {
     display: flex;
@@ -88,6 +92,10 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 15px;
+}
+
+#models svg {
+    width: 400px;
 }
 
 .majice {
