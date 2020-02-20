@@ -35,14 +35,14 @@ function createContent () {
 
                 let page = `<div id='page'></div>`;
                 document.getElementById('title').innerHTML += page; 
-
-                    let majice = `<button onclick='createMajice()'>Majice</button>`;
+                    
+                    let majice = `<button onclick='createModels(majice, "modelMajica")'>Majice</button>`;
                     document.getElementById('page').innerHTML += majice;
 
-                    let sorcevi = `<button onclick='createSorcevi()'>Sorcevi</button>`;
+                    let sorcevi = `<button onclick='createModels(sorcevi, "modelSorc")'>Sorcevi</button>`;
                     document.getElementById('page').innerHTML += sorcevi;
 
-                    let stucne = `<button onclick='createStucne()'>Stucne</button>`;
+                    let stucne = `<button onclick='createModels(stucne, "modelStucne")'>Stucne</button>`;
                     document.getElementById('page').innerHTML += stucne;
 
             let models = `<div id='models'></div>`;
@@ -52,13 +52,13 @@ function createContent () {
 createContent();
 
 /** Create shirt model at left page */
-function createShirt () {
+function createModel () {
     document.getElementById('modelMajica').innerHTML = majica1;
     document.getElementById('modelSorc').innerHTML = sorc1;
     document.getElementById('modelStucne').innerHTML = stucne1;
 }
 
-createShirt();
+createModel();
 
 /**Create colors */
 function createColors () {
@@ -114,68 +114,34 @@ function createColors () {
 createColors();
 
 /** Create majice */
-function createMajice() {
+function createModels(modeli, id) {
     document.getElementById('models').innerHTML = '';
-    for(let majica of majice) {
-        document.getElementById('models').innerHTML += majica;
-    }
-/** TODO */
-    document.getElementById('majica1').addEventListener('click', ()=> {
-        document.getElementById('modelMajica').innerHTML = majica1;
+    let promiseModel = new Promise((resolve, reject) => {
+        for(let model of modeli) {
+            document.getElementById('models').innerHTML += model;
+        };
+        return resolve();
     });
 
-    document.getElementById('majica2').addEventListener('click', ()=> {
-        document.getElementById('modelMajica').innerHTML = majica2;
-    });
-
-    document.getElementById('majica3').addEventListener('click', ()=> {
-        document.getElementById('modelMajica').innerHTML = majica3;
-    });
+    promiseModel.then(chooseModel(id));
 }
 
-/** Create sorcevi */
-function createSorcevi() {
-    document.getElementById('models').innerHTML = '';
-    for(let sorc of sorcevi) {
-        document.getElementById('models').innerHTML += sorc;
+function chooseModel(id) {
+    for(let model of document.getElementById('models').children) {
+        model.addEventListener('click', () => {
+            document.getElementById(id).innerHTML = model.outerHTML;
+        })
     }
-/** TODO */
-    document.getElementById('sorc1').addEventListener('click', ()=> {
-        document.getElementById('modelSorc').innerHTML = sorc1;
-    });
-
-    document.getElementById('sorc2').addEventListener('click', ()=> {
-        document.getElementById('modelSorc').innerHTML = sorc2;
-    })
-}
-
-/** Create stucne */
-function createStucne() {
-    document.getElementById('models').innerHTML = '';
-    for(let stucna of stucne) {
-        document.getElementById('models').innerHTML += stucna;
-    }
-/** TODO */
-    document.getElementById('stucne1').addEventListener('click', ()=> {
-        document.getElementById('modelStucne').innerHTML = stucne1;
-    });
-
-    document.getElementById('stucne2').addEventListener('click', ()=> {
-        document.getElementById('modelStucne').innerHTML = stucne2;
-    });
-
-    document.getElementById('stucne3').addEventListener('click', ()=> {
-        document.getElementById('modelStucne').innerHTML = stucne3;
-    });
 }
 
 /** Color majica */
 document.getElementById('inputColorDres').addEventListener('input', () => {
-    for(let i = 1; i < 4; i++) {
-        if(document.getElementById(`majica${i}`).parentNode.id === `modelMajica`) {
+    let index = 0;
+    while(index++ <= majice.length) {
+        if(document.getElementById(`majica${index}`).parentNode.id === `modelMajica`) {
             let color = document.getElementById('inputColorDres').value; 
-            document.getElementById(`majica${i}Napred`).setAttribute('fill', color);
-            document.getElementById(`majica${i}Ledja`).setAttribute('fill', color);
+            document.getElementById(`majica${index}Napred`).setAttribute('fill', color);
+            document.getElementById(`majica${index}Ledja`).setAttribute('fill', color);
         }
     }
 });
@@ -183,21 +149,23 @@ document.getElementById('inputColorDres').addEventListener('input', () => {
 
 /** Color sorc */
 document.getElementById('inputColorSorc').addEventListener('input', () => {
-    for(let i = 1; i < 3; i++) {
-        if(document.getElementById(`sorc${i}`).parentNode.id === `modelSorc`) {
+    let index = 0;
+    while(index++ <= sorcevi.length) {
+        if(document.getElementById(`sorc${index}`).parentNode.id === `modelSorc`) {
             let color = document.getElementById('inputColorSorc').value; 
-            document.getElementById(`sorc${i}Boja`).setAttribute('fill', color);
+            document.getElementById(`sorc${index}Boja`).setAttribute('fill', color);
         }
     }
 });
 
 /** Color stucne */
 document.getElementById('inputColorStucne').addEventListener('input', () => {
-    for(let i = 1; i < 4; i++) {
-        if(document.getElementById(`stucne${i}`).parentNode.id === `modelStucne`) {
+    let index = 0;
+    while(index++ <= stucne.length) {
+        if(document.getElementById(`stucne${index}`).parentNode.id === `modelStucne`) {
             let color = document.getElementById('inputColorStucne').value; 
-            document.getElementById(`stucna${i}Leva`).setAttribute('fill', color);
-            document.getElementById(`stucna${i}Desna`).setAttribute('fill', color);
+            document.getElementById(`stucna${index}Leva`).setAttribute('fill', color);
+            document.getElementById(`stucna${index}Desna`).setAttribute('fill', color);
         }
     }
 });
