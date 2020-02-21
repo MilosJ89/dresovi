@@ -23,8 +23,22 @@ header {
     width: 100%;
 }
 
-#model svg {
-    height: 200px;
+#model div {
+    margin: 30px 0;
+}
+
+#modelMajica svg {
+    height: 180px;
+    width: 100%;
+}
+
+#modelSorc svg {
+    height: 120px;
+    width: 100%;
+}
+
+#modelStucne svg {
+    height: 150px;
     width: 100%;
 }
 
@@ -95,10 +109,20 @@ header {
 }
 
 #models svg {
-    width: 400px;
+    height: 100px;
+    width: 33%;
 }
 
 .majice {
     height: 200px;
     width: 200px;
+}
+
+#description {
+    display: flex;
+}
+
+#description p {
+    text-align: center;
+    width: 33%;
 }

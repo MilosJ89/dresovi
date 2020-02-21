@@ -47,6 +47,9 @@ function createContent () {
 
             let models = `<div id='models'></div>`;
             document.getElementById('chooseModel').innerHTML += models;
+
+            let description =`<div id='description'></div>`;
+            document.getElementById('chooseModel').innerHTML += description;
 }
 
 createContent();
@@ -169,3 +172,22 @@ document.getElementById('inputColorStucne').addEventListener('input', () => {
         }
     }
 });
+
+/** Create models majice when open page */
+createModels(majice, 'modelMajica');
+
+/** Object for majice */
+const namesMajice = {
+    majica1: 'atletiko_x5F_2',
+    majica2: 'atletiko_x5F_3',
+    majica3: 'ranglan'
+}
+
+function name() {
+    for(let name in namesMajice) {
+        let nameParagrpah = `<p>${namesMajice[name]}</p>`;
+        document.getElementById('description').innerHTML += nameParagrpah;
+    }
+}
+
+name();
