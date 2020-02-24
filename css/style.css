@@ -20,6 +20,8 @@ header {
     margin-top: 10px;
     max-width: 1460px;
     height: 100%;
+    justify-content: space-between;
+    position: relative;
     width: 100%;
 }
 
@@ -125,4 +127,154 @@ header {
 #description p {
     text-align: center;
     width: 33%;
+}
+
+#continueBtn {
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+    bottom: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px;
+    position: absolute;
+    right: 10px;
+    width: 150px;
+}
+
+/*** SECOND PAGE ***/
+#leftPage, #rightPage {
+    width: 40%;
+}
+
+#leftPage p {
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#forma {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#forma input {
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#forma input:focus {
+    border: none;
+    outline: 1px solid gray;
+}
+
+#forma textarea {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+    height: 300px;
+    padding: 20px;
+}
+
+#forma textarea:focus {
+    border: none;
+    outline: 1px solid gray;
+}
+
+/*** Right page ***/
+#rightPage p {
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#table {
+    margin-bottom: 20px;
+}
+
+#headerTable {
+    display: flex;
+}
+
+#headerTable p {
+    text-align: center;
+}
+
+.size {
+    flex-grow: 1;
+}
+
+.name {
+    flex-grow: 6;
+}
+
+.number {
+    flex-grow: 1;
+}
+
+#rowTable {
+    display: flex;
+}
+
+#select {
+    border: none;
+    border-bottom: 1px solid gray;
+    flex-basis: 20%;
+    height: 30px;
+    text-align: center;
+}
+
+#cellName {
+    border: none;
+    border-bottom: 1px solid gray;
+    display: block;
+    flex-grow: 80%;
+    height: 30px;
+    margin: 0 20px;
+    text-align: center;
+    width: 60%;
+}
+
+#cellName:focus {
+    outline: none;
+}
+
+#cellNumber {
+    border: none;
+    border-bottom: 1px solid gray;
+    display: block;
+    height: 30px;
+    text-align: center;
+    width: 20%;
+}
+
+#cellNumber:focus {
+    outline: none;
+}
+
+#add {
+    background-color: none;
+    background-image: url('../img/add-24px.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+#add:focus {
+    outline: none;
 }
