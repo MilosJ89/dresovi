@@ -248,9 +248,14 @@ function nextStep() {
 
 function addRow() {
         let i = document.getElementById('bodyTable');
+
+        const elemLength = i.children.length;
+
         i = +i.children[i.children.length - 1].id.match(/\d+/g)[0];
-        i++;
-        if(i <= 5) {
+        // i = i.children.length;
+        ++i;
+        // console.log(i);
+        if(elemLength < 5) {
             let rowTable = `
             <div id='rowTable${i}' class='rowTable'>
                 <select>
@@ -269,6 +274,7 @@ function addRow() {
 
             document.getElementById('bodyTable').innerHTML += rowTable;
         }
+        
 }
 
 function deleteRow(i) {
