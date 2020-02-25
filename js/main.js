@@ -215,19 +215,20 @@ function nextStep() {
                                 <p class='size'>size</p>
                                 <p class='name'>name</p>
                                 <p class='number'>number</p>
+                                <span class='empty'></span>
                             </div>
                             <div id='bodyTable'>
-                                <div id='rowTable1' class='rowTable'>
-                                    <select id='select'>
+                                <div id='rowTable1' class='rowTable' style='order:100'>
+                                    <select class='size' id='select'>
                                         <option>S</option>
                                         <option>M</option>
                                         <option>L</option>
                                         <option>XL</option>
                                         <option>XXL</option>
                                     </select>
-                                    <input class='cellName' type='text' />
-                                    <input class='cellNumber' type='number' min='0'/>
-                                    <button class='delete' id='1' onclick='deleteRow(this.id)'></button>
+                                    <input class='cellName name' type='text' />
+                                    <input class='cellNumber number' type='number' min='0'/>
+                                    <span class='empty'></span>
                                 </div>
                             </div> 
                         </div>
@@ -247,26 +248,23 @@ function nextStep() {
 }
 
 function addRow() {
-        let i = document.getElementById('bodyTable');
 
+
+        let i = document.getElementById('bodyTable');
         i = +i.children[i.children.length - 1].id.match(/\d+/g)[0];
-    
         ++i;
   
+        let size = document.getElementById('select').value;
+        let name = document.querySelector('.cellName').value;
+        let number = document.querySelector('.cellNumber').value;
+
         let rowTable = `
-            <div id='rowTable${i}' class='rowTable'>
-                <select>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-                <input class='cellName' type='text' />
-                <input class='cellNumber' type='number' min='0' />
+            <div id='rowTable${i}' class='rowTable' style='order:${i}'>
+                <p class='size'>${size}</p>
+                <p class='name'>${name}</p>
+                <p class='number'>${number}</p>
                 <button class='delete' id='${i}' onclick='deleteRow(this.id)'></button>
-            </div>
-        `;
+            </div>`;
 
         document.getElementById('bodyTable').innerHTML += rowTable;
 }

@@ -193,8 +193,8 @@ header {
     color: gray;
     font-size: 18px;
     font-weight: bold;
-    margin-top: 20px;
-    padding: 20px;
+    margin: 20px;
+    padding: 10px;
 }
 
 #table {
@@ -205,7 +205,7 @@ header {
 
 #headerTable {
     display: flex;
-    width: calc(100% - 40px);
+    width: calc(100% - 15px);
 }
 
 #headerTable p {
@@ -213,34 +213,35 @@ header {
     margin-top: 0;
 }
 
-.size {
-    flex-grow: 1;
-}
-
-.name {
-    flex-grow: 6;
-}
-
-.number {
-    flex-grow: 1;
-}
-
 #bodyTable {
+    display: flex;
+    flex-direction: column;
     max-height: 300px;
     overflow-y: scroll;
 } 
+
+#bodyTable p {
+    align-items: center;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    padding: 0;
+    text-align: center;
+}
 
 .rowTable {
     display: flex;
     margin: 5px 0;
 }
 
-.rowTable select {
+#select {
     border: none;
     border-bottom: 1px solid gray;
-    flex-basis: 20%;
     height: 30px;
+    margin: 0 20px;
     text-align: center;
+    width: 10%;
 }
 
 .rowTable input {
@@ -252,16 +253,20 @@ header {
     text-align: center;
 }
 
+.size {
+    width: 10%;
+}
+
+.name {
+    width: 50%;
+}
+
+.number {
+    width: 20%;
+}
+
 .rowTable input:focus {
     outline: none;
-}
-
-.cellName {
-    width: 60%;
-}
-
-.cellNumber {
-    width: 20%;
 }
 
 .add {
@@ -272,6 +277,7 @@ header {
     border: none;
     cursor: pointer;
     height: 40px;
+    margin-left: 20px;
     width: 40px;
 }
 
@@ -286,10 +292,17 @@ header {
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;
+    display: block;
     height: 40px;
-    width: 40px;
+    width: 20%;
 }
 
 .delete:focus {
     outline: none;
+}
+
+.empty {
+    display: block;
+    height: 40px;
+    width: 20%;
 }
