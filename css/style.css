@@ -129,20 +129,24 @@ header {
     width: 33%;
 }
 
-#continueBtn {
+.contentBtn {
     background-color: red;
     border: none;
     border-radius: 20px;
-    bottom: 10px;
+    bottom: -40px;
     color: white;
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
-    padding: 15px;
+    padding: 10px;
     position: absolute;
-    right: 10px;
+    right: 0;
     width: 150px;
+}
+
+.btnBack {
+    left: 10px;
 }
 
 /*** SECOND PAGE ***/
@@ -158,13 +162,13 @@ header {
     padding: 20px;
 }
 
-#forma {
+#leftPage div {
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
 
-#forma input {
+#leftPage input {
     border: none;
     border-bottom: 1px solid gray;
     height: 40px;
@@ -173,12 +177,12 @@ header {
     padding-left: 20px;
 }
 
-#forma input:focus {
+#leftPage input:focus {
     border: none;
     outline: 1px solid gray;
 }
 
-#forma textarea {
+#leftPage textarea {
     border: none;
     border-bottom: 1px solid gray;
     font-size: 20px;
@@ -186,7 +190,7 @@ header {
     padding: 20px;
 }
 
-#forma textarea:focus {
+#leftPage textarea:focus {
     border: none;
     outline: 1px solid gray;
 }
@@ -206,10 +210,12 @@ header {
 
 #headerTable {
     display: flex;
+    width: calc(100% - 40px);
 }
 
 #headerTable p {
     text-align: center;
+    margin-top: 0;
 }
 
 .size {
@@ -224,11 +230,12 @@ header {
     flex-grow: 1;
 }
 
-#rowTable {
+.rowTable {
     display: flex;
+    margin: 5px 0;
 }
 
-#select {
+.rowTable select {
     border: none;
     border-bottom: 1px solid gray;
     flex-basis: 20%;
@@ -236,36 +243,29 @@ header {
     text-align: center;
 }
 
-#cellName {
+.rowTable input {
     border: none;
     border-bottom: 1px solid gray;
     display: block;
-    flex-grow: 80%;
     height: 30px;
     margin: 0 20px;
     text-align: center;
+}
+
+.rowTable input:focus {
+    outline: none;
+}
+
+.cellName {
     width: 60%;
 }
 
-#cellName:focus {
-    outline: none;
-}
-
-#cellNumber {
-    border: none;
-    border-bottom: 1px solid gray;
-    display: block;
-    height: 30px;
-    text-align: center;
+.cellNumber {
     width: 20%;
 }
 
-#cellNumber:focus {
-    outline: none;
-}
-
-#add {
-    background-color: none;
+.add {
+    background-color: white;
     background-image: url('../img/add-24px.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -275,6 +275,21 @@ header {
     width: 40px;
 }
 
-#add:focus {
+.add:focus {
+    outline: none;
+}
+
+.delete {
+    background-color: white;
+    background-image: url('../img/remove-24px.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.delete:focus {
     outline: none;
 }

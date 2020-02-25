@@ -51,7 +51,7 @@ function createContent () {
             let description =`<div id='description'></div>`;
             document.getElementById('chooseModel').innerHTML += description;
 
-        let continueBtn = `<button id='continueBtn' onclick='nextStep()'>Continue</button>`;
+        let continueBtn = `<button class='contentBtn' id='continueBtn' onclick='nextStep()'>Continue</button>`;
         document.getElementById('content').innerHTML += continueBtn;
 }
 
@@ -198,106 +198,85 @@ name();
 function nextStep() {
     document.getElementById('content').innerHTML = '';
 
-        let leftPage = `<div id='leftPage'></div>`;
-        document.getElementById('content').innerHTML = leftPage;
+    let leftPage = `
+                    <div id='leftPage'>
+                        <p>Contact Details & Notes</p>
+                        <div>
+                            <input placeholder='email'></input>
+                            <input placeholder='phone number'></input>
+                            <textarea placeholder='notes'></textarea>
+                        </div>
+                    </div>`;
+    let rightPage = `
+                    <div id='rightPage'>
+                        <p>Jersey List</p>
+                        <div id='table'>
+                            <div id='headerTable'>
+                                <p class='size'>size</p>
+                                <p class='name'>name</p>
+                                <p class='number'>number</p>
+                            </div>
+                            <div id='bodyTable'>
+                                <div id='rowTable1' class='rowTable'>
+                                    <select id='select'>
+                                        <option>S</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                        <option>XL</option>
+                                        <option>XXL</option>
+                                    </select>
+                                    <input class='cellName' type='text' min='0'/>
+                                    <input class='cellNumber' type='number'/>
+                                    <button class='delete' id='1' onclick='deleteRow(this.id)'></button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>`;
 
-            let title = `<p>Contact Details & Notes</p>`;
-            document.getElementById('leftPage').innerHTML = title;
+            document.getElementById('content').innerHTML = leftPage;
+            document.getElementById('content').innerHTML += rightPage;
 
-            let forma = `<div id='forma'></div>`;
-            document.getElementById('leftPage').innerHTML += forma;
-
-                let email = `<input placeholder='email'></input>`;
-                document.getElementById('forma').innerHTML = email;
-
-                let phone = `<input placeholder='phone number'></input>`;
-                document.getElementById('forma').innerHTML += phone;
-
-                let notes = `<textarea placeholder='notes'></textarea>`;
-                document.getElementById('forma').innerHTML += notes;
-        
-        let rightPage = `<div id='rightPage'></div>`;
-        document.getElementById('content').innerHTML += rightPage;
-
-            let title1 = `<p>Jersey List</p>`;
-            document.getElementById('rightPage').innerHTML = title1;
-
-            let table = `<div id='table'></div>`;
-            document.getElementById('rightPage').innerHTML += table;
-
-                let headerTable = `<div id='headerTable'><div>`;
-                document.getElementById('table').innerHTML = headerTable;
-
-                    let size = `<p class='size'>size</p>`;
-                    document.getElementById('headerTable').innerHTML = size;
-
-                    let name = `<p class='name'>name</p>`;
-                    document.getElementById('headerTable').innerHTML += name;
-
-                    let number = `<p class='number'>number</p>`;
-                    document.getElementById('headerTable').innerHTML += number;
-
-                let bodyTable = `<div id='bodyTable'></div>`;
-                document.getElementById('table').innerHTML += bodyTable;
-
-                    let rowTable = `<div id='rowTable'></div>`;
-                    document.getElementById('bodyTable').innerHTML += rowTable;
-
-                        let cellSize = `<select id='select'></select>`;
-                        document.getElementById('rowTable').innerHTML = cellSize;
-
-                            let sizeS = `<option>S</option>`;
-                            document.getElementById('select').innerHTML = sizeS;
-
-                            let sizeM = `<option>M</option>`;
-                            document.getElementById('select').innerHTML += sizeM;
-
-                            let sizeL = `<option>L</option>`;
-                            document.getElementById('select').innerHTML += sizeL;
-
-                            let sizeXL = `<option>XL</option>`;
-                            document.getElementById('select').innerHTML += sizeXL;
-
-                            let sizeXXL = `<option>XXL</option>`;
-                            document.getElementById('select').innerHTML += sizeXXL;
-
-                        let cellName = `<input id='cellName' type='text'></input>`;
-                        document.getElementById('rowTable').innerHTML += cellName;
-
-                        let cellNumber = `<input id='cellNumber' type='number'></input>`;
-                        document.getElementById('rowTable').innerHTML += cellNumber;
-
-            let add = `<button id='add' onclick='addRow()'></button>`;
+            let add = `<button class='add' onclick='addRow()'></button>`;
             document.getElementById('rightPage').innerHTML += add;
+
+            let back = `<button class='contentBtn btnBack' onclick='back()'>Back</button>`;
+            document.getElementById('content').innerHTML += back;
+
+            let send = `<button class='contentBtn' id='send'>Send</button>`;
+            document.getElementById('content').innerHTML += send; 
 }
 
 function addRow() {
-        i=1;
+        let i = document.getElementById('bodyTable');
+        i = +i.children[i.children.length - 1].id.match(/\d+/g)[0];
+        i++;
+        if(i <= 5) {
+            let rowTable = `
+            <div id='rowTable${i}' class='rowTable'>
+                <select>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
 
-        let rowTable = `<div id="rowTable${i}"></div>`;
-        document.getElementById('bodyTable').innerHTML += rowTable;
+                <input class='cellName' type='text' />
+                <input class='cellNumber' type='number' min='0'/>
+                <button class='delete' id='${i}' onclick='deleteRow(this.id)'></button>
+            </div>
+            `;
 
-        let cellSize = `<select id='select${i}'></select>`;
-        document.getElementById(`rowTable${i}`).innerHTML = cellSize;
+            document.getElementById('bodyTable').innerHTML += rowTable;
+        }
+}
 
-            let sizeS = `<option>S</option>`;
-            document.getElementById(`select${i}`).innerHTML = sizeS;
+function deleteRow(i) {
+    document.getElementById(`rowTable${i}`).outerHTML = '';
+}
 
-            let sizeM = `<option>M</option>`;
-            document.getElementById(`select${i}`).innerHTML += sizeM;
-
-            let sizeL = `<option>L</option>`;
-            document.getElementById(`select${i}`).innerHTML += sizeL;
-
-            let sizeXL = `<option>XL</option>`;
-            document.getElementById(`select${i}`).innerHTML += sizeXL;
-
-            let sizeXXL = `<option>XXL</option>`;
-            document.getElementById(`select${i}`).innerHTML += sizeXXL;
-
-        let cellName = `<input id='cellName${i}' type='text'></input>`;
-        document.getElementById(`rowTable${i}`).innerHTML += cellName;
-
-        let cellNumber = `<input id='cellNumber${i}' type='number'></input>`;
-        document.getElementById(`rowTable${i}`).innerHTML += cellNumber;
+function back() {
+    createContent();
+    createModel();
+    createModels(majice, "modelMajica");
 }
