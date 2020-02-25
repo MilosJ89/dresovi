@@ -279,4 +279,41 @@ function back() {
     createContent();
     createModel();
     createModels(majice, "modelMajica");
+    createColors();
+
+    /** Color majica */
+    document.getElementById('inputColorDres').addEventListener('input', () => {
+        let index = 0;
+        while(index++ <= majice.length) {
+            if(document.getElementById(`majica${index}`).parentNode.id === `modelMajica`) {
+                let color = document.getElementById('inputColorDres').value; 
+                document.getElementById(`majica${index}Napred`).setAttribute('fill', color);
+                document.getElementById(`majica${index}Ledja`).setAttribute('fill', color);
+            }
+        }
+    });
+
+
+    /** Color sorc */
+    document.getElementById('inputColorSorc').addEventListener('input', () => {
+        let index = 0;
+        while(index++ <= sorcevi.length) {
+            if(document.getElementById(`sorc${index}`).parentNode.id === `modelSorc`) {
+                let color = document.getElementById('inputColorSorc').value; 
+                document.getElementById(`sorc${index}Boja`).setAttribute('fill', color);
+            }
+        }
+    });
+
+    /** Color stucne */
+    document.getElementById('inputColorStucne').addEventListener('input', () => {
+        let index = 0;
+        while(index++ <= stucne.length) {
+            if(document.getElementById(`stucne${index}`).parentNode.id === `modelStucne`) {
+                let color = document.getElementById('inputColorStucne').value; 
+                document.getElementById(`stucna${index}Leva`).setAttribute('fill', color);
+                document.getElementById(`stucna${index}Desna`).setAttribute('fill', color);
+            }
+        }
+    });
 }
