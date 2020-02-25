@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 header {
@@ -21,7 +22,7 @@ header {
     max-width: 1460px;
     height: 100%;
     justify-content: space-between;
-    position: relative;
+    /* position: relative; */
     width: 100%;
 }
 
@@ -43,14 +44,6 @@ header {
     height: 150px;
     width: 100%;
 }
-
-/* .modelSvg {
-    display: block;
-    height: 300px;
-    margin: 0 auto;
-    margin-top: 20px;
-    width: 460px;
-} */
 
 .colors {
     display: flex;
@@ -130,7 +123,7 @@ header {
 }
 
 .contentBtn {
-    background-color: red;
+    background-color: #cc0000;
     border: none;
     border-radius: 20px;
     bottom: -40px;
@@ -141,7 +134,7 @@ header {
     letter-spacing: 1px;
     padding: 10px;
     position: absolute;
-    right: 0;
+    right: 20px;
     width: 150px;
 }
 
@@ -206,6 +199,8 @@ header {
 
 #table {
     margin-bottom: 20px;
+    margin-right: 20px;
+    max-height: 400px;
 }
 
 #headerTable {
@@ -229,6 +224,11 @@ header {
 .number {
     flex-grow: 1;
 }
+
+#bodyTable {
+    max-height: 300px;
+    overflow-y: scroll;
+} 
 
 .rowTable {
     display: flex;

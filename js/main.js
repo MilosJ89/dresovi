@@ -225,8 +225,8 @@ function nextStep() {
                                         <option>XL</option>
                                         <option>XXL</option>
                                     </select>
-                                    <input class='cellName' type='text' min='0'/>
-                                    <input class='cellNumber' type='number'/>
+                                    <input class='cellName' type='text' />
+                                    <input class='cellNumber' type='number' min='0'/>
                                     <button class='delete' id='1' onclick='deleteRow(this.id)'></button>
                                 </div>
                             </div> 
@@ -249,14 +249,11 @@ function nextStep() {
 function addRow() {
         let i = document.getElementById('bodyTable');
 
-        const elemLength = i.children.length;
-
         i = +i.children[i.children.length - 1].id.match(/\d+/g)[0];
-        // i = i.children.length;
+    
         ++i;
-        // console.log(i);
-        if(elemLength < 5) {
-            let rowTable = `
+  
+        let rowTable = `
             <div id='rowTable${i}' class='rowTable'>
                 <select>
                     <option>S</option>
@@ -265,16 +262,13 @@ function addRow() {
                     <option>XL</option>
                     <option>XXL</option>
                 </select>
-
                 <input class='cellName' type='text' />
-                <input class='cellNumber' type='number' min='0'/>
+                <input class='cellNumber' type='number' min='0' />
                 <button class='delete' id='${i}' onclick='deleteRow(this.id)'></button>
             </div>
-            `;
+        `;
 
-            document.getElementById('bodyTable').innerHTML += rowTable;
-        }
-        
+        document.getElementById('bodyTable').innerHTML += rowTable;
 }
 
 function deleteRow(i) {
