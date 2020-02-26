@@ -14,6 +14,8 @@ function createHeader() {
 
 createHeader();
 
+// <input id='inputColorDres' class='inputColors' type='color' value='#ff0000'></input>
+
 /**
  * Function for create content
  */
@@ -26,22 +28,39 @@ function createContent() {
             <div id='paintModel'>
                 <div id='majica'>
                     <div id='colorMajica'>
-                        <input id='inputColorDres' class='inputColors' type='color' value='#ff0000'></input>
-                        <span class='arrowDown'></span>
+                        <div id='color'>
+                            <div id='dropdown'>
+                                <div class='item'>
+                                    <span></span>
+                                    <p>Red</p>
+                                </div>
+                                <div class='item'>
+                                    <span></span>
+                                    <p>Green</p>
+                                </div>
+                                <div class='item'>
+                                    <span></span>
+                                    <p>Blue</p>
+                                </div>
+                                <div class='item'>
+                                    <input type='color'></input>
+                                    <p>Color Picker</p>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div id='modelMajica'></div>
                 </div>
                 <div id='sorc'>
                     <div id='colorSorc'>
                         <input id='inputColorSorc' class='inputColors' type='color' value='#ffff00'></input>
-                        <span class='arrowDown'></span>
                     </div>
                     <div id='modelSorc'></div>
                 </div>
                 <div id='stucne'>
                     <div id='colorStucne'>
                         <input id='inputColorStucne' class='inputColors' type='color' value='#33cc33'></input>
-                        <span class='arrowDown'></span>
                     </div>
                     <div id='modelStucne'></div>
                 </div>
@@ -119,40 +138,40 @@ function chooseModel(id) {
  */
 createModels(majice, 'modelMajica');
 
-/** Color majica */
-document.getElementById('inputColorDres').addEventListener('input', () => {
-    let index = 0;
-    while(index++ <= majice.length) {
-        if(document.getElementById(`majica${index}`).parentNode.id === `modelMajica`) {
-            let color = document.getElementById('inputColorDres').value; 
-            document.getElementById(`majica${index}Napred`).setAttribute('fill', color);
-            document.getElementById(`majica${index}Ledja`).setAttribute('fill', color);
-        }
-    }
-});
+// /** Color majica */
+// document.getElementById('inputColorDres').addEventListener('input', () => {
+//     let index = 0;
+//     while(index++ <= majice.length) {
+//         if(document.getElementById(`majica${index}`).parentNode.id === `modelMajica`) {
+//             let color = document.getElementById('inputColorDres').value; 
+//             document.getElementById(`majica${index}Napred`).setAttribute('fill', color);
+//             document.getElementById(`majica${index}Ledja`).setAttribute('fill', color);
+//         }
+//     }
+// });
 
-/** Color sorc */
-document.getElementById('inputColorSorc').addEventListener('input', () => {
-    let index = 0;
-    while(index++ <= sorcevi.length) {
-        if(document.getElementById(`sorc${index}`).parentNode.id === `modelSorc`) {
-            let color = document.getElementById('inputColorSorc').value; 
-            document.getElementById(`sorc${index}Boja`).setAttribute('fill', color);
-        }
-    }
-});
+// /** Color sorc */
+// document.getElementById('inputColorSorc').addEventListener('input', () => {
+//     let index = 0;
+//     while(index++ <= sorcevi.length) {
+//         if(document.getElementById(`sorc${index}`).parentNode.id === `modelSorc`) {
+//             let color = document.getElementById('inputColorSorc').value; 
+//             document.getElementById(`sorc${index}Boja`).setAttribute('fill', color);
+//         }
+//     }
+// });
 
-/** Color stucne */
-document.getElementById('inputColorStucne').addEventListener('input', () => {
-    let index = 0;
-    while(index++ <= stucne.length) {
-        if(document.getElementById(`stucne${index}`).parentNode.id === `modelStucne`) {
-            let color = document.getElementById('inputColorStucne').value; 
-            document.getElementById(`stucna${index}Leva`).setAttribute('fill', color);
-            document.getElementById(`stucna${index}Desna`).setAttribute('fill', color);
-        }
-    }
-});
+// /** Color stucne */
+// document.getElementById('inputColorStucne').addEventListener('input', () => {
+//     let index = 0;
+//     while(index++ <= stucne.length) {
+//         if(document.getElementById(`stucne${index}`).parentNode.id === `modelStucne`) {
+//             let color = document.getElementById('inputColorStucne').value; 
+//             document.getElementById(`stucna${index}Leva`).setAttribute('fill', color);
+//             document.getElementById(`stucna${index}Desna`).setAttribute('fill', color);
+//         }
+//     }
+// });
 
 /**
  * Function for next page when click continue button
