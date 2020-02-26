@@ -26,7 +26,6 @@ function createContent() {
             <div id='paintModel'>
                 <div id='majica'>
                     <div id='colorMajica'>
-                        <p class='text'>Boja dresa</p>
                         <input id='inputColorDres' class='inputColors' type='color' value='#ff0000'></input>
                         <span class='arrowDown'></span>
                     </div>
@@ -34,7 +33,6 @@ function createContent() {
                 </div>
                 <div id='sorc'>
                     <div id='colorSorc'>
-                        <p class='text'>Boja sorca</p>
                         <input id='inputColorSorc' class='inputColors' type='color' value='#ffff00'></input>
                         <span class='arrowDown'></span>
                     </div>
@@ -42,7 +40,6 @@ function createContent() {
                 </div>
                 <div id='stucne'>
                     <div id='colorStucne'>
-                        <p class='text'>Boja stucne</p>
                         <input id='inputColorStucne' class='inputColors' type='color' value='#33cc33'></input>
                         <span class='arrowDown'></span>
                     </div>
@@ -53,9 +50,9 @@ function createContent() {
                 <div id='title'>
                     <p>Modeli</p>
                     <div id='page'>
-                        <button onclick='createModels(majice, namesMajice, "modelMajica")'>Majice</button>
-                        <button onclick='createModels(sorcevi, namesSorcevi, "modelSorc")'>Sorcevi</button>
-                        <button onclick='createModels(stucne, namesStucne, "modelStucne")'>Stucne</button>
+                        <button class='btnModel active' onclick='createModels(majice, "modelMajica")'>Majice</button>
+                        <button class='btnModel' onclick='createModels(sorcevi, "modelSorc")'>Sorcevi</button>
+                        <button class='btnModel' onclick='createModels(stucne, "modelStucne")'>Stucne</button>
                     </div>
                 </div>
                 <div id='models'></div>
@@ -64,10 +61,20 @@ function createContent() {
             <button class='contentBtn' id='continueBtn' onclick='nextStep()'>Continue</button>
         </div>`;
 
+
     document.getElementById('body').innerHTML += content;
 }
 
 createContent();
+
+const btns = document.getElementsByClassName('btnModel');
+for(let i=0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace("active", "");
+    this.className += " active";
+    });
+};
 
 /** Create shirt model at left page */
 function createModel () {
@@ -79,36 +86,9 @@ function createModel () {
 createModel();
 
 /**
- * Object for names of majice
- */
-const namesMajice = {
-    majica1: 'atletiko_x5F_2',
-    majica2: 'atletiko_x5F_3',
-    majica3: 'ranglan'
-}
-
-/**
- * Object for names of sorcevi 
- */
-const namesSorcevi = {
-    sorc1: 'sorc_x5F_classic',
-    sorc2: 'sorc_x5F_inter'
-}
-
-/**
- * Object for names of stucne
- */
-const namesStucne = {
-    stucne1: 'stucne1',
-    stucne2: 'stucne2',
-    stucne3: 'stucne3'
-}
-
-
-/**
  * Create models at right page 
  */
-function createModels(modeli, namesModels, id) {
+function createModels(modeli, id) {
     document.getElementById('models').innerHTML = '';
     
     let promiseModel = new Promise((resolve, reject) => {
@@ -119,22 +99,7 @@ function createModels(modeli, namesModels, id) {
     });
     
     promiseModel
-        .then(chooseModel(id))
-        .then(nameModels(namesModels));
-}
-
-/**
- * Function for write names of below models
- * 
- * @param {*} namesModels 
- */
-function nameModels(namesModels) {
-    document.getElementById('description').innerHTML = '';
-    for(let name in namesModels) {
-        let nameParagraph = `<p>${namesModels[name]}</p>`
-
-        document.getElementById('description').innerHTML += nameParagraph;
-    }
+        .then(chooseModel(id));
 }
 
 /**
@@ -152,7 +117,7 @@ function chooseModel(id) {
 /** 
  * Create models majice when open page 
  */
-createModels(majice, namesMajice, 'modelMajica');
+createModels(majice, 'modelMajica');
 
 /** Color majica */
 document.getElementById('inputColorDres').addEventListener('input', () => {
@@ -301,7 +266,7 @@ function back() {
     document.getElementById('content').outerHTML = '';
     createContent();
     createModel();
-    createModels(majice, namesMajice, "modelMajica");
+    createModels(majice, "modelMajica");
 
     /** Color majica */
     document.getElementById('inputColorDres').addEventListener('input', () => {
@@ -338,4 +303,12 @@ function back() {
             }
         }
     });
+
+    for(let i=0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        let current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace("active", "");
+        this.className += " active";
+        });
+    };
 }
