@@ -2,57 +2,69 @@ let majice = [majica1, majica2, majica3];
 let sorcevi = [sorc1, sorc2];
 let stucne = [stucne1, stucne2, stucne3];
 
-function createContent () {
-    let content = `<div id='content'></div>`;
-    document.getElementById('body').innerHTML += content; 
+/**
+ * Function for create header
+ */
+function createHeader() {
+    let header = `
+        <header></header>`;
 
-        let paintModel = `<div id='paintModel'></div>`;
-        document.getElementById('content').innerHTML = paintModel;
+        document.getElementById('body').innerHTML = header;
+}
 
-            let model = `<div id='model'></div>`;
-            document.getElementById('paintModel').innerHTML = model;
+createHeader();
 
-                let modelMajica = `<div id='modelMajica'></div>`;
-                document.getElementById('model').innerHTML = modelMajica;
+/**
+ * Function for create content
+ */
+function createContent() {
+    let contentDiv = document.createElement('div');
+    contentDiv.setAttribute('id', 'content');
 
-                let modelSorc = `<div id='modelSorc'></div>`;
-                document.getElementById('model').innerHTML += modelSorc;
+    let content = `
+        <div id='content'>
+            <div id='paintModel'>
+                <div id='majica'>
+                    <div id='colorMajica'>
+                        <p class='text'>Boja dresa</p>
+                        <input id='inputColorDres' class='inputColors' type='color' value='#ff0000'></input>
+                        <span class='arrowDown'></span>
+                    </div>
+                    <div id='modelMajica'></div>
+                </div>
+                <div id='sorc'>
+                    <div id='colorSorc'>
+                        <p class='text'>Boja sorca</p>
+                        <input id='inputColorSorc' class='inputColors' type='color' value='#ffff00'></input>
+                        <span class='arrowDown'></span>
+                    </div>
+                    <div id='modelSorc'></div>
+                </div>
+                <div id='stucne'>
+                    <div id='colorStucne'>
+                        <p class='text'>Boja stucne</p>
+                        <input id='inputColorStucne' class='inputColors' type='color' value='#33cc33'></input>
+                        <span class='arrowDown'></span>
+                    </div>
+                    <div id='modelStucne'></div>
+                </div>
+            </div>
+            <div id='chooseModel'>
+                <div id='title'>
+                    <p>Modeli</p>
+                    <div id='page'>
+                        <button onclick='createModels(majice, namesMajice, "modelMajica")'>Majice</button>
+                        <button onclick='createModels(sorcevi, namesSorcevi, "modelSorc")'>Sorcevi</button>
+                        <button onclick='createModels(stucne, namesStucne, "modelStucne")'>Stucne</button>
+                    </div>
+                </div>
+                <div id='models'></div>
+                <div id='description'></div>
+            </div>
+            <button class='contentBtn' id='continueBtn' onclick='nextStep()'>Continue</button>
+        </div>`;
 
-                let modelStucne = `<div id='modelStucne'></div>`;
-                document.getElementById('model').innerHTML += modelStucne;
-
-            let color = `<div id='color'></div>`;
-            document.getElementById('paintModel').innerHTML += color;
-
-        let chooseModel = `<div id='chooseModel'></div>`;
-        document.getElementById('content').innerHTML += chooseModel;
-
-            let title = `<div id='title'></div>`;
-            document.getElementById('chooseModel').innerHTML = title;
-
-                let paragraph = `<p>Modeli</p>`;
-                document.getElementById('title').innerHTML = paragraph;
-
-                let page = `<div id='page'></div>`;
-                document.getElementById('title').innerHTML += page; 
-                    
-                    let majice = `<button onclick='createModels(majice, "modelMajica")'>Majice</button>`;
-                    document.getElementById('page').innerHTML += majice;
-
-                    let sorcevi = `<button onclick='createModels(sorcevi, "modelSorc")'>Sorcevi</button>`;
-                    document.getElementById('page').innerHTML += sorcevi;
-
-                    let stucne = `<button onclick='createModels(stucne, "modelStucne")'>Stucne</button>`;
-                    document.getElementById('page').innerHTML += stucne;
-
-            let models = `<div id='models'></div>`;
-            document.getElementById('chooseModel').innerHTML += models;
-
-            let description =`<div id='description'></div>`;
-            document.getElementById('chooseModel').innerHTML += description;
-
-        let continueBtn = `<button class='contentBtn' id='continueBtn' onclick='nextStep()'>Continue</button>`;
-        document.getElementById('content').innerHTML += continueBtn;
+    document.getElementById('body').innerHTML += content;
 }
 
 createContent();
@@ -66,72 +78,69 @@ function createModel () {
 
 createModel();
 
-/**Create colors */
-function createColors () {
-    let colorDres = `<div id='colorDres' class='colors'></div>`;
-    document.getElementById('color').innerHTML = colorDres;
-
-        let inputColorDres = `<input id='inputColorDres' class='inputColors' type='color' value='#ff0000'>`;
-        document.getElementById('colorDres').innerHTML = inputColorDres;
-
-        let spanColorDres = `<span class='arrowDown'></span>`;
-        document.getElementById('colorDres').innerHTML += spanColorDres;
-        
-        let textDres = `<p class='text'>Boja dresa<p/>`;
-        document.getElementById('colorDres').innerHTML += textDres;
-
-    let colorRukav = `<div id='colorRukav' class='colors'></div>`;
-    document.getElementById('color').innerHTML += colorRukav;
-
-        let inputColorRukav = `<input id='inputColorRukav' class='inputColors' type='color' value='#0000ff'>`;
-        document.getElementById('colorRukav').innerHTML = inputColorRukav;
-
-        let spanColorRukav = `<span class='arrowDown'></span>`;
-        document.getElementById('colorRukav').innerHTML += spanColorRukav;
-        
-        let textRukav = `<p class='text'>Boja rukava<p/>`;
-        document.getElementById('colorRukav').innerHTML += textRukav;
-
-    let colorSorc = `<div id='colorSorc' class='colors'></div>`;
-    document.getElementById('color').innerHTML += colorSorc;
-
-        let inputColorSorc = `<input id='inputColorSorc' class='inputColors' type='color' value='#ffff00'>`;
-        document.getElementById('colorSorc').innerHTML = inputColorSorc;
-
-        let spanColorSorc = `<span class='arrowDown'></span>`;
-        document.getElementById('colorSorc').innerHTML += spanColorSorc;
-        
-        let textSorc = `<p class='text'>Boja sorca<p/>`;
-        document.getElementById('colorSorc').innerHTML += textSorc;
-
-    let colorStucne = `<div id='colorStucne' class='colors'></div>`;
-    document.getElementById('color').innerHTML += colorStucne;
-
-        let inputColorStucne = `<input id='inputColorStucne' class='inputColors' type='color' value='#33cc33'>`;
-        document.getElementById('colorStucne').innerHTML = inputColorStucne;
-
-        let spanColorStucne = `<span class='arrowDown'></span>`;
-        document.getElementById('colorStucne').innerHTML += spanColorStucne;
-        
-        let textStucne = `<p class='text'>Boja stucne<p/>`;
-        document.getElementById('colorStucne').innerHTML += textStucne;
+/**
+ * Object for names of majice
+ */
+const namesMajice = {
+    majica1: 'atletiko_x5F_2',
+    majica2: 'atletiko_x5F_3',
+    majica3: 'ranglan'
 }
 
-createColors();
+/**
+ * Object for names of sorcevi 
+ */
+const namesSorcevi = {
+    sorc1: 'sorc_x5F_classic',
+    sorc2: 'sorc_x5F_inter'
+}
 
-/** Create majice */
-function createModels(modeli, id) {
+/**
+ * Object for names of stucne
+ */
+const namesStucne = {
+    stucne1: 'stucne1',
+    stucne2: 'stucne2',
+    stucne3: 'stucne3'
+}
+
+
+/**
+ * Create models at right page 
+ */
+function createModels(modeli, namesModels, id) {
     document.getElementById('models').innerHTML = '';
+    
     let promiseModel = new Promise((resolve, reject) => {
         for(let model of modeli) {
             document.getElementById('models').innerHTML += model;
         };
         return resolve();
     });
-
-    promiseModel.then(chooseModel(id));
+    
+    promiseModel
+        .then(chooseModel(id))
+        .then(nameModels(namesModels));
 }
 
+/**
+ * Function for write names of below models
+ * 
+ * @param {*} namesModels 
+ */
+function nameModels(namesModels) {
+    document.getElementById('description').innerHTML = '';
+    for(let name in namesModels) {
+        let nameParagraph = `<p>${namesModels[name]}</p>`
+
+        document.getElementById('description').innerHTML += nameParagraph;
+    }
+}
+
+/**
+ * Function for choose model - when click on model at right page, change model at left page
+ * @param {*} id 
+ */
 function chooseModel(id) {
     for(let model of document.getElementById('models').children) {
         model.addEventListener('click', () => {
@@ -139,6 +148,11 @@ function chooseModel(id) {
         })
     }
 }
+
+/** 
+ * Create models majice when open page 
+ */
+createModels(majice, namesMajice, 'modelMajica');
 
 /** Color majica */
 document.getElementById('inputColorDres').addEventListener('input', () => {
@@ -176,25 +190,9 @@ document.getElementById('inputColorStucne').addEventListener('input', () => {
     }
 });
 
-/** Create models majice when open page */
-createModels(majice, 'modelMajica');
-
-/** Object for majice */
-const namesMajice = {
-    majica1: 'atletiko_x5F_2',
-    majica2: 'atletiko_x5F_3',
-    majica3: 'ranglan'
-}
-
-function name() {
-    for(let name in namesMajice) {
-        let nameParagrpah = `<p>${namesMajice[name]}</p>`;
-        document.getElementById('description').innerHTML += nameParagrpah;
-    }
-}
-
-name();
-
+/**
+ * Function for next page when click continue button
+ */
 function nextStep() {
     document.getElementById('content').innerHTML = '';
 
@@ -207,6 +205,7 @@ function nextStep() {
                             <textarea placeholder='notes'></textarea>
                         </div>
                     </div>`;
+
     let rightPage = `
                     <div id='rightPage'>
                         <p>Jersey List</p>
@@ -218,8 +217,8 @@ function nextStep() {
                                 <span class='empty'></span>
                             </div>
                             <div id='bodyTable'>
-                                <div id='rowTable1' class='rowTable' style='order:100'>
-                                    <select class='size' id='select'>
+                                <div id='rowTable1' class='rowTable'>
+                                    <select class='select size'>
                                         <option>S</option>
                                         <option>M</option>
                                         <option>L</option>
@@ -228,7 +227,7 @@ function nextStep() {
                                     </select>
                                     <input class='cellName name' type='text' />
                                     <input class='cellNumber number' type='number' min='0'/>
-                                    <span class='empty'></span>
+                                    <button class='delete' id='1' onclick='deleteRow(this.id)'></button>
                                 </div>
                             </div> 
                         </div>
@@ -247,37 +246,55 @@ function nextStep() {
             document.getElementById('content').innerHTML += send; 
 }
 
+/**
+ * Function for add new row when fill in the fields
+ */
 function addRow() {
 
+    let i = document.getElementById('bodyTable');
+    i = +i.children[i.children.length - 1].id.match(/\d+/g)[0];
+    ++i;
 
-        let i = document.getElementById('bodyTable');
-        i = +i.children[i.children.length - 1].id.match(/\d+/g)[0];
-        ++i;
-  
-        let size = document.getElementById('select').value;
-        let name = document.querySelector('.cellName').value;
-        let number = document.querySelector('.cellNumber').value;
+    let rowDiv = document.createElement('div');
+        rowDiv.setAttribute('class', 'rowTable');
+        rowDiv.setAttribute('id', `rowTable${i}`);
 
-        let rowTable = `
-            <div id='rowTable${i}' class='rowTable' style='order:${i}'>
-                <p class='size'>${size}</p>
-                <p class='name'>${name}</p>
-                <p class='number'>${number}</p>
-                <button class='delete' id='${i}' onclick='deleteRow(this.id)'></button>
-            </div>`;
+    let rowTable = ` 
+        <select class='select size'>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+        </select>
+        <input class='cellName name' type='text' />
+        <input class='cellNumber number' type='number' min='0' />
+        <button class='delete' id='${i}' onclick='deleteRow(this.id)'></button>`;
+   
+    rowDiv.innerHTML = rowTable;
 
-        document.getElementById('bodyTable').innerHTML += rowTable;
+    document.getElementById('bodyTable').appendChild(rowDiv);
 }
 
+/**
+ * Function for delete row when click delete button (red line)
+ * 
+ * @param {*} i 
+ */
 function deleteRow(i) {
-    document.getElementById(`rowTable${i}`).outerHTML = '';
+    if(i > 1) {
+        document.getElementById(`rowTable${i}`).outerHTML = '';
+    }
 }
 
+/**
+ * Function for prevoous page when click button back
+ */
 function back() {
+    document.getElementById('content').outerHTML = '';
     createContent();
     createModel();
-    createModels(majice, "modelMajica");
-    createColors();
+    createModels(majice, namesMajice, "modelMajica");
 
     /** Color majica */
     document.getElementById('inputColorDres').addEventListener('input', () => {

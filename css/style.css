@@ -14,62 +14,90 @@ header {
     height: 100px;
 }
 
-/* Left page */
+/*** CONTENT ***/
 #content {
     display: flex;
-    margin: 0 auto;
-    margin-top: 10px;
+    margin: 10px auto;
     max-width: 1460px;
     height: 100%;
     justify-content: space-between;
-    /* position: relative; */
+    position: relative;
     width: 100%;
 }
 
-#model div {
-    margin: 30px 0;
+#paintModel, #chooseModel {
+    width: 50%;
+}
+
+/*** Left page */
+#paintModel {
+    display: flex;
+    flex-direction: column;
+}
+
+#majica, #sorc, #stucne {
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+#colorMajica, #colorSorc, #colorStucne {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 150px;
+}
+
+#modelMajica, #modelSorc, #modelStucne {
+    width: 100%;
+}
+
+#modelMajica svg, #modelSorc svg, #modelStucne svg {
+    width: 100%;
 }
 
 #modelMajica svg {
     height: 180px;
-    width: 100%;
 }
 
 #modelSorc svg {
     height: 120px;
-    width: 100%;
 }
 
 #modelStucne svg {
     height: 150px;
-    width: 100%;
-}
-
-.colors {
-    display: flex;
-    justify-content: start;
-    margin: 10px;
-    margin-left: 40%;
 }
 
 .text {
-    margin-left: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.inputColors {
+    height: 20px;
 }
 
 .arrowDown {
     background-image: url('../img/arrow_drop_down-24px.svg');
     background-position: center;
     background-repeat: no-repeat;
+    bottom: 0;
     display: block;
     height: 20px;
+    position: absolute;
+    right: 15px;
     width: 20px;
 }
 
-/* Right page */
-#paintModel, #chooseModel {
-    width: 50%;
+.line {
+    background-color: gray;
+    display: block;
+    height: 90%;
+    width: 1px;
 }
 
+/*** Right page ***/
 #chooseModel p {
     font-size: 26px;
     font-weight: bold;
@@ -115,6 +143,7 @@ header {
 
 #description {
     display: flex;
+    justify-content: space-around;
 }
 
 #description p {
@@ -159,6 +188,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    margin-bottom: 30px;
 }
 
 #leftPage input {
@@ -235,7 +265,7 @@ header {
     margin: 5px 0;
 }
 
-#select {
+.select {
     border: none;
     border-bottom: 1px solid gray;
     height: 30px;
