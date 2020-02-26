@@ -166,7 +166,6 @@ document.getElementById('inputColorDres').addEventListener('input', () => {
     }
 });
 
-
 /** Color sorc */
 document.getElementById('inputColorSorc').addEventListener('input', () => {
     let index = 0;
@@ -225,8 +224,8 @@ function nextStep() {
                                         <option>XL</option>
                                         <option>XXL</option>
                                     </select>
-                                    <input class='cellName name' type='text' />
-                                    <input class='cellNumber number' type='number' min='0'/>
+                                    <input class='cellName' id='name1' type='text' />
+                                    <input class='cellNumber' id='number1' type='number' min='0'/>
                                     <button class='delete' id='1' onclick='deleteRow(this.id)'></button>
                                 </div>
                             </div> 
@@ -267,13 +266,21 @@ function addRow() {
             <option>XL</option>
             <option>XXL</option>
         </select>
-        <input class='cellName name' type='text' />
-        <input class='cellNumber number' type='number' min='0' />
+        <input class='cellName' id='name${i}' type='text' />
+        <input class='cellNumber' id='number${i}' type='number' min='0' />
         <button class='delete' id='${i}' onclick='deleteRow(this.id)'></button>`;
    
     rowDiv.innerHTML = rowTable;
 
-    document.getElementById('bodyTable').appendChild(rowDiv);
+    let name = document.getElementById(`name${i-1}`).value;
+    let number = document.getElementById(`number${i-1}`).value;
+
+    if(name === "" || number === "") {
+        alert('Please fill in fields');
+    } else {
+        document.getElementById('bodyTable').appendChild(rowDiv);    
+    }
+    
 }
 
 /**

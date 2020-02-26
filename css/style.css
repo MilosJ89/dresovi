@@ -209,7 +209,7 @@ header {
     border: none;
     border-bottom: 1px solid gray;
     font-size: 20px;
-    height: 300px;
+    height: 254px;
     padding: 20px;
 }
 
@@ -277,7 +277,9 @@ header {
 .rowTable input {
     border: none;
     border-bottom: 1px solid gray;
+    color: gray;
     display: block;
+    font-size: 18px;
     height: 30px;
     margin: 0 20px;
     text-align: center;
@@ -287,11 +289,11 @@ header {
     width: 10%;
 }
 
-.name {
+.name, .cellName {
     width: 50%;
 }
 
-.number {
+.number, .cellNumber {
     width: 20%;
 }
 
