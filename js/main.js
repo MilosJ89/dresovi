@@ -264,6 +264,8 @@ function addRow() {
     } else {
         document.getElementById('bodyTable').appendChild(rowDiv);    
     }
+
+    document.getElementById(`name${i}`).focus();
     
 }
 
