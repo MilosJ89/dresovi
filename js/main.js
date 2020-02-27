@@ -1,6 +1,6 @@
 let majice = [majica1, majica2, majica3];
 let sorcevi = [sorc1, sorc2];
-let stucne = [stucne1, stucne2, stucne3];
+let stucne = [stucna1, stucna2, stucna3];
 
 /**
  * Function for create header
@@ -28,39 +28,88 @@ function createContent() {
             <div id='paintModel'>
                 <div id='majica'>
                     <div id='colorMajica'>
-                        <div id='color'>
+                        <div id='color1'>
                             <div id='dropdown'>
                                 <div class='item'>
-                                    <span></span>
+                                    <span class='red' onclick='color(this, "modelMajica")'></span>
                                     <p>Red</p>
                                 </div>
                                 <div class='item'>
-                                    <span></span>
+                                    <span class='green' onclick='color(this, "modelMajica")'></span>
                                     <p>Green</p>
                                 </div>
                                 <div class='item'>
-                                    <span></span>
+                                    <span class='blue' onclick='color(this, "modelMajica")'></span>
                                     <p>Blue</p>
                                 </div>
                                 <div class='item'>
-                                    <input type='color'></input>
+                                    <span class='yellow' onclick='color(this, "modelMajica")'></span>
+                                    <p>Yellow</p>
+                                </div>
+                                <div class='item'>
+                                    <input class='colorPicker' type='color'></input>
                                     <p>Color Picker</p>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                     <div id='modelMajica'></div>
                 </div>
                 <div id='sorc'>
                     <div id='colorSorc'>
-                        <input id='inputColorSorc' class='inputColors' type='color' value='#ffff00'></input>
+                        <div id='color2'>
+                            <div id='dropdown'>
+                                <div class='item'>
+                                    <span class='red' onclick='color(this, "modelSorc")'></span>
+                                    <p>Red</p>
+                                </div>
+                                <div class='item'>
+                                    <span class='green' onclick='color(this, "modelSorc")'></span>
+                                    <p>Green</p>
+                                </div>
+                                <div class='item'>
+                                    <span class='blue' onclick='color(this, "modelSorc")'></span>
+                                    <p>Blue</p>
+                                </div>
+                                <div class='item'>
+                                    <span class='yellow' onclick='color(this, "modelSorc")'></span>
+                                    <p>Yellow</p>
+                                </div>
+                                <div class='item'>
+                                    <input class='colorPicker' type='color'></input>
+                                    <p>Color Picker</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div id='modelSorc'></div>
                 </div>
                 <div id='stucne'>
                     <div id='colorStucne'>
-                        <input id='inputColorStucne' class='inputColors' type='color' value='#33cc33'></input>
+                        <div id='color3'>
+                            <div id='dropdown'>
+                                <div class='item'>
+                                    <span class='red' onclick='color(this, "modelStucne")'></span>
+                                    <p>Red</p>
+                                </div>
+                                <div class='item'>
+                                    <span class='green' onclick='color(this, "modelStucne")'></span>
+                                    <p>Green</p>
+                                </div>
+                                <div class='item'>
+                                    <span class='blue' onclick='color(this, "modelStucne")'></span>
+                                    <p>Blue</p>
+                                </div>
+                                <div class='item'>
+                                    <span class='yellow' onclick='color(this, "modelStucne")'></span>
+                                    <p>Yellow</p>
+                                </div>
+                                <div class='item'>
+                                    <input class='colorPicker' type='color'></input>
+                                    <p>Color Picker</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div id='modelStucne'></div>
                 </div>
@@ -86,6 +135,43 @@ function createContent() {
 
 createContent();
 
+/**
+ * Color 
+ */
+function color(span, model) {
+
+    let spanClass = span.getAttribute('class');
+    let bgColorSpan = window.getComputedStyle(document.querySelector(`.${spanClass}`, null)).getPropertyValue('background-color');
+
+    let id = document.getElementById(model).firstChild.id;
+
+
+    switch(model) {
+        case 'modelMajica':
+            document.getElementById(`${id}Napred`).setAttribute('fill', bgColorSpan);
+            document.getElementById(`${id}Ledja`).setAttribute('fill', bgColorSpan);
+            document.getElementById('color1').style.backgroundColor = bgColorSpan;
+        break;
+        
+        case 'modelSorc':
+            document.getElementById(`${id}Boja`).setAttribute('fill', bgColorSpan);
+            document.getElementById('color2').style.backgroundColor = bgColorSpan;
+        break;
+
+        case 'modelStucne':
+            document.getElementById(`${id}Leva`).setAttribute('fill', bgColorSpan);
+            document.getElementById(`${id}Desna`).setAttribute('fill', bgColorSpan);
+            document.getElementById('color3').style.backgroundColor = bgColorSpan;
+        break;
+
+        default:
+            break;
+    }
+}
+
+/**
+ * Active tab
+ */
 const btns = document.getElementsByClassName('btnModel');
 for(let i=0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
@@ -99,7 +185,7 @@ for(let i=0; i < btns.length; i++) {
 function createModel () {
     document.getElementById('modelMajica').innerHTML = majica1;
     document.getElementById('modelSorc').innerHTML = sorc1;
-    document.getElementById('modelStucne').innerHTML = stucne1;
+    document.getElementById('modelStucne').innerHTML = stucna1;
 }
 
 createModel();

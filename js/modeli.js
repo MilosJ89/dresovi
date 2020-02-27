@@ -1341,7 +1341,7 @@ const sorc2 = `<svg id='sorc2' width="239px" height="206px" viewBox="0 0 239 206
 </g>
 </svg>`;
 
-const stucne1 = `<svg id='stucne1' width="203px" height="255px" viewBox="0 0 203 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const stucna1 = `<svg id='stucna1' width="203px" height="255px" viewBox="0 0 203 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 	<g id="seven_modeli_dres_sorc_stucne" transform="translate(-223.000000, -696.000000)">
 		<g id="stucne" transform="translate(224.000000, 406.000000)">
@@ -1528,7 +1528,7 @@ const stucne1 = `<svg id='stucne1' width="203px" height="255px" viewBox="0 0 203
 </g>
 </svg>`;
 
-const stucne2 = `<svg id='stucne2' width="203px" height="255px" viewBox="0 0 203 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const stucna2 = `<svg id='stucna2' width="203px" height="255px" viewBox="0 0 203 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 	<g id="seven_modeli_dres_sorc_stucne" transform="translate(-221.000000, -697.000000)">
 		<g id="stucne" transform="translate(222.000000, 406.000000)">
@@ -1709,7 +1709,7 @@ const stucne2 = `<svg id='stucne2' width="203px" height="255px" viewBox="0 0 203
 </g>
 </svg>`
 
-const stucne3 = `<svg id='stucne3' width="203px" height="255px" viewBox="0 0 203 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const stucna3 = `<svg id='stucna3' width="203px" height="255px" viewBox="0 0 203 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 	<g id="seven_modeli_dres_sorc_stucne" transform="translate(-221.000000, -696.000000)">
 		<g id="stucne" transform="translate(222.000000, 696.000000)">
