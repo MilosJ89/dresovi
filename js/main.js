@@ -60,7 +60,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelSorc")'></span>
                                 <span class='white' onclick='color(this, "modelSorc")'></span>
                                 <span class='gold' onclick='color(this, "modelSorc")'></span>
-                                <input id='colorPikcer2' class='colorPicker' type='color' onchange='colorInput(this, "modelSorc")'>
+                                <input id='colorPikcer2' class='colorPicker' type='color' onclick='colorInput(this, "modelSorc")'>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,6 @@ function color(span, model) {
 }
 
 function colorInput(input, model) {
-    debugger
     let color = input.value;
     let id = document.getElementById(model).firstChild.id;
 
