@@ -15,18 +15,6 @@ function createHeader() {
 createHeader();
 
 /**
- * Function for create footer
- */
-// function createFooter() {
-//     let footer = `
-//         <footer id='footer'></footer>`;
-
-//         document.getElementById('body').innerHTML += footer;
-// }
-
-// createFooter();
-
-/**
  * Function for create content
  */
 function createContent() {
@@ -51,7 +39,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelMajica")'></span>
                                 <span class='white' onclick='color(this, "modelMajica")'></span>
                                 <span class='gold' onclick='color(this, "modelMajica")'></span>
-                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelMajica")'></input>
+                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelMajice")'>  
                             </div>
                         </div>
                     </div>
@@ -72,7 +60,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelSorc")'></span>
                                 <span class='white' onclick='color(this, "modelSorc")'></span>
                                 <span class='gold' onclick='color(this, "modelSorc")'></span>
-                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelSorc")'></input>
+                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelSorc")'>
                             </div>
                         </div>
                     </div>
@@ -93,7 +81,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelStucne")'></span>
                                 <span class='white' onclick='color(this, "modelStucne")'></span>
                                 <span class='gold' onclick='color(this, "modelStucne")'></span>
-                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelStucne")'></input>
+                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelStucne")' />
                             </div>
                         </div>
                     </div>
@@ -129,7 +117,6 @@ function color(span, model) {
 
     let id = document.getElementById(model).firstChild.id;
 
-
     switch(model) {
         case 'modelMajica':
             document.getElementById(`${id}Napred`).setAttribute('fill', bgColorSpan);
@@ -155,9 +142,7 @@ function color(span, model) {
 
 function colorInput(input, model) {
     let color = input.value;
-    
     let id = document.getElementById(model).firstChild.id;
-
 
     switch(model) {
         case 'modelMajica':
@@ -243,41 +228,6 @@ function chooseModel(id) {
  * Create models majice when open page 
  */
 createModels(majice, 'modelMajica');
-
-// /** Color majica */
-// document.getElementById('inputColorDres').addEventListener('input', () => {
-//     let index = 0;
-//     while(index++ <= majice.length) {
-//         if(document.getElementById(`majica${index}`).parentNode.id === `modelMajica`) {
-//             let color = document.getElementById('inputColorDres').value; 
-//             document.getElementById(`majica${index}Napred`).setAttribute('fill', color);
-//             document.getElementById(`majica${index}Ledja`).setAttribute('fill', color);
-//         }
-//     }
-// });
-
-// /** Color sorc */
-// document.getElementById('inputColorSorc').addEventListener('input', () => {
-//     let index = 0;
-//     while(index++ <= sorcevi.length) {
-//         if(document.getElementById(`sorc${index}`).parentNode.id === `modelSorc`) {
-//             let color = document.getElementById('inputColorSorc').value; 
-//             document.getElementById(`sorc${index}Boja`).setAttribute('fill', color);
-//         }
-//     }
-// });
-
-// /** Color stucne */
-// document.getElementById('inputColorStucne').addEventListener('input', () => {
-//     let index = 0;
-//     while(index++ <= stucne.length) {
-//         if(document.getElementById(`stucne${index}`).parentNode.id === `modelStucne`) {
-//             let color = document.getElementById('inputColorStucne').value; 
-//             document.getElementById(`stucna${index}Leva`).setAttribute('fill', color);
-//             document.getElementById(`stucna${index}Desna`).setAttribute('fill', color);
-//         }
-//     }
-// });
 
 /**
  * Function for next page when click continue button
