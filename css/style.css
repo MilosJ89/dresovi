@@ -2,7 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    position: relative;
+}
+
+#body {
+    height: 100vh;
 }
 
 header {
@@ -17,9 +20,9 @@ header {
 /*** CONTENT ***/
 #content {
     display: flex;
-    margin: 10px auto;
+    margin: 0 auto;
     max-width: 1460px;
-    height: 100%;
+    height: calc(100vh - 100px);
     justify-content: space-between;
     padding: 0 30px;
     position: relative;
@@ -251,26 +254,6 @@ header {
     width: 33%;
 }
 
-.contentBtn {
-    background-color: #cc0000;
-    border: none;
-    border-radius: 20px;
-    bottom: -40px;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 10px;
-    position: absolute;
-    right: 50px;
-    width: 150px;
-}
-
-.btnBack {
-    left: 50px;
-}
-
 /*** SECOND PAGE ***/
 #leftPage, #rightPage {
     width: 40%;
@@ -437,4 +420,26 @@ header {
     display: block;
     height: 40px;
     width: 20%;
+}
+
+/*** Footer ***/
+.btnFooter {
+    background-color: #cc0000;
+    border: none;
+    border-radius: 20px;
+    bottom: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 1px;
+    padding: 10px;
+    position: absolute;
+    right: 50px;
+    width: 150px;
+}
+
+.btnBack {
+    left: 50px;
 }

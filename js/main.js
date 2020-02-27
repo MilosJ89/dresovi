@@ -15,6 +15,18 @@ function createHeader() {
 createHeader();
 
 /**
+ * Function for create footer
+ */
+// function createFooter() {
+//     let footer = `
+//         <footer id='footer'></footer>`;
+
+//         document.getElementById('body').innerHTML += footer;
+// }
+
+// createFooter();
+
+/**
  * Function for create content
  */
 function createContent() {
@@ -100,15 +112,13 @@ function createContent() {
                 <div id='models'></div>
                 <div id='description'></div>
             </div>
-            <button class='contentBtn' id='continueBtn' onclick='nextStep()'>Continue</button>
+            <button class='btnFooter' id='continueBtn' onclick='nextStep()'>Continue</button>
         </div>`;
-
 
     document.getElementById('body').innerHTML += content;
 }
 
 createContent();
-
 /**
  * Color 
  */
@@ -318,10 +328,10 @@ function nextStep() {
             let add = `<button class='add' onclick='addRow()'></button>`;
             document.getElementById('rightPage').innerHTML += add;
 
-            let back = `<button class='contentBtn btnBack' onclick='back()'>Back</button>`;
+            let back = `<button class='btnFooter contentBtn btnBack' onclick='back()'>Back</button>`;
             document.getElementById('content').innerHTML += back;
 
-            let send = `<button class='contentBtn' id='send'>Send</button>`;
+            let send = `<button class='btnFooter contentBtn' id='send'>Send</button>`;
             document.getElementById('content').innerHTML += send; 
 }
 
