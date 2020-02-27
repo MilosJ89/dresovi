@@ -47,7 +47,7 @@ function createContent() {
                                     <p>Yellow</p>
                                 </div>
                                 <div class='item'>
-                                    <input class='colorPicker' type='color'></input>
+                                    <input class='colorPicker' type='color' onchange='colorInput(this, "modelMajica")'></input>
                                     <p>Color Picker</p>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ function createContent() {
                                     <p>Yellow</p>
                                 </div>
                                 <div class='item'>
-                                    <input class='colorPicker' type='color'></input>
+                                    <input class='colorPicker' type='color' onchange='colorInput(this, "modelSorc")'></input>
                                     <p>Color Picker</p>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@ function createContent() {
                                     <p>Yellow</p>
                                 </div>
                                 <div class='item'>
-                                    <input class='colorPicker' type='color'></input>
+                                    <input class='colorPicker' type='color' onchange='colorInput(this, "modelStucne")'></input>
                                     <p>Color Picker</p>
                                 </div>
                             </div>
@@ -162,6 +162,35 @@ function color(span, model) {
             document.getElementById(`${id}Leva`).setAttribute('fill', bgColorSpan);
             document.getElementById(`${id}Desna`).setAttribute('fill', bgColorSpan);
             document.getElementById('color3').style.backgroundColor = bgColorSpan;
+        break;
+
+        default:
+            break;
+    }
+}
+
+function colorInput(input, model) {
+    let color = input.value;
+    
+    let id = document.getElementById(model).firstChild.id;
+
+
+    switch(model) {
+        case 'modelMajica':
+            document.getElementById(`${id}Napred`).setAttribute('fill', color);
+            document.getElementById(`${id}Ledja`).setAttribute('fill', color);
+            document.getElementById('color1').style.backgroundColor = color;
+        break;
+        
+        case 'modelSorc':
+            document.getElementById(`${id}Boja`).setAttribute('fill', color);
+            document.getElementById('color2').style.backgroundColor = color;
+        break;
+
+        case 'modelStucne':
+            document.getElementById(`${id}Leva`).setAttribute('fill', color);
+            document.getElementById(`${id}Desna`).setAttribute('fill', color);
+            document.getElementById('color3').style.backgroundColor = color;
         break;
 
         default:
