@@ -77,12 +77,16 @@ header {
     border: 5px solid #ececec;
     height: 30px;
     position: relative;
-    width: 100px;
+    width: 50px;
 }
 
-#dropdown {
-    background-color: #1E1E3F;
+.dropdown1, .dropdown2, .dropdown3 {
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
     display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
     left: -5px;
     padding: 2px 0;
     position: absolute;
@@ -92,30 +96,43 @@ header {
     z-index: 5;
 }
 
-#color1:hover #dropdown {
-    display: block;
+/* #color1:hover #dropdown {
+    display: flex;
 }
 
 #color2:hover #dropdown {
-    display: block;
+    display: flex;
 }
 
 #color3:hover #dropdown {
-    display: block;
-}
-
-.item {
-    align-items: center;
     display: flex;
-    height: 30px;
-    padding: 2px;
+} */
+
+.openDropdown {
+    display: flex;
 }
 
-#dropdown span {
-    border: 3px solid #ececec;
+.dropdown1 span {
+    border: 1px solid gray;
     display: block;
     height: 24px;
-    margin-left: 5px;
+    margin: 3px;
+    width: 24px;
+}
+
+.dropdown2 span {
+    border: 1px solid gray;
+    display: block;
+    height: 24px;
+    margin: 3px;
+    width: 24px;
+}
+
+.dropdown3 span {
+    border: 1px solid gray;
+    display: block;
+    height: 24px;
+    margin: 3px;
     width: 24px;
 }
 
@@ -135,16 +152,42 @@ header {
     background-color: yellow;
 }
 
-#dropdown p {
-    color: white;
-    font-size: 12px;
-    margin-left: 2px;
+.pink {
+    background-color: pink;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.black {
+    background-color: black;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.white {
+    background-color: white;
+}
+
+.gold {
+    background-color: gold;
 }
 
 .colorPicker {
-    border: none;
+    background-image: url('../img/color_picker24x24.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gray;
     height: 24px;
-    margin-left: 5px;
+    margin: 3px;
+    padding: 12px;
     width: 24px;
 }
 
