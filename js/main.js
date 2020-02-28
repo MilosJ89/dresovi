@@ -39,7 +39,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelMajica")'></span>
                                 <span class='white' onclick='color(this, "modelMajica")'></span>
                                 <span class='gold' onclick='color(this, "modelMajica")'></span>
-                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelMajice")'>  
+                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelMajice")'>
                             </div>
                         </div>
                     </div>
