@@ -314,10 +314,10 @@ function nextStep() {
             let add = `<button class='add' onclick='addRow()'></button>`;
             document.getElementById('rightPage').innerHTML += add;
 
-            let back = `<button class='btnFooter contentBtn btnBack' onclick='back()'>Back</button>`;
+            let back = `<button class='btnFooter btnBack' onclick='back()'>Back</button>`;
             document.getElementById('content').innerHTML += back;
 
-            let send = `<button class='btnFooter contentBtn' id='send'>Send</button>`;
+            let send = `<button class='btnFooter' id='send'>Send</button>`;
             document.getElementById('content').innerHTML += send; 
 }
 

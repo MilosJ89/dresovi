@@ -160,7 +160,7 @@ header {
     border: 1px solid gray;
     height: 24px;
     margin: 3px;
-    padding: 12px;
+    padding: 10px;
     width: 24px;
 }
 
@@ -229,25 +229,25 @@ header {
     width: 50%;
 }
 
-#leftPage p {
+#leftPage p, #rightPage p {
     color: gray;
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 #leftPage div {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    margin-bottom: 30px;
+    margin: 10px;
+    margin-top: 55px;
 }
 
 #leftPage input {
     border: none;
     border-bottom: 1px solid gray;
-    height: 40px;
+    height: 30px;
     font-size: 20px;
     margin-bottom: 20px;
     padding-left: 20px;
@@ -272,23 +272,14 @@ header {
 }
 
 /*** Right page ***/
-#rightPage p {
-    color: gray;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px;
-    padding: 10px;
-}
-
 #table {
-    margin-bottom: 20px;
-    margin-right: 20px;
+    margin: 10px;
     max-height: 400px;
 }
 
 #headerTable {
     display: flex;
-    width: calc(100% - 15px);
+    height: 40px;
 }
 
 #headerTable p {
@@ -322,9 +313,8 @@ header {
     border: none;
     border-bottom: 1px solid gray;
     height: 30px;
-    margin: 0 20px;
+    margin: 0 20px 0 10px;
     text-align: center;
-    width: 10%;
 }
 
 .rowTable input {
