@@ -99,18 +99,6 @@ header {
     z-index: 5;
 }
 
-/* #color1:hover #dropdown {
-    display: flex;
-}
-
-#color2:hover #dropdown {
-    display: flex;
-}
-
-#color3:hover #dropdown {
-    display: flex;
-} */
-
 .openDropdown {
     display: flex;
 }

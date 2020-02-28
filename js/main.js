@@ -39,7 +39,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelMajica")'></span>
                                 <span class='white' onclick='color(this, "modelMajica")'></span>
                                 <span class='gold' onclick='color(this, "modelMajica")'></span>
-                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelMajice")'>
+                                <input id='colorPicker1' class='colorPicker' type='color' onchange='colorInput(this, "modelMajica", "dropdown1")'>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelSorc")'></span>
                                 <span class='white' onclick='color(this, "modelSorc")'></span>
                                 <span class='gold' onclick='color(this, "modelSorc")'></span>
-                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelSorc")'>
+                                <input id='colorPicker2' class='colorPicker' type='color' onchange='colorInput(this, "modelSorc", "dropdown2")'>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelStucne")'></span>
                                 <span class='white' onclick='color(this, "modelStucne")'></span>
                                 <span class='gold' onclick='color(this, "modelStucne")'></span>
-                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelStucne")' />
+                                <input id='colorPicker3' class='colorPicker' type='color' onchange='colorInput(this, "modelStucne", "dropdown3")'>
                             </div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@ function color(span, model) {
     }
 }
 
-function colorInput(input, model) {
+function colorInput(input, model,dropdown) {
     let color = input.value;
     let id = document.getElementById(model).firstChild.id;
 
@@ -165,13 +165,15 @@ function colorInput(input, model) {
         default:
             break;
     }
+    
+    document.querySelector(`.${dropdown}`).classList.remove('openDropdown');
 }
 
 /**
  * Function open dropdown
  */
 function openDropdown(dropdown) {
-    document.querySelector(`.${dropdown}`).classList.toggle('openDropdown');
+    document.querySelector(`.${dropdown}`).classList.add('openDropdown');
 }
 
 /**
@@ -345,41 +347,41 @@ function back() {
     createModel();
     createModels(majice, "modelMajica");
 
-    /** Color majica */
-    document.getElementById('inputColorDres').addEventListener('input', () => {
-        let index = 0;
-        while(index++ <= majice.length) {
-            if(document.getElementById(`majica${index}`).parentNode.id === `modelMajica`) {
-                let color = document.getElementById('inputColorDres').value; 
-                document.getElementById(`majica${index}Napred`).setAttribute('fill', color);
-                document.getElementById(`majica${index}Ledja`).setAttribute('fill', color);
-            }
-        }
-    });
+    // /** Color majica */
+    // document.getElementById('inputColorDres').addEventListener('input', () => {
+    //     let index = 0;
+    //     while(index++ <= majice.length) {
+    //         if(document.getElementById(`majica${index}`).parentNode.id === `modelMajica`) {
+    //             let color = document.getElementById('inputColorDres').value; 
+    //             document.getElementById(`majica${index}Napred`).setAttribute('fill', color);
+    //             document.getElementById(`majica${index}Ledja`).setAttribute('fill', color);
+    //         }
+    //     }
+    // });
 
 
-    /** Color sorc */
-    document.getElementById('inputColorSorc').addEventListener('input', () => {
-        let index = 0;
-        while(index++ <= sorcevi.length) {
-            if(document.getElementById(`sorc${index}`).parentNode.id === `modelSorc`) {
-                let color = document.getElementById('inputColorSorc').value; 
-                document.getElementById(`sorc${index}Boja`).setAttribute('fill', color);
-            }
-        }
-    });
+    // /** Color sorc */
+    // document.getElementById('inputColorSorc').addEventListener('input', () => {
+    //     let index = 0;
+    //     while(index++ <= sorcevi.length) {
+    //         if(document.getElementById(`sorc${index}`).parentNode.id === `modelSorc`) {
+    //             let color = document.getElementById('inputColorSorc').value; 
+    //             document.getElementById(`sorc${index}Boja`).setAttribute('fill', color);
+    //         }
+    //     }
+    // });
 
-    /** Color stucne */
-    document.getElementById('inputColorStucne').addEventListener('input', () => {
-        let index = 0;
-        while(index++ <= stucne.length) {
-            if(document.getElementById(`stucne${index}`).parentNode.id === `modelStucne`) {
-                let color = document.getElementById('inputColorStucne').value; 
-                document.getElementById(`stucna${index}Leva`).setAttribute('fill', color);
-                document.getElementById(`stucna${index}Desna`).setAttribute('fill', color);
-            }
-        }
-    });
+    // /** Color stucne */
+    // document.getElementById('inputColorStucne').addEventListener('input', () => {
+    //     let index = 0;
+    //     while(index++ <= stucne.length) {
+    //         if(document.getElementById(`stucne${index}`).parentNode.id === `modelStucne`) {
+    //             let color = document.getElementById('inputColorStucne').value; 
+    //             document.getElementById(`stucna${index}Leva`).setAttribute('fill', color);
+    //             document.getElementById(`stucna${index}Desna`).setAttribute('fill', color);
+    //         }
+    //     }
+    // });
 
     for(let i=0; i < btns.length; i++) {
         btns[i].addEventListener("click", function() {
