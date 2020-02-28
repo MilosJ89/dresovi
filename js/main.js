@@ -1,4 +1,4 @@
-let majice = [majica1, majica2, majica3];
+let majice = [majica1, majica2, majica3, majica4];
 let sorcevi = [sorc1, sorc2];
 let stucne = [stucna1, stucna2, stucna3];
 
@@ -14,6 +14,7 @@ function createHeader() {
 
 createHeader();
 
+
 /**
  * Function for create content
  */
@@ -26,63 +27,75 @@ function createContent() {
             <div id='paintModel'>
                 <div id='majica'>
                     <div id='colorMajica'>
-                        <div id='color1' onclick='openDropdown("dropdown1")'>
-                            <div class='dropdown1'>
-                                <span class='red' onclick='color(this, "modelMajica")'></span>
-                                <span class='green' onclick='color(this, "modelMajica")'></span>
-                                <span class='blue' onclick='color(this, "modelMajica")'></span>
-                                <span class='yellow' onclick='color(this, "modelMajica")'></span>
-                                <span class='pink' onclick='color(this, "modelMajica")'></span>
-                                <span class='gray' onclick='color(this, "modelMajica")'></span>
-                                <span class='black' onclick='color(this, "modelMajica")'></span>
-                                <span class='orange' onclick='color(this, "modelMajica")'></span>
-                                <span class='purple' onclick='color(this, "modelMajica")'></span>
-                                <span class='white' onclick='color(this, "modelMajica")'></span>
-                                <span class='gold' onclick='color(this, "modelMajica")'></span>
-                                <input id='colorPicker1' class='colorPicker' type='color' value='#0a290a'>      
-                            </div>    
+                        <div id='color1' onclick='openDropdown("dropdown1")'></div>
+                        <div class='dropdown1'>
+                            <span class='red' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='green' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='blue' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='yellow' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='pink' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='gray' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='black' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='orange' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='purple' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='white' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='gold' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <input class='colorPicker' type='color' onchange='colorInput(this, "modelMajica", "dropdown1")'>
+                        </div>
+                        <div id='color4' onclick='openDropdown("dropdown4")'></div>
+                        <div class='dropdown4'>
+                            <span class='red' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='green' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='blue' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='yellow' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='pink' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='gray' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='black' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='orange' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='purple' onclick='colorStafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='white' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <span class='gold' onclick='colorStrafte(this, "modelMajica", "dropdown4")'></span>
+                            <input class='colorPicker' type='color' onchange='colorInput(this, "modelMajica", "dropdown1")'>
                         </div>
                     </div>
                     <div id='modelMajica'></div>
                 </div>
                 <div id='sorc'>
                     <div id='colorSorc'>
-                        <div id='color2' onclick='openDropdown("dropdown2")'>
+                        <div id='color2' onclick='openDropdown("dropdown2")'></div>
                             <div class='dropdown2'>
-                                <span class='red' onclick='color(this, "modelSorc")'></span>
-                                <span class='green' onclick='color(this, "modelSorc")'></span>
-                                <span class='blue' onclick='color(this, "modelSorc")'></span>
-                                <span class='yellow' onclick='color(this, "modelSorc")'></span>
-                                <span class='pink' onclick='color(this, "modelSorc")'></span>
-                                <span class='gray' onclick='color(this, "modelSorc")'></span>
-                                <span class='black' onclick='color(this, "modelSorc")'></span>
-                                <span class='orange' onclick='color(this, "modelSorc")'></span>
-                                <span class='purple' onclick='color(this, "modelSorc")'></span>
-                                <span class='white' onclick='color(this, "modelSorc")'></span>
-                                <span class='gold' onclick='color(this, "modelSorc")'></span>
-                                <input id='colorPicker2' class='colorPicker' type='color' oninput='colorInput(this, "modelSorc")' value='#0a290a'>
+                                <span class='red' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='green' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='blue' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='yellow' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='pink' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='gray' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='black' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='orange' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='purple' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='white' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <span class='gold' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                                <input class='colorPicker' type='color' onchange='colorInput(this, "modelSorc", "dropdown2")'>
                             </div>
                         </div>
-                    </div>
                     <div id='modelSorc'></div>
                 </div>
                 <div id='stucne'>
                     <div id='colorStucne'>
-                        <div id='color3' onclick='openDropdown("dropdown3")'>
-                            <div class='dropdown3'>
-                                <span class='red' onclick='color(this, "modelStucne")'></span>
-                                <span class='green' onclick='color(this, "modelStucne")'></span>
-                                <span class='blue' onclick='color(this, "modelStucne")'></span>
-                                <span class='yellow' onclick='color(this, "modelStucne")'></span>
-                                <span class='pink' onclick='color(this, "modelStucne")'></span>
-                                <span class='gray' onclick='color(this, "modelStucne")'></span>
-                                <span class='black' onclick='color(this, "modelStucne")'></span>
-                                <span class='orange' onclick='color(this, "modelStucne")'></span>
-                                <span class='purple' onclick='color(this, "modelStucne")'></span>
-                                <span class='white' onclick='color(this, "modelStucne")'></span>
-                                <span class='gold' onclick='color(this, "modelStucne")'></span>
-                                <input id='colorPicker3' class='colorPicker' type='color' oninput='colorInput(this, "modelStucne")' value='#0a290a'>
-                            </div>
+                        <div id='color3' onclick='openDropdown("dropdown3")'></div>
+                        <div class='dropdown3'>
+                            <span class='red' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='green' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='blue' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='yellow' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='pink' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='gray' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='black' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='orange' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='purple' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='white' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='gold' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <input class='colorPicker' type='color' onchange='colorInput(this, "modelStucne", "dropdown3")'>
                         </div>
                     </div>
                     <div id='modelStucne'></div>
@@ -101,26 +114,32 @@ function createContent() {
                 <div id='description'></div>
             </div>
             <button class='btnFooter' id='continueBtn' onclick='nextStep()'>Continue</button>
+            </div>
         </div>`;
 
     document.getElementById('body').innerHTML += content;
 }
 
 createContent();
-/**
- * Color 
- */
-function color(span, model) {
 
+/**
+ * 
+ * @param {*} span 
+ * @param {*} model 
+ * @param {*} dropdown 
+ * 
+ * Paint model from fix colors in span
+ */
+
+function color(span, model, dropdown) {
     let spanClass = span.getAttribute('class');
     let bgColorSpan = window.getComputedStyle(document.querySelector(`.${spanClass}`, null)).getPropertyValue('background-color');
-
     let id = document.getElementById(model).firstChild.id;
 
     switch(model) {
         case 'modelMajica':
             document.getElementById(`${id}Napred`).setAttribute('fill', bgColorSpan);
-            document.getElementById(`${id}Ledja`).setAttribute('fill', bgColorSpan);
+            // document.getElementById(`${id}Ledja`).setAttribute('fill', bgColorSpan);
             document.getElementById('color1').style.backgroundColor = bgColorSpan;
         break;
         
@@ -138,60 +157,103 @@ function color(span, model) {
         default:
             break;
     }
+
+    document.querySelector(`.${dropdown}`).classList.remove('openDropdown');
 }
 
-document.getElementById('colorPicker1').addEventListener('input', () => {
-    let color = document.getElementById('colorPicker1').value;
-    console.log(color);
-        document.getElementById(`majica1Napred`).setAttribute('fill', color);
-        document.getElementById(`majica1Ledja`).setAttribute('fill', color);
-})
+function colorStrafte(span, model, dropdown) {
+    
+    let spanClass  = span.getAttribute('class');
+    let bgColorSpan = window.getComputedStyle(document.querySelector(`.${spanClass}`, null)).getPropertyValue('background-color');
+    let id = document.getElementById(model).firstChild.id;
 
-// function colorInput(input, model) {
-//     let color = input.value;
-//     let id = document.getElementById(model).firstChild.id;
+    document.querySelectorAll(`.${id}Strafta`).forEach(x=> x.setAttribute('fill', bgColorSpan));
 
-//     switch(model) {
-//         case 'modelMajica':
-//             document.getElementById(`${id}Napred`).setAttribute('fill', color);
-//             document.getElementById(`${id}Ledja`).setAttribute('fill', color);
-//             document.getElementById('color1').style.backgroundColor = color;
-//         break;
+    document.querySelector(`.${dropdown}`).classList.remove('openDropdown');
+}
+
+/**
+ * 
+ * @param {*} input 
+ * @param {*} model 
+ * @param {*} dropdown
+ * 
+ * Paint model from color in color picker 
+ */
+function colorInput(input, model, dropdown) {
+    let color = input.value;
+    let id = document.getElementById(model).firstChild.id;
+
+    switch(model) {
+        case 'modelMajica':
+            document.getElementById(`${id}Napred`).setAttribute('fill', color);
+            document.getElementById(`${id}Ledja`).setAttribute('fill', color);
+            document.getElementById('color1').style.backgroundColor = color;
+        break;
         
-//         case 'modelSorc':
-//             document.getElementById(`${id}Boja`).setAttribute('fill', color);
-//             document.getElementById('color2').style.backgroundColor = color;
-//         break;
+        case 'modelSorc':
+            document.getElementById(`${id}Boja`).setAttribute('fill', color);
+            document.getElementById('color2').style.backgroundColor = color;
+        break;
 
-//         case 'modelStucne':
-//             document.getElementById(`${id}Leva`).setAttribute('fill', color);
-//             document.getElementById(`${id}Desna`).setAttribute('fill', color);
-//             document.getElementById('color3').style.backgroundColor = color;
-//         break;
+        case 'modelStucne':
+            document.getElementById(`${id}Leva`).setAttribute('fill', color);
+            document.getElementById(`${id}Desna`).setAttribute('fill', color);
+            document.getElementById('color3').style.backgroundColor = color;
+        break;
 
-//         default:
-//             break;
-//     }
-// }
+        default:
+            break;
+    }
+
+    document.querySelector(`.${dropdown}`).classList.remove('openDropdown');
+}
 
 /**
  * Function open dropdown
  */
 function openDropdown(dropdown) {
-    document.querySelector(`.${dropdown}`).classList.toggle('openDropdown');
+    if(dropdown === "dropdown1") {
+        document.querySelector(`.${dropdown}`).classList.add('openDropdown');
+        document.querySelector(`.dropdown2`).classList.remove('openDropdown');
+        document.querySelector(`.dropdown3`).classList.remove('openDropdown');
+        document.querySelector(`.dropdown4`).classList.remove('openDropdown');
+    }
+     else if(dropdown === "dropdown2") {
+        document.querySelector(`.${dropdown}`).classList.add('openDropdown');
+        document.querySelector(`.dropdown1`).classList.remove('openDropdown');
+        document.querySelector(`.dropdown3`).classList.remove('openDropdown');
+        document.querySelector(`.dropdown4`).classList.remove('openDropdown');
+    } 
+      else if(dropdown === "dropdown3") {
+        document.querySelector(`.${dropdown}`).classList.add('openDropdown');
+        document.querySelector(`.dropdown1`).classList.remove('openDropdown');
+        document.querySelector(`.dropdown2`).classList.remove('openDropdown');
+        document.querySelector(`.dropdown4`).classList.remove('openDropdown');
+    }
+    else if(dropdown === "dropdown4") {
+        document.querySelector(`.${dropdown}`).classList.add('openDropdown');
+        document.querySelector(`.dropdown1`).classList.remove('openDropdown');
+        document.querySelector(`.dropdown2`).classList.remove('openDropdown');
+        document.querySelector(`.dropdown3`).classList.remove('openDropdown');
+    }
 }
 
 /**
  * Active tab
  */
-const btns = document.getElementsByClassName('btnModel');
-for(let i=0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace("active", "");
-    this.className += " active";
-    });
-};
+function activeTab() {
+    const btns = document.getElementsByClassName('btnModel');
+    for(let i=0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        let current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace("active", "");
+        this.className += " active";
+        });
+    };
+}
+
+activeTab();
 
 /** Create shirt model at left page */
 function createModel () {
@@ -265,6 +327,9 @@ function nextStep() {
                             <div id='bodyTable'>
                                 <div id='rowTable1' class='rowTable'>
                                     <select class='select size'>
+                                        <option>8</option>
+                                        <option>10</option>
+                                        <option>12</option>
                                         <option>S</option>
                                         <option>M</option>
                                         <option>L</option>
@@ -285,10 +350,10 @@ function nextStep() {
             let add = `<button class='add' onclick='addRow()'></button>`;
             document.getElementById('rightPage').innerHTML += add;
 
-            let back = `<button class='btnFooter contentBtn btnBack' onclick='back()'>Back</button>`;
+            let back = `<button class='btnFooter btnBack' onclick='back()'>Back</button>`;
             document.getElementById('content').innerHTML += back;
 
-            let send = `<button class='btnFooter contentBtn' id='send'>Send</button>`;
+            let send = `<button class='btnFooter' id='send' onclick='send()'>Send</button>`;
             document.getElementById('content').innerHTML += send; 
 }
 
@@ -307,6 +372,9 @@ function addRow() {
 
     let rowTable = ` 
         <select class='select size'>
+            <option>8</option>
+            <option>10</option>
+            <option>12</option>
             <option>S</option>
             <option>M</option>
             <option>L</option>
@@ -328,8 +396,7 @@ function addRow() {
         document.getElementById('bodyTable').appendChild(rowDiv);    
     }
 
-    document.getElementById(`name${i}`).focus();
-    
+    document.getElementById(`name${i}`).focus();  
 }
 
 /**
@@ -344,55 +411,23 @@ function deleteRow(i) {
 }
 
 /**
- * Function for prevoous page when click button back
+ * Function for previous page when click button back
  */
 function back() {
     document.getElementById('content').outerHTML = '';
     createContent();
     createModel();
     createModels(majice, "modelMajica");
+    activeTab();
+}
 
-    // /** Color majica */
-    // document.getElementById('inputColorDres').addEventListener('input', () => {
-    //     let index = 0;
-    //     while(index++ <= majice.length) {
-    //         if(document.getElementById(`majica${index}`).parentNode.id === `modelMajica`) {
-    //             let color = document.getElementById('inputColorDres').value; 
-    //             document.getElementById(`majica${index}Napred`).setAttribute('fill', color);
-    //             document.getElementById(`majica${index}Ledja`).setAttribute('fill', color);
-    //         }
-    //     }
-    // });
+/**
+ * Function for modal when click at send
+ */
+function send() {
+    let sendModal = `
+                <div id='sendModal'>
+                </div>`;
 
-
-    // /** Color sorc */
-    // document.getElementById('inputColorSorc').addEventListener('input', () => {
-    //     let index = 0;
-    //     while(index++ <= sorcevi.length) {
-    //         if(document.getElementById(`sorc${index}`).parentNode.id === `modelSorc`) {
-    //             let color = document.getElementById('inputColorSorc').value; 
-    //             document.getElementById(`sorc${index}Boja`).setAttribute('fill', color);
-    //         }
-    //     }
-    // });
-
-    // /** Color stucne */
-    // document.getElementById('inputColorStucne').addEventListener('input', () => {
-    //     let index = 0;
-    //     while(index++ <= stucne.length) {
-    //         if(document.getElementById(`stucne${index}`).parentNode.id === `modelStucne`) {
-    //             let color = document.getElementById('inputColorStucne').value; 
-    //             document.getElementById(`stucna${index}Leva`).setAttribute('fill', color);
-    //             document.getElementById(`stucna${index}Desna`).setAttribute('fill', color);
-    //         }
-    //     }
-    // });
-
-    for(let i=0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-        let current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace("active", "");
-        this.className += " active";
-        });
-    };
+    document.body.innerHTML += sendModal;
 }
