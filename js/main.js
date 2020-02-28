@@ -39,8 +39,8 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelMajica")'></span>
                                 <span class='white' onclick='color(this, "modelMajica")'></span>
                                 <span class='gold' onclick='color(this, "modelMajica")'></span>
-                                <input id='colorPikcer1' class='colorPicker' type='color' onchange='colorInput(this, "modelMajica")'>  
-                            </div>
+                                <input id='colorPicker1' class='colorPicker' type='color' value='#0a290a'>      
+                            </div>    
                         </div>
                     </div>
                     <div id='modelMajica'></div>
@@ -60,7 +60,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelSorc")'></span>
                                 <span class='white' onclick='color(this, "modelSorc")'></span>
                                 <span class='gold' onclick='color(this, "modelSorc")'></span>
-                                <input id='colorPikcer2' class='colorPicker' type='color' onchange='colorInput(this, "modelSorc")'>
+                                <input id='colorPicker2' class='colorPicker' type='color' oninput='colorInput(this, "modelSorc")' value='#0a290a'>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ function createContent() {
                                 <span class='purple' onclick='color(this, "modelStucne")'></span>
                                 <span class='white' onclick='color(this, "modelStucne")'></span>
                                 <span class='gold' onclick='color(this, "modelStucne")'></span>
-                                <input id='colorPikcer3' class='colorPicker' type='color' onchange='colorInput(this, "modelStucne")'>
+                                <input id='colorPicker3' class='colorPicker' type='color' oninput='colorInput(this, "modelStucne")' value='#0a290a'>
                             </div>
                         </div>
                     </div>
@@ -140,32 +140,39 @@ function color(span, model) {
     }
 }
 
-function colorInput(input, model) {
-    let color = input.value;
-    let id = document.getElementById(model).firstChild.id;
+document.getElementById('colorPicker1').addEventListener('input', () => {
+    let color = document.getElementById('colorPicker1').value;
+    console.log(color);
+        document.getElementById(`majica1Napred`).setAttribute('fill', color);
+        document.getElementById(`majica1Ledja`).setAttribute('fill', color);
+})
 
-    switch(model) {
-        case 'modelMajica':
-            document.getElementById(`${id}Napred`).setAttribute('fill', color);
-            document.getElementById(`${id}Ledja`).setAttribute('fill', color);
-            document.getElementById('color1').style.backgroundColor = color;
-        break;
+// function colorInput(input, model) {
+//     let color = input.value;
+//     let id = document.getElementById(model).firstChild.id;
+
+//     switch(model) {
+//         case 'modelMajica':
+//             document.getElementById(`${id}Napred`).setAttribute('fill', color);
+//             document.getElementById(`${id}Ledja`).setAttribute('fill', color);
+//             document.getElementById('color1').style.backgroundColor = color;
+//         break;
         
-        case 'modelSorc':
-            document.getElementById(`${id}Boja`).setAttribute('fill', color);
-            document.getElementById('color2').style.backgroundColor = color;
-        break;
+//         case 'modelSorc':
+//             document.getElementById(`${id}Boja`).setAttribute('fill', color);
+//             document.getElementById('color2').style.backgroundColor = color;
+//         break;
 
-        case 'modelStucne':
-            document.getElementById(`${id}Leva`).setAttribute('fill', color);
-            document.getElementById(`${id}Desna`).setAttribute('fill', color);
-            document.getElementById('color3').style.backgroundColor = color;
-        break;
+//         case 'modelStucne':
+//             document.getElementById(`${id}Leva`).setAttribute('fill', color);
+//             document.getElementById(`${id}Desna`).setAttribute('fill', color);
+//             document.getElementById('color3').style.backgroundColor = color;
+//         break;
 
-        default:
-            break;
-    }
-}
+//         default:
+//             break;
+//     }
+// }
 
 /**
  * Function open dropdown
