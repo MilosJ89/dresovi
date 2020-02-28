@@ -33,7 +33,7 @@ header {
     width: 50%;
 }
 
-/*** Left page */
+/*** Left page ***/
 #paintModel {
     display: flex;
     flex-direction: column;
@@ -45,13 +45,7 @@ header {
     margin-top: 20px;
 }
 
-#colorMajica, #colorSorc, #colorStucne {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-
+/** Model that color **/
 #modelMajica, #modelSorc, #modelStucne {
     width: 100%;
 }
@@ -72,15 +66,19 @@ header {
     height: 150px;
 }
 
-.inputColors {
-    height: 20px;
+/** Color dropdown ith colors and color picker **/
+#colorMajica, #colorSorc, #colorStucne {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
 #color1, #color2, #color3 {
     background-color: #cc0000;
-    border: 5px solid #ececec;
-    height: 30px;
-    width: 50px;
+    border: 1px solid gray;
+    height: 24px;
+    width: 24px;
 }
 
 .dropdown1, .dropdown2, .dropdown3 {
@@ -90,10 +88,10 @@ header {
     display: none;
     flex-wrap: wrap;
     justify-content: space-around;
-    left: -5px;
+    left: 0;
     padding: 2px 0;
     position: absolute;
-    top: 25px;
+    top: 24px;
     transform: translate(0, 0);
     width: 100px;
     z-index: 5;
@@ -103,23 +101,7 @@ header {
     display: flex;
 }
 
-.dropdown1 span {
-    border: 1px solid gray;
-    display: block;
-    height: 24px;
-    margin: 3px;
-    width: 24px;
-}
-
-.dropdown2 span {
-    border: 1px solid gray;
-    display: block;
-    height: 24px;
-    margin: 3px;
-    width: 24px;
-}
-
-.dropdown3 span {
+#paintModel span {
     border: 1px solid gray;
     display: block;
     height: 24px;
@@ -244,7 +226,7 @@ header {
 
 /*** SECOND PAGE ***/
 #leftPage, #rightPage {
-    width: 40%;
+    width: 50%;
 }
 
 #leftPage p {
