@@ -26,63 +26,60 @@ function createContent() {
             <div id='paintModel'>
                 <div id='majica'>
                     <div id='colorMajica'>
-                        <div id='color1' onclick='openDropdown("dropdown1")'>
-                            <div class='dropdown1'>
-                                <span class='red' onclick='color(this, "modelMajica")'></span>
-                                <span class='green' onclick='color(this, "modelMajica")'></span>
-                                <span class='blue' onclick='color(this, "modelMajica")'></span>
-                                <span class='yellow' onclick='color(this, "modelMajica")'></span>
-                                <span class='pink' onclick='color(this, "modelMajica")'></span>
-                                <span class='gray' onclick='color(this, "modelMajica")'></span>
-                                <span class='black' onclick='color(this, "modelMajica")'></span>
-                                <span class='orange' onclick='color(this, "modelMajica")'></span>
-                                <span class='purple' onclick='color(this, "modelMajica")'></span>
-                                <span class='white' onclick='color(this, "modelMajica")'></span>
-                                <span class='gold' onclick='color(this, "modelMajica")'></span>
-                                <input id='colorPicker1' class='colorPicker' type='color' onchange='colorInput(this, "modelMajica", "dropdown1")'>
-                            </div>
+                        <div id='color1' onclick='openDropdown("dropdown1")'></div>
+                        <div class='dropdown1'>
+                            <span class='red' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='green' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='blue' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='yellow' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='pink' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='gray' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='black' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='orange' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='purple' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='white' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <span class='gold' onclick='color(this, "modelMajica", "dropdown1")'></span>
+                            <input id='colorPicker1' class='colorPicker' type='color' onchange='colorInput(this, "modelMajica", "dropdown1")'>
                         </div>
                     </div>
                     <div id='modelMajica'></div>
                 </div>
                 <div id='sorc'>
                     <div id='colorSorc'>
-                        <div id='color2' onclick='openDropdown("dropdown2")'>
-                            <div class='dropdown2'>
-                                <span class='red' onclick='color(this, "modelSorc")'></span>
-                                <span class='green' onclick='color(this, "modelSorc")'></span>
-                                <span class='blue' onclick='color(this, "modelSorc")'></span>
-                                <span class='yellow' onclick='color(this, "modelSorc")'></span>
-                                <span class='pink' onclick='color(this, "modelSorc")'></span>
-                                <span class='gray' onclick='color(this, "modelSorc")'></span>
-                                <span class='black' onclick='color(this, "modelSorc")'></span>
-                                <span class='orange' onclick='color(this, "modelSorc")'></span>
-                                <span class='purple' onclick='color(this, "modelSorc")'></span>
-                                <span class='white' onclick='color(this, "modelSorc")'></span>
-                                <span class='gold' onclick='color(this, "modelSorc")'></span>
-                                <input id='colorPicker2' class='colorPicker' type='color' onchange='colorInput(this, "modelSorc", "dropdown2")'>
-                            </div>
+                        <div id='color2' onclick='openDropdown("dropdown2")'></div>
+                        <div class='dropdown2'>
+                            <span class='red' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='green' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='blue' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='yellow' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='pink' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='gray' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='black' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='orange' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='purple' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='white' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <span class='gold' onclick='color(this, "modelSorc", "dropdown2")'></span>
+                            <input id='colorPicker2' class='colorPicker' type='color' onchange='colorInput(this, "modelSorc", "dropdown2")'>
                         </div>
                     </div>
                     <div id='modelSorc'></div>
                 </div>
                 <div id='stucne'>
                     <div id='colorStucne'>
-                        <div id='color3' onclick='openDropdown("dropdown3")'>
-                            <div class='dropdown3'>
-                                <span class='red' onclick='color(this, "modelStucne")'></span>
-                                <span class='green' onclick='color(this, "modelStucne")'></span>
-                                <span class='blue' onclick='color(this, "modelStucne")'></span>
-                                <span class='yellow' onclick='color(this, "modelStucne")'></span>
-                                <span class='pink' onclick='color(this, "modelStucne")'></span>
-                                <span class='gray' onclick='color(this, "modelStucne")'></span>
-                                <span class='black' onclick='color(this, "modelStucne")'></span>
-                                <span class='orange' onclick='color(this, "modelStucne")'></span>
-                                <span class='purple' onclick='color(this, "modelStucne")'></span>
-                                <span class='white' onclick='color(this, "modelStucne")'></span>
-                                <span class='gold' onclick='color(this, "modelStucne")'></span>
-                                <input id='colorPicker3' class='colorPicker' type='color' onchange='colorInput(this, "modelStucne", "dropdown3")'>
-                            </div>
+                        <div id='color3' onclick='openDropdown("dropdown3")'></div>
+                        <div class='dropdown3'>
+                            <span class='red' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='green' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='blue' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='yellow' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='pink' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='gray' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='black' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='orange' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='purple' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='white' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <span class='gold' onclick='color(this, "modelStucne", "dropdown3")'></span>
+                            <input id='colorPicker3' class='colorPicker' type='color' onchange='colorInput(this, "modelStucne", "dropdown3")'>
                         </div>
                     </div>
                     <div id='modelStucne'></div>
@@ -110,8 +107,8 @@ createContent();
 /**
  * Color 
  */
-function color(span, model) {
-
+function color(span, model, dropdown) {
+    document.querySelector(`.${dropdown}`).classList.remove('openDropdown');
     let spanClass = span.getAttribute('class');
     let bgColorSpan = window.getComputedStyle(document.querySelector(`.${spanClass}`, null)).getPropertyValue('background-color');
 

@@ -49,6 +49,7 @@ header {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 #modelMajica, #modelSorc, #modelStucne {
@@ -79,7 +80,6 @@ header {
     background-color: #cc0000;
     border: 5px solid #ececec;
     height: 30px;
-    position: relative;
     width: 50px;
 }
 
