@@ -6,6 +6,7 @@
 
 #body {
     height: 100vh;
+    position: relative;
 }
 
 header {
@@ -15,6 +16,10 @@ header {
     background-size: cover;
     border-bottom: 1px solid black;
     height: 100px;
+}
+
+button:focus {
+    outline: none;
 }
 
 /*** CONTENT ***/
@@ -74,14 +79,15 @@ header {
     position: relative;
 }
 
-#color1, #color2, #color3 {
+#color1, #color2, #color3, #color4 {
     background-color: #cc0000;
     border: 1px solid gray;
     height: 24px;
+    margin: 10px;
     width: 24px;
 }
 
-.dropdown1, .dropdown2, .dropdown3 {
+.dropdown1, .dropdown2, .dropdown3, .dropdown4 {
     align-items: center;
     background-color: white;
     border: 1px solid black;
@@ -402,4 +408,15 @@ header {
 
 .btnBack {
     left: 50px;
+}
+
+#sendModal {
+    background-color: red;
+    height: 300px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 100;
 }
