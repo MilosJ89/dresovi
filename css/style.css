@@ -24,22 +24,271 @@ button:focus {
 
 /*** CONTENT ***/
 #content {
+    border-top: none;
     display: flex;
     margin: 0 auto;
     max-width: 1460px;
-    height: calc(100vh - 100px);
-    justify-content: space-between;
-    padding: 0 30px;
-    position: relative;
+    height: calc(100% - 100px);
+    /* position: relative; */
     width: 100%;
 }
 
-#paintModel, #chooseModel {
+#leftPage, #rightPage {
+    position: relative;
     width: 50%;
 }
 
+#leftPage {
+    border-right: 1px solid gray;
+}
+
+/*** HOME PAGE ***/
+
+    /** LEFT PAGE **/
+#modelPaintJerseys, #modelPaintShorts, #modelPaintSocks {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.colors {
+    width: 30%;
+}
+
+#colorJerseys {
+    display: flex;
+}
+
+.modelPaint {
+    width: 70%;
+} 
+
+.modelPaint svg {
+    height: 150px;
+    width: 100%;
+}
+
+    /** RIGHT PAGE **/
+.tabs {
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    height: 55px;
+    width: 100%;
+}
+
+.tabsBtn {
+    border: none;
+    color: gray;
+    cursor: pointer;
+    display: block;
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: bold;;
+    padding: 15px;
+}
+
+.activeBtn {
+    background-color: #ececec;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+        /* Models */
+.models {
+    background-color: #ececec;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 95px);
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.models svg {
+    height: 100px;
+    width: 100px;
+}
+
+.btn {
+    background-color: #cc0000;
+    border: none;
+    border-radius: 20px;
+    bottom: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 1px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    width: 150px;
+}
+
+.backBtn {
+    left: 0;
+}
+
+/*** SECOND PAGE ***/
+.title {
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+}
+    /** CONTACT PAGE **/
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 55px;
+}
+
+.contact input {
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.contact input:focus {
+    border: none;
+    outline: 1px solid gray;
+}
+
+.contact textarea {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+    height: 254px;
+    padding: 20px;
+}
+
+.contact textarea:focus {
+    border: none;
+    outline: 1px solid gray;
+}
+
+    /** LIST PAGE **/
+#table {
+    margin: 10px;
+    max-height: 400px;
+}
+
+#headerTable {
+    display: flex;
+    height: 40px;
+}
+
+#headerTable p {
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+}
+
+#bodyTable {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow-y: scroll;
+} 
+
+#bodyTable p {
+    align-items: center;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    padding: 0;
+    text-align: center;
+}
+
+.rowTable {
+    display: flex;
+    margin: 5px 0;
+}
+
+.select {
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 30px;
+    margin: 0 20px 0 10px;
+    text-align: center;
+}
+
+.rowTable input {
+    border: none;
+    border-bottom: 1px solid gray;
+    color: gray;
+    display: block;
+    font-size: 18px;
+    height: 30px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.size {
+    width: 10%;
+}
+
+.name, .cellName {
+    width: 50%;
+}
+
+.number, .cellNumber {
+    width: 20%;
+}
+
+.rowTable input:focus {
+    outline: none;
+}
+
+.add {
+    background-color: white;
+    background-image: url('../img/add-24px.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 20px;
+    width: 40px;
+}
+
+.add:focus {
+    outline: none;
+}
+
+.delete {
+    background-color: white;
+    background-image: url('../img/remove-24px.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    width: 20%;
+}
+
+.delete:focus {
+    outline: none;
+}
+
+.empty {
+    display: block;
+    height: 40px;
+    width: 20%;
+}
+
+
 /*** Left page ***/
-#paintModel {
+/* #paintModel {
     display: flex;
     flex-direction: column;
 }
@@ -47,11 +296,11 @@ button:focus {
 #majica, #sorc, #stucne {
     align-items: center;
     display: flex;
-    margin-top: 20px;
-}
+    margin-top: 20px; */
+/* } */
 
 /** Model that color **/
-#modelMajica, #modelSorc, #modelStucne {
+/* #modelMajica, #modelSorc, #modelStucne {
     width: 100%;
 }
 
@@ -69,10 +318,10 @@ button:focus {
 
 #modelStucne svg {
     height: 150px;
-}
+} */
 
 /** Color dropdown ith colors and color picker **/
-#colorMajica, #colorSorc, #colorStucne {
+/* #colorMajica, #colorSorc, #colorStucne {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -168,10 +417,10 @@ button:focus {
     margin: 3px;
     padding: 10px;
     width: 24px;
-}
+} */
 
 /*** Right page ***/
-#chooseModel p {
+/* #chooseModel p {
     font-size: 26px;
     font-weight: bold;
     padding: 10px 0;
@@ -228,10 +477,10 @@ button:focus {
 #description p {
     text-align: center;
     width: 33%;
-}
+} */
 
 /*** SECOND PAGE ***/
-#leftPage, #rightPage {
+/* #leftPage, #rightPage {
     width: 50%;
 }
 
@@ -278,7 +527,7 @@ button:focus {
 }
 
 /*** Right page ***/
-#table {
+/* #table {
     margin: 10px;
     max-height: 400px;
 }
@@ -389,8 +638,8 @@ button:focus {
 }
 
 /*** Footer ***/
-.btnFooter {
-    background-color: #cc0000;
+/* .btnFooter { */
+    /* background-color: #cc0000;
     border: none;
     border-radius: 20px;
     bottom: 20px;
@@ -419,4 +668,4 @@ button:focus {
     transform: translate(-50%, -50%);
     width: 300px;
     z-index: 100;
-}
+}   */
