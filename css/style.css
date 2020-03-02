@@ -46,7 +46,7 @@ button:focus {
 
 /*** HOME PAGE ***/
 
-    /** LEFT PAGE **/
+    /** RIGHT PAGE **/
 #modelPaintJerseys, #modelPaintShorts, #modelPaintSocks {
     display: flex;
     height: 200px;
@@ -163,15 +163,19 @@ button:focus {
 }
 
 .modelPaint {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     width: 70%;
 } 
 
 .modelPaint svg {
     height: 150px;
+    transform: rotateY(0deg);
     width: 100%;
 }
 
-    /** RIGHT PAGE **/
+    /** LEFT PAGE **/
 .tabs {
     border-bottom: 1px solid #dadada;
     display: flex;
@@ -208,6 +212,7 @@ button:focus {
 }
 
 .models svg {
+    cursor: pointer;
     height: 100px;
     width: 100px;
 }
@@ -389,4 +394,37 @@ button:focus {
     display: block;
     height: 40px;
     width: 20%;
+}
+
+.rotateJerseyForward {
+    animation: forwardRotate 3s;
+    /* transform: rotateY(65deg); */
+}
+
+@keyframes forwardRotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+
+/* #backOfJersey {
+    transform: rotateY(90deg);
+} */
+
+.rotateJerseyBack {
+    animation: backRotate 3s;
+}
+
+@keyframes backRotate {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
 }

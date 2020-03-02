@@ -1,4 +1,4 @@
-let jerseys = [jersey1, jersey2, jersey3, jersey4];
+let jerseys = [jersey1, jersey2, jersey3, jersey4, backOfJersey];
 let modelsOfJerseys = [jerseyModel1, jerseyModel2, jerseyModel3, jerseyModel4];
 let shorts = [shorts1, shorts2];
 let modelsOfShorts = [shortsModel1, shortsModel2];
@@ -44,7 +44,7 @@ function modelForPaint() {
                         <div class='colors' id='colorSocks'></div>
                         <div class='modelPaint' id='modelSock'></div>
                     </div>`;
-    document.getElementById('leftPage').innerHTML = modelPaint;
+    document.getElementById('rightPage').innerHTML = modelPaint;
 }
 
 /**
@@ -59,7 +59,7 @@ function createTabs() {
                     <button id='font' class='tabsBtn' onclick='createModels(this, letters)'>Font</button>
                     <button id='logo' class='tabsBtn' onclick='createModels(this, logos)'>Logo</button>
                 </div>`;
-    document.getElementById('rightPage').innerHTML = tabs;
+    document.getElementById('leftPage').innerHTML = tabs;
 }
 
 /**
@@ -82,7 +82,7 @@ function createModelsDiv() {
     let modelsPage = `
                     <div class='models'>
                     </div>`;
-    document.getElementById('rightPage').innerHTML += modelsPage;
+    document.getElementById('leftPage').innerHTML += modelsPage;
 }
 
 /**
@@ -105,7 +105,7 @@ function createModels(btn, models, id, paintModels) {
         };
         return resolve();
     });
-    
+
     promiseModel
         .then(chooseModel(id, paintModels));
 }
@@ -157,6 +157,7 @@ function getDropdown(id, dropdown, model) {
  * Function for create colors for jerseys
  */
 function colorJersey() {
+    // return getDropdown('color1', 'dropdownJerseys', 'modelJersey');
     document.getElementById('colorJerseys').innerHTML = getDropdown('color1', 'dropdownJerseys', 'modelJersey');
 }
 
@@ -456,3 +457,27 @@ function send() {
 
     document.body.innerHTML += sendModal;
 }
+
+function rotateJersey() {
+    document.getElementById('modelJersey').innerHTML = jerseyModel1;
+    document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyForward');
+    
+
+    setTimeout(rotateJerseyBack, 3000);
+}
+
+function rotateJerseyBack() {
+    document.getElementById('modelJersey').innerHTML = backOfJersey;
+    document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');
+}
+
+document.getElementById('backOfJersey').addEventListener('click', rotateJersey);
+/**
+ * Function transform
+ */
+// function transformRotate() {
+//     document.getElementById('modelJersey1').addEventListener('click', function rotate () {
+//         document.getElementById('modelJersey1').setAttribute('transform', 'rotateX(45deg)');
+//     })
+// }
+
