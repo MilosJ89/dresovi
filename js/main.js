@@ -76,9 +76,6 @@ function activeTab() {
     };
 }
 /**
- * 
- * @param {*} models
- * 
  * Function for create models div 
  */
 function createModelsDiv() {
@@ -89,7 +86,11 @@ function createModelsDiv() {
 }
 
 /**
- * Function for create models when click on tab
+ * 
+ * @param {HTMLElement} btn 
+ * @param {*} models 
+ * @param {*} id 
+ * @param {*} paintModels 
  */
 function createModels(btn, models, id, paintModels) {
     let current = document.getElementsByClassName("activeBtn");
@@ -190,24 +191,24 @@ function color(span, dropdown, model) {
 
     switch(model, dropdown) {
         case 'modelJersey', 'dropdownJerseys':
-                document.getElementById(`${id}Forward`).setAttribute('fill', bgColorSpan);
-                document.getElementById('color1').style.backgroundColor = bgColorSpan;
-        break;
+            document.getElementById(`${id}Forward`).setAttribute('fill', bgColorSpan);
+            document.getElementById('color1').style.backgroundColor = bgColorSpan;
+            break;
 
         case 'modelJersey', 'dropdownPins':
-                document.querySelectorAll(`.${id}Pin`).forEach(x => x.setAttribute('fill', bgColorSpan));
-                document.getElementById('color4').style.backgroundColor = bgColorSpan;
-        break;
+            document.querySelectorAll(`.${id}Pin`).forEach(setAttributeClasses.bind(null, bgColorSpan));
+            document.getElementById('color4').style.backgroundColor = bgColorSpan;
+            break;
         
         case 'modelShort', 'dropdownShorts':
             document.getElementById(`${id}Color`).setAttribute('fill', bgColorSpan);
             document.getElementById('color2').style.backgroundColor = bgColorSpan;
-        break;
+            break;
 
         case 'modelSock', 'dropdownSocks':
-            document.querySelectorAll(`.${id}Color`).forEach(x => x.setAttribute('fill', bgColorSpan));
+            document.querySelectorAll(`.${id}Color`).forEach(setAttributeClasses.bind(null, bgColorSpan));
             document.getElementById('color3').style.backgroundColor = bgColorSpan;
-        break;
+            break;
 
         default:
             break;
@@ -218,7 +219,7 @@ function color(span, dropdown, model) {
 
 /**
  * 
- * Fnction for colors from color picker
+ * Function for colors from color picker
  */
 function colorInput(input, dropdown, model) {
     let color = input.value;
@@ -228,22 +229,22 @@ function colorInput(input, dropdown, model) {
         case 'modelJersey', 'dropdownJerseys':
             document.getElementById(`${id}Forward`).setAttribute('fill', color);
             document.getElementById('color1').style.backgroundColor = color;
-        break;
+            break;
 
         case 'modelJersey', 'dropdownPins':
-            document.querySelectorAll(`.${id}Pin`).forEach(x => x.setAttribute('fill', color));
+            document.querySelectorAll(`.${id}Pin`).forEach(setAttributeClasses.bind(null, color));
             document.getElementById('color4').style.backgroundColor = color;
-        break;
+            break;
         
         case 'modelShort', 'dropdownShorts':
             document.getElementById(`${id}Color`).setAttribute('fill', color);
             document.getElementById('color2').style.backgroundColor = color;
-        break;
+            break;
 
         case 'modelSock', 'dropdownSocks':
-            document.querySelectorAll(`.${id}Color`).forEach(x => x.setAttribute('fill', color));
+            document.querySelectorAll(`.${id}Color`).forEach(setAttributeClasses.bind(null, color));
             document.getElementById('color3').style.backgroundColor = color;
-        break;
+            break;
 
         default:
             break;
@@ -251,6 +252,16 @@ function colorInput(input, dropdown, model) {
     document.getElementById(dropdown).classList.remove('openDropdown');
 }
 
+/**
+ * 
+ * @param {*} model 
+ * @param {*} param 
+ * 
+ * Function for set attribute all classes
+ */
+function setAttributeClasses(param, model) {
+    model.setAttribute('fill', param);
+}
 
 /**
  * Function for open dropdown
@@ -350,26 +361,14 @@ function listModels() {
                         <span class='empty'></span>
                     </div>
                     <div id='bodyTable'>
-                         <div id='rowTable1' class='rowTable'>
-                            <select class='select size'>
-                                <option>8</option>
-                                <option>10</option>
-                                <option>12</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
-                                <option>XXL</option>
-                            </select>
-                            <input class='cellName' id='name1' type='text' />
-                            <input class='cellNumber' id='number1' type='number' min='0'/>
-                            <button class='delete' id='1' onclick='deleteRow(this.id)'></button>
-                        </div>
+                         <div id='rowTable1' class='rowTable'></div>
                 </div> 
             </div>`;
     
     document.getElementById('rightPage').innerHTML = paragraph;
     document.getElementById('rightPage').innerHTML += table;
+
+    document.getElementById('rowTable1').innerHTML = rowTable(1);
 
     let add = `<button class='add' onclick='addRow()'></button>`;
     document.getElementById('rightPage').innerHTML += add;
@@ -379,19 +378,10 @@ function listModels() {
 }
 
 /**
- * Function for add new row when fill in the fields
+ * Function for create row in table
  */
-function addRow() {
-
-    let i = document.getElementById('bodyTable');
-    i = +i.children[i.children.length - 1].id.match(/\d+/g)[0];
-    ++i;
-
-    let rowDiv = document.createElement('div');
-        rowDiv.setAttribute('class', 'rowTable');
-        rowDiv.setAttribute('id', `rowTable${i}`);
-
-    let rowTable = ` 
+function rowTable(i) {
+    return `
         <select class='select size'>
             <option>8</option>
             <option>10</option>
@@ -405,8 +395,23 @@ function addRow() {
         <input class='cellName' id='name${i}' type='text' />
         <input class='cellNumber' id='number${i}' type='number' min='0' />
         <button class='delete' id='${i}' onclick='deleteRow(this.id)'></button>`;
+}
+
+
+/**
+ * Function for add new row when fill in the fields
+ */
+function addRow() {
+
+    let i = document.getElementById('bodyTable');
+    i = +i.children[i.children.length - 1].id.match(/\d+/g)[0];
+    ++i;
+
+    let rowDiv = document.createElement('div');
+        rowDiv.setAttribute('class', 'rowTable');
+        rowDiv.setAttribute('id', `rowTable${i}`);
    
-    rowDiv.innerHTML = rowTable;
+    rowDiv.innerHTML += rowTable(i);
 
     let name = document.getElementById(`name${i-1}`).value;
     let number = document.getElementById(`number${i-1}`).value;
