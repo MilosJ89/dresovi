@@ -5,8 +5,11 @@
 }
 
 #body {
-    height: 100vh;
+    height: calc(100vh - 100px);
+    margin: 0 auto;
+    /* max-width: 1460px; */
     position: relative;
+    width: 100%;
 }
 
 header {
@@ -16,6 +19,9 @@ header {
     background-size: cover;
     border-bottom: 1px solid black;
     height: 100px;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 button:focus {
@@ -26,20 +32,16 @@ button:focus {
 #content {
     border-top: none;
     display: flex;
+    height: 100%;
     margin: 0 auto;
     max-width: 1460px;
-    height: calc(100% - 100px);
-    /* position: relative; */
     width: 100%;
 }
 
 #leftPage, #rightPage {
+    height: 100%;
     position: relative;
     width: 50%;
-}
-
-#leftPage {
-    border-right: 1px solid gray;
 }
 
 /*** HOME PAGE ***/
@@ -51,12 +53,113 @@ button:focus {
     justify-content: space-between;
 }
 
+#modelPaintJerseys {
+    margin-top: 50px;
+}
+
 .colors {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
     width: 30%;
+}
+
+.colors > div {
+    position: relative;
 }
 
 #colorJerseys {
     display: flex;
+}
+
+#color1, #color2, #color3, #color4 {
+    background-color: #cc0000;
+    border: 1px solid gray;
+    height: 24px;
+    width: 24px;
+}
+
+.dropdown {
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    left: 0;
+    padding: 2px 0;
+    position: absolute;
+    top: 24px;
+    transform: translate(0, 0);
+    width: 100px;
+    z-index: 5;
+}
+
+.openDropdown {
+    display: flex;
+}
+
+.dropdown span {
+    border: 1px solid gray;
+    display: block;
+    height: 24px;
+    margin: 3px;
+    width: 24px;
+}
+
+.red {
+    background-color: #cc0000;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.black {
+    background-color: black;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.white {
+    background-color: white;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.colorPicker {
+    background-image: url('../img/color_picker24x24.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid gray;
+    height: 24px;
+    margin: 3px;
+    padding: 10px;
+    width: 24px;
 }
 
 .modelPaint {
@@ -72,11 +175,12 @@ button:focus {
 .tabs {
     border-bottom: 1px solid #dadada;
     display: flex;
-    height: 55px;
+    height: 50px;
     width: 100%;
 }
 
 .tabsBtn {
+    background-color: white;
     border: none;
     color: gray;
     cursor: pointer;
@@ -98,7 +202,7 @@ button:focus {
     background-color: #ececec;
     display: flex;
     flex-wrap: wrap;
-    height: calc(100% - 95px);
+    height: calc(100% - 105px);
     justify-content: space-around;
     padding: 20px;
 }
@@ -119,6 +223,7 @@ button:focus {
     font-weight: bold;
     height: 40px;
     letter-spacing: 1px;
+    margin: 10px 0;
     padding: 10px;
     position: absolute;
     right: 0;
@@ -285,387 +390,3 @@ button:focus {
     height: 40px;
     width: 20%;
 }
-
-
-/*** Left page ***/
-/* #paintModel {
-    display: flex;
-    flex-direction: column;
-}
-
-#majica, #sorc, #stucne {
-    align-items: center;
-    display: flex;
-    margin-top: 20px; */
-/* } */
-
-/** Model that color **/
-/* #modelMajica, #modelSorc, #modelStucne {
-    width: 100%;
-}
-
-#modelMajica svg, #modelSorc svg, #modelStucne svg {
-    width: 100%;
-}
-
-#modelMajica svg {
-    height: 180px;
-}
-
-#modelSorc svg {
-    height: 120px;
-}
-
-#modelStucne svg {
-    height: 150px;
-} */
-
-/** Color dropdown ith colors and color picker **/
-/* #colorMajica, #colorSorc, #colorStucne {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-
-#color1, #color2, #color3, #color4 {
-    background-color: #cc0000;
-    border: 1px solid gray;
-    height: 24px;
-    margin: 10px;
-    width: 24px;
-}
-
-.dropdown1, .dropdown2, .dropdown3, .dropdown4 {
-    align-items: center;
-    background-color: white;
-    border: 1px solid black;
-    display: none;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    left: 0;
-    padding: 2px 0;
-    position: absolute;
-    top: 24px;
-    transform: translate(0, 0);
-    width: 100px;
-    z-index: 5;
-}
-
-.openDropdown {
-    display: flex;
-}
-
-#paintModel span {
-    border: 1px solid gray;
-    display: block;
-    height: 24px;
-    margin: 3px;
-    width: 24px;
-}
-
-.red {
-    background-color: #cc0000;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.green {
-    background-color: green;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
-.pink {
-    background-color: pink;
-}
-
-.gray {
-    background-color: gray;
-}
-
-.black {
-    background-color: black;
-}
-
-.orange {
-    background-color: orange;
-}
-
-.purple {
-    background-color: purple;
-}
-
-.white {
-    background-color: white;
-}
-
-.gold {
-    background-color: gold;
-}
-
-.colorPicker {
-    background-image: url('../img/color_picker24x24.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 1px solid gray;
-    height: 24px;
-    margin: 3px;
-    padding: 10px;
-    width: 24px;
-} */
-
-/*** Right page ***/
-/* #chooseModel p {
-    font-size: 26px;
-    font-weight: bold;
-    padding: 10px 0;
-    text-align: center;
-}
-
-#page {
-    display: flex;
-    justify-content: space-around;
-}
-
-.btnModel {
-    background-color: white;
-    border: none;
-    color: gray;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 5px;
-    width: 200px;
-}
-
-.btnModel:focus {
-    outline: none;
-}
-
-.active {
-    border-bottom: 1px solid black;
-    color: black;
-    font-weight: bold;
-}
-
-#models {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 15px;
-}
-
-#models svg {
-    height: 100px;
-    width: 33%;
-}
-
-.majice {
-    height: 200px;
-    width: 200px;
-}
-
-#description {
-    display: flex;
-    justify-content: space-around;
-}
-
-#description p {
-    text-align: center;
-    width: 33%;
-} */
-
-/*** SECOND PAGE ***/
-/* #leftPage, #rightPage {
-    width: 50%;
-}
-
-#leftPage p, #rightPage p {
-    color: gray;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-#leftPage div {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    margin-top: 55px;
-}
-
-#leftPage input {
-    border: none;
-    border-bottom: 1px solid gray;
-    height: 30px;
-    font-size: 20px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-#leftPage input:focus {
-    border: none;
-    outline: 1px solid gray;
-}
-
-#leftPage textarea {
-    border: none;
-    border-bottom: 1px solid gray;
-    font-size: 20px;
-    height: 254px;
-    padding: 20px;
-}
-
-#leftPage textarea:focus {
-    border: none;
-    outline: 1px solid gray;
-}
-
-/*** Right page ***/
-/* #table {
-    margin: 10px;
-    max-height: 400px;
-}
-
-#headerTable {
-    display: flex;
-    height: 40px;
-}
-
-#headerTable p {
-    text-align: center;
-    margin-top: 0;
-}
-
-#bodyTable {
-    display: flex;
-    flex-direction: column;
-    max-height: 300px;
-    overflow-y: scroll;
-} 
-
-#bodyTable p {
-    align-items: center;
-    border-bottom: 1px solid gray;
-    display: flex;
-    justify-content: center;
-    margin: 0 20px;
-    padding: 0;
-    text-align: center;
-}
-
-.rowTable {
-    display: flex;
-    margin: 5px 0;
-}
-
-.select {
-    border: none;
-    border-bottom: 1px solid gray;
-    height: 30px;
-    margin: 0 20px 0 10px;
-    text-align: center;
-}
-
-.rowTable input {
-    border: none;
-    border-bottom: 1px solid gray;
-    color: gray;
-    display: block;
-    font-size: 18px;
-    height: 30px;
-    margin: 0 20px;
-    text-align: center;
-}
-
-.size {
-    width: 10%;
-}
-
-.name, .cellName {
-    width: 50%;
-}
-
-.number, .cellNumber {
-    width: 20%;
-}
-
-.rowTable input:focus {
-    outline: none;
-}
-
-.add {
-    background-color: white;
-    background-image: url('../img/add-24px.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    height: 40px;
-    margin-left: 20px;
-    width: 40px;
-}
-
-.add:focus {
-    outline: none;
-}
-
-.delete {
-    background-color: white;
-    background-image: url('../img/remove-24px.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    display: block;
-    height: 40px;
-    width: 20%;
-}
-
-.delete:focus {
-    outline: none;
-}
-
-.empty {
-    display: block;
-    height: 40px;
-    width: 20%;
-}
-
-/*** Footer ***/
-/* .btnFooter { */
-    /* background-color: #cc0000;
-    border: none;
-    border-radius: 20px;
-    bottom: 20px;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    height: 40px;
-    letter-spacing: 1px;
-    padding: 10px;
-    position: absolute;
-    right: 50px;
-    width: 150px;
-}
-
-.btnBack {
-    left: 50px;
-}
-
-#sendModal {
-    background-color: red;
-    height: 300px;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    z-index: 100;
-}   */
