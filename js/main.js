@@ -1,5 +1,7 @@
+let blankModels = [blankModel1, blankModel2, blankModel3];
 let jerseys = [jersey1, jersey2, jersey3, jersey4];
 let modelsOfJerseys = [jerseyModel1, jerseyModel2, jerseyModel3, jerseyModel4];
+let backOfJerseys = [backOfJersey1, backOfJersey2, backOfJersey3, backOfJersey4];
 let shorts = [shorts1, shorts2];
 let modelsOfShorts = [shortsModel1, shortsModel2];
 let socks = [sock1, sock2, sock3];
@@ -116,7 +118,6 @@ function createModels(btn, models, id, paintModels) {
  * @param {*} id 
  */
 function chooseModel(id, paintModels) {
-
     let childrenOfModels = document.querySelector('.models').children;
 
     for(let model in childrenOfModels) {
@@ -128,11 +129,34 @@ function chooseModel(id, paintModels) {
         } 
         else {
             childrenOfModels[model].addEventListener('click', ()=> {
+                document.getElementById(id).innerHTML = '';
                 document.getElementById(id).innerHTML = paintModels[model];
+                document.getElementById(id).innerHTML += deleteBtnModel(id)
                 eval(`${id}Color()`);
             });
         }
     };
+}
+
+/**
+ * Function for create button for delete model
+ */
+function deleteBtnModel(id) {
+    return `<buttton id="${id}Delete" class='deleteModel' onclick='deleteModel()'></button>`;
+}
+
+/**
+ * Function for delete model
+ */
+function deleteModel() {
+
+}
+
+function createBlankModel() {
+    // console.log(blankModels[2]);
+    document.getElementById('modelJersey').innerHTML = blankModel1;
+    document.getElementById('modelShort').innerHTML = blankModel2;
+    document.getElementById('modelSock').innerHTML = blankModel3;
 }
 
 /**
@@ -306,6 +330,7 @@ function homePage() {
     modelForPaint();
     activeTab();
     createButtonContinue();
+    createBlankModel();
     createModels(document.getElementsByClassName('tabsBtn')[0], jerseys, "modelJersey", modelsOfJerseys);
 };
 
@@ -466,12 +491,20 @@ function send() {
 
 function rotateJersey() {
     document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyForward');
-    setTimeout(rotateJerseyBack, 3000);
+
+    setTimeout(function rotateJerseyBack() {
+        color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
+        document.getElementById('modelJersey').innerHTML = backOfJerseys[1];
+        document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');    
+    }, 2000);
+
+    // setTimeout(rotateJerseyBack(), 2000);
+
 }
 
-function rotateJerseyBack() {
-    color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
-    document.getElementById('modelJersey').innerHTML = backOfJersey;
-    document.getElementById('backOfJerseyColor').setAttribute('fill', color);
-    document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');
-}
+// function rotateJerseyBack() {
+//     color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
+    
+//     document.getElementById('modelJersey').innerHTML = backOfJerseys[0];
+//     document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');
+// }
