@@ -1,4 +1,4 @@
-let jerseys = [jersey1, jersey2, jersey3, jersey4, backOfJersey];
+let jerseys = [jersey1, jersey2, jersey3, jersey4];
 let modelsOfJerseys = [jerseyModel1, jerseyModel2, jerseyModel3, jerseyModel4];
 let shorts = [shorts1, shorts2];
 let modelsOfShorts = [shortsModel1, shortsModel2];
@@ -121,12 +121,18 @@ function chooseModel(id, paintModels) {
     for(let model in childrenOfModels) {
         if (model === 'length') {
             break;
+        } 
+        else if(childrenOfModels[model].id.slice(0,6) === 'letter') {
+                    childrenOfModels[model].addEventListener('click', ()=> {
+                    rotateJersey();
+                    });
+        } 
+        else {
+            childrenOfModels[model].addEventListener('click', ()=> {
+                document.getElementById(id).innerHTML = paintModels[model];
+                eval(`${id}Color()`);
+            });
         }
-
-        childrenOfModels[model].addEventListener('click', () => {
-            document.getElementById(id).innerHTML = paintModels[model];
-            eval(`${id}Color()`);
-        });
     };
 }
 
@@ -460,19 +466,18 @@ function send() {
  */
 
 function rotateJersey() {
-    document.getElementById('modelJersey').innerHTML = jerseyModel1;
     document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyForward');
-    
-
     setTimeout(rotateJerseyBack, 3000);
 }
 
 function rotateJerseyBack() {
+    color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
     document.getElementById('modelJersey').innerHTML = backOfJersey;
+    document.getElementById('backOfJerseyColor').setAttribute('fill', color);
     document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');
 }
 
-document.getElementById('backOfJersey').addEventListener('click', rotateJersey);
+// document.getElementById('backOfJersey').addEventListener('click', rotateJersey);
 /**
  * Function transform
  */
