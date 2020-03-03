@@ -153,7 +153,6 @@ function deleteModel() {
 }
 
 function createBlankModel() {
-    // console.log(blankModels[2]);
     document.getElementById('modelJersey').innerHTML = blankModel1;
     document.getElementById('modelShort').innerHTML = blankModel2;
     document.getElementById('modelSock').innerHTML = blankModel3;
@@ -495,18 +494,8 @@ function rotateJersey(i) {
     setTimeout(function rotateJerseyBack() {
         color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
         document.getElementById('modelJersey').innerHTML = backOfJerseys[i];
-        // console.log(document.querySelector(`.backOfJersey${i}Color`));
-        document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');    
+        document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');
         document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', color);
     }, 2000);
-
-    // setTimeout(rotateJerseyBack(), 2000);
-
-}
-
-// function rotateJerseyBack() {
-//     color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
     
-//     document.getElementById('modelJersey').innerHTML = backOfJerseys[0];
-//     document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');
-// }
+}
