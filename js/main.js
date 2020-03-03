@@ -75,6 +75,7 @@ function activeTab() {
         });
     };
 }
+
 /**
  * Function for create models div 
  */
@@ -123,9 +124,7 @@ function chooseModel(id, paintModels) {
             break;
         } 
         else if(childrenOfModels[model].id.slice(0,6) === 'letter') {
-                    childrenOfModels[model].addEventListener('click', ()=> {
-                    rotateJersey();
-                    });
+                    childrenOfModels[model].addEventListener('click', rotateJersey);
         } 
         else {
             childrenOfModels[model].addEventListener('click', ()=> {
@@ -476,14 +475,3 @@ function rotateJerseyBack() {
     document.getElementById('backOfJerseyColor').setAttribute('fill', color);
     document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');
 }
-
-// document.getElementById('backOfJersey').addEventListener('click', rotateJersey);
-/**
- * Function transform
- */
-// function transformRotate() {
-//     document.getElementById('modelJersey1').addEventListener('click', function rotate () {
-//         document.getElementById('modelJersey1').setAttribute('transform', 'rotateX(45deg)');
-//     })
-// }
-

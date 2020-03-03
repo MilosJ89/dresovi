@@ -73,10 +73,25 @@ button:focus {
 }
 
 #color1, #color2, #color3, #color4 {
-    background-color: #cc0000;
     border: 1px solid gray;
     height: 24px;
     width: 24px;
+}
+
+#color1 {
+    background-color: rgb(62, 92, 148);
+}
+
+#color2 {
+    background-color: rgb(204, 0, 0);
+}
+
+#color3 {
+    background-color: rgb(73, 142, 218);
+}
+
+#color4 {
+    background-color: rgb(142, 176, 214);
 }
 
 .dropdown {
