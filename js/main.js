@@ -125,7 +125,7 @@ function chooseModel(id, paintModels) {
             break;
         } 
         else if(childrenOfModels[model].id.slice(0,6) === 'letter') {
-                    childrenOfModels[model].addEventListener('click', rotateJersey);
+                    childrenOfModels[model].addEventListener('click', rotateJersey.bind(null, model));
         } 
         else {
             childrenOfModels[model].addEventListener('click', ()=> {
@@ -489,13 +489,15 @@ function send() {
  * Function for rotate elements 
  */
 
-function rotateJersey() {
+function rotateJersey(i) {
     document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyForward');
 
     setTimeout(function rotateJerseyBack() {
         color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
-        document.getElementById('modelJersey').innerHTML = backOfJerseys[1];
+        document.getElementById('modelJersey').innerHTML = backOfJerseys[i];
+        // console.log(document.querySelector(`.backOfJersey${i}Color`));
         document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');    
+        document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', color);
     }, 2000);
 
     // setTimeout(rotateJerseyBack(), 2000);
