@@ -1,4 +1,4 @@
-let blankModels = [blankModel1, blankModel2, blankModel3];
+let blankModels = [modelJerseyBlank, modelShortBlank, modelSockBlank];
 let jerseys = [jersey1, jersey2, jersey3, jersey4];
 let modelsOfJerseys = [jerseyModel1, jerseyModel2, jerseyModel3, jerseyModel4];
 let backOfJerseys = [backOfJersey1, backOfJersey2, backOfJersey3, backOfJersey4];
@@ -142,20 +142,36 @@ function chooseModel(id, paintModels) {
  * Function for create button for delete model
  */
 function deleteBtnModel(id) {
-    return `<buttton id="${id}Delete" class='deleteModel' onclick='deleteModel()'></button>`;
+    return `<button id="${id}Delete" class='deleteModel' onclick='deleteModel("${id}")'></button>`;
 }
 
 /**
  * Function for delete model
  */
-function deleteModel() {
+function deleteModel(id) {
 
+    switch(id) {
+        case "modelJersey":
+            document.getElementById(id).innerHTML = modelJerseyBlank;
+            document.getElementById("colorJerseys").innerHTML = '';
+            break;
+        case "modelShort":
+            document.getElementById(id).innerHTML = modelShortBlank;
+            document.getElementById("colorShorts").innerHTML = '';
+            break;
+        case "modelSock":
+            document.getElementById(id).innerHTML = modelSockBlank;
+            document.getElementById("colorSocks").innerHTML = '';
+            break;
+        default:
+            break;
+    }
 }
 
 function createBlankModel() {
-    document.getElementById('modelJersey').innerHTML = blankModel1;
-    document.getElementById('modelShort').innerHTML = blankModel2;
-    document.getElementById('modelSock').innerHTML = blankModel3;
+    document.getElementById('modelJersey').innerHTML = modelJerseyBlank;
+    document.getElementById('modelShort').innerHTML = modelShortBlank;
+    document.getElementById('modelSock').innerHTML = modelSockBlank;
 }
 
 /**

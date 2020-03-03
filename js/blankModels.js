@@ -1,4 +1,4 @@
-const blankModel1 = `<svg id='blankModel1' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const modelJerseyBlank = `<svg id='modelJerseyBlank' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <linearGradient x1="22.9515484%" y1="89.9378064%" x2="61.7583704%" y2="30.4352992%" id="linearGradient-1">
             <stop stop-color="#9E9E9E" offset="28.51%"></stop>
@@ -179,7 +179,7 @@ const blankModel1 = `<svg id='blankModel1' width="321px" height="322px" viewBox=
     </g>
 </svg>`;
 
-const blankModel2 = `<svg id='blankModel2' width="239px" height="206px" viewBox="0 0 239 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const modelShortBlank = `<svg id='modelShortBlank' width="239px" height="206px" viewBox="0 0 239 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 	<linearGradient x1="22.5854354%" y1="89.2202584%" x2="61.3939374%" y2="29.717744%" id="linearGradient-1">
 		<stop stop-color="#9E9E9E" offset="28.51%"></stop>
@@ -405,7 +405,7 @@ const blankModel2 = `<svg id='blankModel2' width="239px" height="206px" viewBox=
 </g>
 </svg>`;
 
-const blankModel3 = `<svg id='blankModel3' width="203px" height="255px" viewBox="0 0 203 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const modelSockBlank = `<svg id='modelSockBlank' width="203px" height="255px" viewBox="0 0 203 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <g id="seven_modeli_dres_sorc_stucne" transform="translate(-221.000000, -697.000000)">
         <g id="stucne" transform="translate(222.000000, 406.000000)">
