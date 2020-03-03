@@ -125,6 +125,7 @@ function chooseModel(id, paintModels) {
 
         childrenOfModels[model].addEventListener('click', () => {
             document.getElementById(id).innerHTML = paintModels[model];
+            eval(`${id}Color()`);
         });
     };
 }
@@ -156,29 +157,29 @@ function getDropdown(id, dropdown, model) {
 /**
  * Function for create colors for jerseys
  */
-function colorJersey() {
-    // return getDropdown('color1', 'dropdownJerseys', 'modelJersey');
+function modelJerseyColor() {
     document.getElementById('colorJerseys').innerHTML = getDropdown('color1', 'dropdownJerseys', 'modelJersey');
+    document.getElementById('colorJerseys').innerHTML += getDropdown('color4', 'dropdownPins', 'modelJersey');
 }
 
 /**
  * Function for create colors for shorts
  */
-function colorShorts() {
+function modelShortColor() {
     document.getElementById('colorShorts').innerHTML = getDropdown('color2', 'dropdownShorts', 'modelShort');
 }
 
 /**
  * Function for create colors for shorts
  */
-function colorSocks() {
+function modelSockColor() {
     document.getElementById('colorSocks').innerHTML = getDropdown('color3', 'dropdownSocks', 'modelSock');
 }
 
 /**
  * Function for create colors for pins
  */
-function colorPins() {
+function modelPinColor() {
     document.getElementById('colorJerseys').innerHTML += getDropdown('color4', 'dropdownPins', 'modelJersey');
 }
 
@@ -268,12 +269,12 @@ function setAttributeClasses(param, model) {
  * Function for open dropdown
  */
 function openDropdown(dropdown) {
-    let dropdowns = ['dropdownJerseys', 'dropdownShorts', 'dropdownSocks', 'dropdownPins'];
+    let dropdowns = ['dropdownJerseys', 'dropdownPins', 'dropdownShorts', 'dropdownSocks'];
 
     for(let param of dropdowns) {
         if(param === dropdown) {
             document.getElementById(`${param}`).classList.add('openDropdown');
-        } else {
+        } else if (param !== dropdown && document.getElementById(param)) {
             document.getElementById(`${param}`).classList.remove('openDropdown');
         }
     }
@@ -300,10 +301,6 @@ function homePage() {
     modelForPaint();
     activeTab();
     createButtonContinue();
-    colorJersey();
-    colorPins();
-    colorShorts();
-    colorSocks();
     createModels(document.getElementsByClassName('tabsBtn')[0], jerseys, "modelJersey", modelsOfJerseys);
 };
 
@@ -457,6 +454,10 @@ function send() {
 
     document.body.innerHTML += sendModal;
 }
+
+/**
+ * Function for rotate elements 
+ */
 
 function rotateJersey() {
     document.getElementById('modelJersey').innerHTML = jerseyModel1;
