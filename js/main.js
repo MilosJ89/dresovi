@@ -511,8 +511,9 @@ function rotateJersey(i) {
     let color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
     document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', color);    
 
-    modelBackOfJerseyColor();
+    // modelBackOfJerseyColor();
 
+    document.getElementById('colorJerseys').innerHTML = '';
 }
 
 /**
