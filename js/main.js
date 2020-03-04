@@ -13,7 +13,7 @@ let letters = [letter1, letter2, letter3, letter4];
  */
 function createHeader() {
     let header = `
-        <header></header>`;
+        <header id='header'></header>`;
 
         document.getElementById('body').innerHTML = header;
 };
@@ -188,6 +188,8 @@ function getDropdownSpans(dropdown, model, color) {
 function getDropdown(id, dropdown, model) {
     const colors = ["red", "green", "blue", "yellow", "pink", "gray", "black", "orange", "purple", "white", "gold"];
 
+    document.body.addEventListener('click', closeDropdown.bind(null, dropdown, id));
+
     return `
         <div>
             <div id="${id}" onclick='openDropdown("${dropdown}")'></div>
@@ -239,7 +241,6 @@ function color(span, dropdown, model) {
         case 'modelJersey', 'dropdownJerseys':
             document.getElementById(`${id}Forward`).setAttribute('fill', bgColorSpan);
             document.getElementById('color1').style.backgroundColor = bgColorSpan;
-            localStorage.setItem('colorSpanBg', bgColorSpan);
             break;
 
         case 'modelJersey', 'dropdownPins':
@@ -509,4 +510,22 @@ function rotateJersey(i) {
     document.getElementById('modelJersey').innerHTML = backOfJerseys[i];
     let color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
     document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', color);    
+
+    modelBackOfJerseyColor();
+
+}
+
+/**
+ * 
+ * @param {*} dropdown 
+ * @param {*} id 
+ * @param {*} event 
+ * 
+ * Function for close dropdown when click on body
+ */
+function closeDropdown(dropdown, id, event) {
+
+    if (event.target.id !== id) {
+        document.getElementById(dropdown).classList.remove('openDropdown');
+    }
 }
