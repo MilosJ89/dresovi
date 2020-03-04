@@ -199,11 +199,18 @@ function getDropdown(id, dropdown, model) {
 }
 
 /**
- * Function for create colors for jerseys
+ * Function for create colors for jerseys and pins
  */
 function modelJerseyColor() {
     document.getElementById('colorJerseys').innerHTML = getDropdown('color1', 'dropdownJerseys', 'modelJersey');
     document.getElementById('colorJerseys').innerHTML += getDropdown('color4', 'dropdownPins', 'modelJersey');
+}
+
+/**
+ * Function for create colors for back of jerseys
+ */
+function modelBackOfJerseyColor() {
+    document.getElementById('colorJersys').innerHTML = getDropdown('color5', 'dropdownBackOfJerseys', 'modelJersey');
 }
 
 /**
@@ -220,13 +227,6 @@ function modelSockColor() {
     document.getElementById('colorSocks').innerHTML = getDropdown('color3', 'dropdownSocks', 'modelSock');
 }
 
-/**
- * Function for create colors for pins
- */
-function modelPinColor() {
-    document.getElementById('colorJerseys').innerHTML += getDropdown('color4', 'dropdownPins', 'modelJersey');
-}
-
 /** 
  * Function for colors from spans
  */
@@ -239,6 +239,7 @@ function color(span, dropdown, model) {
         case 'modelJersey', 'dropdownJerseys':
             document.getElementById(`${id}Forward`).setAttribute('fill', bgColorSpan);
             document.getElementById('color1').style.backgroundColor = bgColorSpan;
+            localStorage.setItem('colorSpanBg', bgColorSpan);
             break;
 
         case 'modelJersey', 'dropdownPins':
@@ -505,13 +506,7 @@ function send() {
  */
 
 function rotateJersey(i) {
-    document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyForward');
-
-    setTimeout(function rotateJerseyBack() {
-        color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
-        document.getElementById('modelJersey').innerHTML = backOfJerseys[i];
-        document.getElementById('modelJersey').firstChild.setAttribute('class', 'rotateJerseyBack');
-        document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', color);
-    }, 2000);
-    
+    document.getElementById('modelJersey').innerHTML = backOfJerseys[i];
+    let color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
+    document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', color);    
 }
