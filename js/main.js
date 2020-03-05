@@ -265,7 +265,6 @@ function color(span, dropdown, model) {
         case 'modelBackOfJersey', 'dropdownBackOfJerseys':
             document.querySelectorAll(`.${id}Color`).forEach(setAttributeClasses.bind(null, bgColorSpan));
             document.getElementById('color5').style.backgroundColor = bgColorSpan;
-            localStorage.setItem('color', bgColorSpan);
             break;
 
         default:
@@ -305,7 +304,7 @@ function colorInput(input, dropdown, model) {
             break;
 
         case 'modelBackOfJersey', 'dropdownBackOfJerseys':
-            document.getElementById(`${id}Color`).setAttribute('fill', color);
+            document.querySelectorAll(`.${id}Color`).forEach(setAttributeClasses.bind(null, color));
             document.getElementById('color5').style.backgroundColor = color;
             break;
 
