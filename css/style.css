@@ -46,14 +46,32 @@ button:focus {
 /*** HOME PAGE ***/
 
     /** RIGHT PAGE **/
-#modelPaintJerseys, #modelPaintShorts, #modelPaintSocks {
+#rightPage {
+    display: flex;
+    flex-direction: column;
+}
+
+#modelPaintJerseys, #modelPaintShorts, #modelPaintSocks, #modelPaintOfJerseys {
     display: flex;
     height: 200px;
     justify-content: space-between;
+    margin-top: 20px;
+}
+/* 
+#modelPaintJerseys, #modelPaintOfJerseys {
+    margin-top: 50px;
+} */
+
+#modelPaintOfJerseys {
+    order: 1;
 }
 
-#modelPaintJerseys {
-    margin-top: 50px;
+#modelPaintShorts {
+    order: 2;
+}
+
+#modelPaintSocks {
+    order: 3;
 }
 
 .colors {
@@ -69,7 +87,7 @@ button:focus {
     position: relative;
 }
 
-#color1, #color2, #color3, #color4 {
+#color1, #color2, #color3, #color4, #color5 {
     border: 1px solid gray;
     border-radius: 50%;
     height: 24px;
@@ -92,6 +110,10 @@ button:focus {
 #color4 {
     background-color: rgb(142, 176, 214);
 }
+
+/* #color5 {
+    background-color: rgb(62, 92, 148);
+} */
 
 .dropdown {
     align-items: center;
@@ -201,6 +223,10 @@ button:focus {
 
 #modelSock svg {
     height: 200px;
+}
+
+#modelBackOfJersey svg {
+    height: 220px;
 }
 
 .deleteModel {

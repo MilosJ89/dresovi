@@ -1,4 +1,4 @@
-const backOfJersey1 = `<svg id='backOfJersey1' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const backOfJersey0 = `<svg id='backOfJersey0' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <g id="ranglan_new">
         <g id="ledja_2_">
@@ -86,7 +86,7 @@ const backOfJersey1 = `<svg id='backOfJersey1' width="321px" height="322px" view
 </g>
 </svg>`;
 
-const backOfJersey2 = `<svg id='backOfJersey2' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const backOfJersey1 = `<svg id='backOfJersey1' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <g id="ranglan_new">
         <g id="ledja_2_">
@@ -161,7 +161,7 @@ const backOfJersey2 = `<svg id='backOfJersey2' width="321px" height="322px" view
 </g>
 </svg>`;
 
-const backOfJersey3 = `<svg id='backOfJersey3' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const backOfJersey2 = `<svg id='backOfJersey2' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <g id="ranglan_new">
         <g id="ledja_2_">
@@ -235,7 +235,7 @@ const backOfJersey3 = `<svg id='backOfJersey3' width="321px" height="322px" view
 </g>
 </svg>`;
 
-const backOfJersey4 = `<svg id='backOfJersey4' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const backOfJersey3 = `<svg id='backOfJersey3' width="321px" height="322px" viewBox="0 0 321 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <g id="ranglan_new">
         <g id="ledja_2_">

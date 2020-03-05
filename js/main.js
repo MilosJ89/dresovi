@@ -1,7 +1,7 @@
 let blankModels = [modelJerseyBlank, modelShortBlank, modelSockBlank];
 let jerseys = [jersey1, jersey2, jersey3, jersey4];
 let modelsOfJerseys = [jerseyModel1, jerseyModel2, jerseyModel3, jerseyModel4];
-let backOfJerseys = [backOfJersey1, backOfJersey2, backOfJersey3, backOfJersey4];
+let backOfJerseys = [backOfJersey0, backOfJersey1, backOfJersey2, backOfJersey3];
 let shorts = [shorts1, shorts2];
 let modelsOfShorts = [shortsModel1, shortsModel2];
 let socks = [sock1, sock2, sock3];
@@ -131,7 +131,7 @@ function chooseModel(id, paintModels) {
             childrenOfModels[model].addEventListener('click', ()=> {
                 document.getElementById(id).innerHTML = '';
                 document.getElementById(id).innerHTML = paintModels[model];
-                document.getElementById(id).innerHTML += deleteBtnModel(id)
+                document.getElementById(id).innerHTML += deleteBtnModel(id);
                 eval(`${id}Color()`);
             });
         }
@@ -162,6 +162,9 @@ function deleteModel(id) {
         case "modelSock":
             document.getElementById(id).innerHTML = modelSockBlank;
             document.getElementById("colorSocks").innerHTML = '';
+            break;
+        case "modelBackOfJersey":
+            document.getElementById(id).innerHTML = '';
             break;
         default:
             break;
@@ -212,7 +215,7 @@ function modelJerseyColor() {
  * Function for create colors for back of jerseys
  */
 function modelBackOfJerseyColor() {
-    document.getElementById('colorJersys').innerHTML = getDropdown('color5', 'dropdownBackOfJerseys', 'modelJersey');
+    document.getElementById('colorBackOfJerseys').innerHTML = getDropdown('color5', 'dropdownBackOfJerseys', 'modelBackOfJersey');
 }
 
 /**
@@ -241,6 +244,7 @@ function color(span, dropdown, model) {
         case 'modelJersey', 'dropdownJerseys':
             document.getElementById(`${id}Forward`).setAttribute('fill', bgColorSpan);
             document.getElementById('color1').style.backgroundColor = bgColorSpan;
+            localStorage.setItem('color', bgColorSpan);
             break;
 
         case 'modelJersey', 'dropdownPins':
@@ -256,6 +260,12 @@ function color(span, dropdown, model) {
         case 'modelSock', 'dropdownSocks':
             document.querySelectorAll(`.${id}Color`).forEach(setAttributeClasses.bind(null, bgColorSpan));
             document.getElementById('color3').style.backgroundColor = bgColorSpan;
+            break;
+
+        case 'modelBackOfJersey', 'dropdownBackOfJerseys':
+            document.getElementById(`${id}Color`).setAttribute('fill', bgColorSpan);
+            document.getElementById('color5').style.backgroundColor = bgColorSpan;
+            localStorage.setItem('color', bgColorSpan);
             break;
 
         default:
@@ -294,6 +304,11 @@ function colorInput(input, dropdown, model) {
             document.getElementById('color3').style.backgroundColor = color;
             break;
 
+        case 'modelBackOfJersey', 'dropdownBackOfJerseys':
+            document.getElementById(`${id}Color`).setAttribute('fill', color);
+            document.getElementById('color5').style.backgroundColor = color;
+            break;
+
         default:
             break;
     }
@@ -315,7 +330,7 @@ function setAttributeClasses(param, model) {
  * Function for open dropdown
  */
 function openDropdown(dropdown) {
-    let dropdowns = ['dropdownJerseys', 'dropdownPins', 'dropdownShorts', 'dropdownSocks'];
+    let dropdowns = ['dropdownJerseys', 'dropdownPins', 'dropdownShorts', 'dropdownSocks', 'dropdownBackOfJerseys'];
 
     for(let param of dropdowns) {
         if(param === dropdown) {
@@ -503,20 +518,6 @@ function send() {
 }
 
 /**
- * Function for rotate elements 
- */
-
-function rotateJersey(i) {
-    document.getElementById('modelJersey').innerHTML = backOfJerseys[i];
-    let color = window.getComputedStyle(document.getElementById('color1')).getPropertyValue('background-color');
-    document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', color);    
-
-    // modelBackOfJerseyColor();
-
-    document.getElementById('colorJerseys').innerHTML = '';
-}
-
-/**
  * 
  * @param {*} dropdown 
  * @param {*} id 
@@ -526,7 +527,30 @@ function rotateJersey(i) {
  */
 function closeDropdown(dropdown, id, event) {
 
-    if (event.target.id !== id) {
+    if (event.target.id !== id && event.target.className !== 'colorPicker' && document.getElementById(dropdown)) {
         document.getElementById(dropdown).classList.remove('openDropdown');
     }
+}
+
+/**
+ * Function for rotate elements 
+ */
+
+function rotateJersey(i) {
+
+    let colorBackOfJerseys = `<div class='colors' id='colorBackOfJerseys'></div></div>`;
+    
+    let modelBackOfJersey = `<div class='modelPaint' id='modelBackOfJersey'></div>`;
+
+    document.getElementById('colorJerseys').innerHTML = colorBackOfJerseys;
+    document.getElementById('modelJersey').innerHTML = modelBackOfJersey;
+
+    document.getElementById('modelBackOfJersey').innerHTML = backOfJerseys[i];
+    
+    modelBackOfJerseyColor();
+
+    document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', localStorage.getItem('color'));    
+    document.getElementById('color5').setAttribute('style', `background-color: ${localStorage.getItem('color')}`);
+
+    document.getElementById('modelJersey').innerHTML += deleteBtnModel('modelJersey');
 }
