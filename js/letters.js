@@ -28,13 +28,13 @@ const letter1 = `<svg id='letter1' width="100px" height="178px" viewBox="0 0 100
 
 const letter2 = `<svg id='letter2' width="96px" height="171px" viewBox="0 0 96 171" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Arial-BoldMT, Arial" font-weight="bold">
-    <text id="PREZIME" font-size="21" letter-spacing="0.626999974" fill="#666666">
+    <text id="PREZIME" font-size="21" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="-0.365154207" y="16">PREZIME</tspan>
     </text>
-    <text id="KLUB" font-size="21" letter-spacing="0.627" fill="#666666">
+    <text id="KLUB" font-size="21" letter-spacing="0.627" fill="#ffffff">
         <tspan x="18.0838906" y="170">KLUB</tspan>
     </text>
-    <text id="10" font-size="95" line-spacing="162" letter-spacing="-3.61999989" fill="#666666">
+    <text id="10" font-size="95" line-spacing="162" letter-spacing="-3.61999989" fill="#ffffff">
         <tspan x="-6.52447271" y="84">1</tspan>
         <tspan x="42.6900001" y="84">0</tspan>
     </text>
@@ -43,13 +43,13 @@ const letter2 = `<svg id='letter2' width="96px" height="171px" viewBox="0 0 96 1
 
 const letter3 = `<svg id='letter3' width="91px" height="170px" viewBox="0 0 91 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <text id="PREZIME" font-family="Chalkboard" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#666666">
+    <text id="PREZIME" font-family="Chalkboard" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="-0.0497485287" y="15">PREZIME</tspan>
     </text>
-    <text id="KLUB" font-family="Chalkboard-Bold, Chalkboard" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#666666">
+    <text id="KLUB" font-family="Chalkboard-Bold, Chalkboard" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="16.2548398" y="169">KLUB</tspan>
     </text>
-    <text id="10" font-family="Chalkboard-Bold, Chalkboard" font-size="95" font-weight="bold" letter-spacing="-3.81582999" fill="#666666">
+    <text id="10" font-family="Chalkboard-Bold, Chalkboard" font-size="95" font-weight="bold" letter-spacing="-3.81582999" fill="#ffffff">
         <tspan x="-2.54881089" y="114">10</tspan>
     </text>
 </g>
@@ -57,13 +57,13 @@ const letter3 = `<svg id='letter3' width="91px" height="170px" viewBox="0 0 91 1
 
 const letter4 = `<svg id='letter4' width="96px" height="167px" viewBox="0 0 96 167" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <text id="PREZIME" font-family="Copperplate" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#666666">
+    <text id="PREZIME" font-family="Copperplate" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="-0.94449991" y="12">PREZIME</tspan>
     </text>
-    <text id="KLUB" font-family="Copperplate-Bold, Copperplate" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#666666">
+    <text id="KLUB" font-family="Copperplate-Bold, Copperplate" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="12.9115001" y="166">KLUB</tspan>
     </text>
-    <text id="10" font-family="Copperplate-Bold, Copperplate" font-size="86" font-weight="bold" letter-spacing="-3.45433044" fill="#666666">
+    <text id="10" font-family="Copperplate-Bold, Copperplate" font-size="86" font-weight="bold" letter-spacing="-3.45433044" fill="#ffffff">
         <tspan x="-8.59166956" y="101">10</tspan>
     </text>
 </g>

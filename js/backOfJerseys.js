@@ -61,11 +61,11 @@ const backOfJersey0 = `<svg id='backOfJersey0' width="321px" height="322px" view
         </g>
     </g>
     <g id="stampa_2_" transform="translate(111.000000, 73.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#000000">
-        <g id="XMLID_1635_" transform="translate(0.000000, 36.000000)">
+        <g id="XMLID_1635_" class='backOfJersey0Color' transform="translate(0.000000, 36.000000)">
             <path d="M19.5,0.5 L33.1,0.5 L33.5,0.9 L33.5,104.7 L33.1,105.1 L14.5,105.1 L13.7,105.3 C13.1,105.1 12.8,104.9 12.8,104.6 L12.8,25.3 L12.4,24.9 L1.1,24.9 L0.7,24.5 L0.7,23.4 C0.7,12.5 5.1,5.1 13.9,1.2 C16.2,0.8 18.1,0.5 19.5,0.5 Z" id="XMLID_1636_"></path>
             <path d="M68.4,0.6 L72,0.6 C84,0.6 92.3,5.6 97,15.6 C98.1,19.2 98.7,22.4 98.7,25.2 L98.7,80.2 C98.7,91.1 94.1,98.7 84.8,102.8 C80.6,104.5 75.9,105.4 70.7,105.4 L69.9,105.4 C57,105.4 48.3,100.9 43.8,91.8 C42.2,88.3 41.5,84.2 41.5,79.2 L41.5,26.3 C41.5,14.8 46.3,7 55.8,3 C60,1.4 64.2,0.6 68.4,0.6 Z M62.2,27.1 L62.2,77.5 C62.2,83.1 63.3,86.4 65.4,87.4 C66.7,88.1 68,88.4 69.3,88.4 L71,88.4 C75.7,88.4 78.1,85.1 78.1,78.6 L78.1,25.9 C78.1,21.9 76.5,19.3 73.2,18 L70.2,17.6 C64.8,17.5 62.2,20.7 62.2,27.1 Z" id="XMLID_1638_"></path>
         </g>
-        <g id="XMLID_1618_" transform="translate(0.000000, 0.000000)">
+        <g id="XMLID_1618_" class='backOfJersey0Color' transform="translate(0.000000, 0.000000)">
             <path d="M1.1,0.4 L7.4,0.4 C10.3,0.4 12.4,1.9 13.8,4.8 C14,5.5 14.1,6.2 14.1,6.9 L14.1,7.6 C14.1,9.9 12.8,11.8 10.2,13.4 C9.2,13.8 8.3,14 7.4,14 L5.8,14 L5.8,22.5 L5.6,22.7 L1.1,22.7 L0.9,22.5 L0.9,0.6 L1.1,0.4 Z M5.8,5.2 L5.8,9.1 L7.2,9.1 C8,9.1 8.5,8.5 8.8,7.3 L8.8,6.8 C8.5,5.7 7.9,5.2 7.2,5.2 L6,5.2 L5.8,5.2 L5.8,5.2 Z" id="XMLID_1619_"></path>
             <path d="M16,0.4 L22.2,0.4 C25.4,0.4 27.6,2.1 28.8,5.5 L29,7 C29,8.7 28.3,10.3 27,11.7 C28.3,12.7 28.9,14 28.9,15.3 L28.9,22.4 L28.7,22.6 L24.3,22.5 L24.1,22.5 L24.1,16.2 C24.1,14.7 23.3,13.9 21.7,13.9 L20.7,13.9 L20.7,22.2 L20.4,22.4 L16,22.4 L15.8,22.2 L15.8,0.4 L16,0.4 Z M20.6,5.2 L20.6,8.8 L20.8,9 L21.9,9 C22.9,9 23.5,8.3 23.6,7 C23.4,5.8 22.8,5.2 21.9,5.2 L20.6,5.2 L20.6,5.2 Z" id="XMLID_1622_"></path>
             <path d="M37.5,0.3 L41.8,0.3 L42,0.5 L42,5.1 L41.8,5.3 L36.8,5.3 C35.9,5.4 35.5,5.8 35.5,6.6 L35.5,8.4 L35.4,9 L35.5,9.1 L42,9.1 L42,14 L35.4,14 L35.4,16 C35.4,17.2 36,17.8 37.2,17.8 L41.8,17.8 L42,18 L42,22.5 L41.8,22.7 L36.9,22.7 C34,22.7 32,21.2 31,18.3 C30.8,17.6 30.6,17 30.6,16.6 L30.6,7 C30.6,3.4 32.4,1.3 36,0.4 L37.5,0.3 Z" id="XMLID_1625_"></path>
@@ -75,7 +75,7 @@ const backOfJersey0 = `<svg id='backOfJersey0' width="321px" height="322px" view
             <path d="M94.2,0.3 L98.5,0.3 L98.7,0.5 L98.7,5.1 L98.5,5.3 L93.5,5.3 C92.6,5.4 92.2,5.8 92.2,6.6 L92.2,8.4 L92.1,9 L92.2,9.1 L98.7,9.1 L98.7,14 L92.1,14 L92.1,16 C92.1,17.2 92.7,17.8 93.9,17.8 L98.5,17.8 L98.7,18 L98.7,22.5 L98.5,22.7 L93.6,22.7 C90.7,22.7 88.7,21.2 87.7,18.3 C87.5,17.6 87.3,17 87.3,16.6 L87.3,7 C87.3,3.4 89.1,1.3 92.7,0.4 L94.2,0.3 Z" id="XMLID_1633_"></path>
         </g>
         <g id="XMLID_1607_" transform="translate(14.000000, 153.000000)">
-            <g id="XMLID_1843_">
+            <g id="XMLID_1843_" class='backOfJersey0Color'>
                 <path d="M1.1,0.3 L5.6,0.3 L5.8,0.5 L5.8,9.1 L7,9.1 C8.3,9.1 8.9,8.4 8.9,6.9 L8.9,0.5 L9.1,0.3 L13.7,0.3 L13.9,0.5 L13.9,6.1 C13.9,9 13.3,10.8 12.2,11.5 C12.9,12.2 13.4,12.9 13.7,13.9 C13.8,14.8 13.9,16.1 13.9,17.8 L13.9,22.5 L13.7,22.7 L9.1,22.7 L8.9,22.5 L8.9,16.3 C8.9,15.2 8.6,14.5 7.9,14.1 L6.6,14 L5.9,14 L5.8,14.1 L5.7,14.1 L5.8,14.2 L5.8,22.5 L5.6,22.7 L1.1,22.7 L0.9,22.5 L0.9,0.5 L1.1,0.3 Z" id="XMLID_1852_"></path>
                 <polygon id="XMLID_1850_" points="23.7 0.4 28.2 0.4 28.4 0.6 28.4 17.8 28.5 17.7 33.6 17.7 33.8 17.9 33.8 22.5 33.6 22.7 23.7 22.7 23.5 22.5 23.5 0.6"></polygon>
                 <path d="M43.6,0.4 L47.9,0.4 L48.1,0.6 L48.1,16 C48.1,16.9 48.6,17.4 49.7,17.6 C50.6,17.6 51.1,17.1 51.2,16 L51.2,0.6 L51.4,0.4 L55.8,0.4 L56,0.6 L56,15.6 C56,18.9 55,21 53,21.9 C52.2,22.4 51.1,22.7 50,22.7 L49.8,22.7 C46.8,22.7 44.8,21.4 43.8,18.9 L43.5,17.4 L43.5,0.6 L43.6,0.4 Z" id="XMLID_1848_"></path>
@@ -148,13 +148,13 @@ const backOfJersey1 = `<svg id='backOfJersey1' width="321px" height="322px" view
             </g>
         </g>
     </g>
-    <text id="PREZIME" font-family="Arial-BoldMT, Arial" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#666666">
+    <text id="PREZIME" class='backOfJersey1Color' font-family="Arial-BoldMT, Arial" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="114.634846" y="92">PREZIME</tspan>
     </text>
-    <text id="KLUB" font-family="Arial-BoldMT, Arial" font-size="21" font-weight="bold" letter-spacing="0.627" fill="#666666">
+    <text id="KLUB" class='backOfJersey1Color' font-family="Arial-BoldMT, Arial" font-size="21" font-weight="bold" letter-spacing="0.627" fill="#ffffff">
         <tspan x="133.083891" y="246">KLUB</tspan>
     </text>
-    <text id="10" font-family="Arial-BoldMT, Arial" font-size="95" font-weight="bold" line-spacing="162" letter-spacing="-3.61999989" fill="#666666">
+    <text id="10" class='backOfJersey1Color' font-family="Arial-BoldMT, Arial" font-size="95" font-weight="bold" line-spacing="162" letter-spacing="-3.61999989" fill="#ffffff">
         <tspan x="108.475527" y="160">1</tspan>
         <tspan x="157.69" y="160">0</tspan>
     </text>
@@ -223,13 +223,13 @@ const backOfJersey2 = `<svg id='backOfJersey2' width="321px" height="322px" view
             </g>
         </g>
     </g>
-    <text id="PREZIME" font-family="Chalkboard" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#666666">
+    <text id="PREZIME" class='backOfJersey2Color' font-family="Chalkboard" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="115.950251" y="88">PREZIME</tspan>
     </text>
-    <text id="KLUB" font-family="Chalkboard-Bold, Chalkboard" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#666666">
+    <text id="KLUB" class='backOfJersey2Color' font-family="Chalkboard-Bold, Chalkboard" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="132.25484" y="242">KLUB</tspan>
     </text>
-    <text id="10" font-family="Chalkboard-Bold, Chalkboard" font-size="95" font-weight="bold" letter-spacing="-3.81582999" fill="#666666">
+    <text id="10" class='backOfJersey2Color' font-family="Chalkboard-Bold, Chalkboard" font-size="95" font-weight="bold" letter-spacing="-3.81582999" fill="#ffffff">
         <tspan x="113.451189" y="187">10</tspan>
     </text>
 </g>
@@ -297,13 +297,13 @@ const backOfJersey3 = `<svg id='backOfJersey3' width="321px" height="322px" view
             </g>
         </g>
     </g>
-    <text id="PREZIME" font-family="Copperplate" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#666666">
+    <text id="PREZIME" class='backOfJersey1Color' font-family="Copperplate" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="115.0555" y="87">PREZIME</tspan>
     </text>
-    <text id="KLUB" font-family="Copperplate-Bold, Copperplate" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#666666">
+    <text id="KLUB" class='backOfJersey1Color' font-family="Copperplate-Bold, Copperplate" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="128.9115" y="241">KLUB</tspan>
     </text>
-    <text id="10" font-family="Copperplate-Bold, Copperplate" font-size="86" font-weight="bold" letter-spacing="-3.45433044" fill="#666666">
+    <text id="10" class='backOfJersey1Color' font-family="Copperplate-Bold, Copperplate" font-size="86" font-weight="bold" letter-spacing="-3.45433044" fill="#ffffff">
         <tspan x="107.40833" y="176">10</tspan>
     </text>
 </g>

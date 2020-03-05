@@ -111,9 +111,9 @@ button:focus {
     background-color: rgb(142, 176, 214);
 }
 
-/* #color5 {
-    background-color: rgb(62, 92, 148);
-} */
+#color5 {
+    background-color: rgb(255, 255, 255);
+}
 
 .dropdown {
     align-items: center;

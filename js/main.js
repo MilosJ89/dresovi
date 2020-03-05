@@ -263,7 +263,7 @@ function color(span, dropdown, model) {
             break;
 
         case 'modelBackOfJersey', 'dropdownBackOfJerseys':
-            document.getElementById(`${id}Color`).setAttribute('fill', bgColorSpan);
+            document.querySelectorAll(`.${id}Color`).forEach(setAttributeClasses.bind(null, bgColorSpan));
             document.getElementById('color5').style.backgroundColor = bgColorSpan;
             localStorage.setItem('color', bgColorSpan);
             break;
@@ -376,11 +376,21 @@ homePage();
  * Function for continue
  */
 function nextPage() {
-    document.getElementById('leftPage').innerHTML = '';
-    document.getElementById('rightPage').innerHTML = '';
+    const hello = {
+        jersey: document.getElementById('modelJersey').innerHTML,
+        shorts: document.getElementById('modelShort').innerHTML,
+        sock: document.getElementById('modelSock').innerHTML
+    };
 
-    contactPage();
-    listModels();
+    localStorage.setItem('dres', JSON.stringify(hello));
+
+    // document.getElementById('leftPage').innerHTML = '';
+    // document.getElementById('rightPage').innerHTML = '';
+
+    // console.log(document.getElementById('modelJersey'));
+    // console.log(JSON.parse(localStorage.getItem('jersey')));
+    // contactPage();
+    // listModels();
 }
 
 /**
@@ -550,7 +560,13 @@ function rotateJersey(i) {
     modelBackOfJerseyColor();
 
     document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', localStorage.getItem('color'));    
-    document.getElementById('color5').setAttribute('style', `background-color: ${localStorage.getItem('color')}`);
 
     document.getElementById('modelJersey').innerHTML += deleteBtnModel('modelJersey');
 }
+
+
+/**
+ * Object with informations for selected model
+ */
+
+// console.log(localStorage.getItem('color'));
