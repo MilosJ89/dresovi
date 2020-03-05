@@ -383,13 +383,13 @@ function nextPage() {
 
     localStorage.setItem('dres', JSON.stringify(hello));
 
-    // document.getElementById('leftPage').innerHTML = '';
-    // document.getElementById('rightPage').innerHTML = '';
+    document.getElementById('leftPage').innerHTML = '';
+    document.getElementById('rightPage').innerHTML = '';
 
     // console.log(document.getElementById('modelJersey'));
     // console.log(JSON.parse(localStorage.getItem('jersey')));
-    // contactPage();
-    // listModels();
+    contactPage();
+    listModels();
 }
 
 /**
@@ -521,9 +521,24 @@ function back() {
 function send() {
     let sendModal = `
                 <div id='sendModal'>
+                    <div id='sendModalJersey'></div>
+                    <div id='sendModalShorts'></div>
+                    <div id='sendModalSock'></div>
                 </div>`;
 
     document.body.innerHTML += sendModal;
+
+    if (localStorage.getItem('dres')) {
+        const storageDres = JSON.parse(localStorage.getItem('dres'));
+
+        document.getElementById('sendModalJersey').innerHTML = storageDres.jersey;
+        document.getElementById('sendModalShorts').innerHTML = storageDres.shorts;
+        document.getElementById('sendModalSock').innerHTML = storageDres.sock;    
+    }
+
+    // document.getElementById('sendModalJersey').innerHTML = JSON.parse(localStorage.getItem('dres').jersey);
+    // document.getElementById('sendModalShorts').innerHTML = JSON.parse(localStorage.getItem('dres').shorts);
+    // document.getElementById('sendModalSock').innerHTML = JSON.parse(localStorage.getItem('dres').sock);    
 }
 
 /**
