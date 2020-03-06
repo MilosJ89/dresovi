@@ -375,19 +375,19 @@ homePage();
  * Function for continue
  */
 function nextPage() {
-    const hello = {
-        jersey: document.getElementById('modelJersey').innerHTML,
-        shorts: document.getElementById('modelShort').innerHTML,
-        sock: document.getElementById('modelSock').innerHTML
-    };
 
-    localStorage.setItem('dres', JSON.stringify(hello));
+    const selectedModel = {
+        jersey: localStorage.getItem('jersey'),
+        shorts: document.getElementById('modelShort').innerHTML,
+        sock: document.getElementById('modelSock').innerHTML,
+        backOfJersey: document.getElementById('modelBackOfJersey').innerHTML
+    }
+
+    localStorage.setItem('modelForSend', JSON.stringify(selectedModel));
 
     document.getElementById('leftPage').innerHTML = '';
     document.getElementById('rightPage').innerHTML = '';
 
-    // console.log(document.getElementById('modelJersey'));
-    // console.log(JSON.parse(localStorage.getItem('jersey')));
     contactPage();
     listModels();
 }
@@ -451,7 +451,7 @@ function listModels() {
  */
 function rowTable(i) {
     return `
-        <select class='select size'>
+        <select id='size${i}' class='select size'>
             <option>8</option>
             <option>10</option>
             <option>12</option>
@@ -516,29 +516,97 @@ function back() {
 }
 
 /**
+ * Function for localStorage for information from list: size, name, number
+ */
+const list = [];
+function storageList() {
+    let childrenOfBodyTable = document.getElementById('bodyTable').children;
+
+    for(let i = 1; i<= childrenOfBodyTable.length; i++) {
+        let size = eval(`size${i}`);
+        let name = eval(`name${i}`);
+        let number = eval(`number${i}`);
+
+        size = document.getElementById(`size${i}`).value;
+        name = document.getElementById(`name${i}`).value;
+        number = document.getElementById(`number${i}`).value;
+
+        list[i-1] = {
+            sizeModel: size,
+            nameModel: name,
+            numberModel: number
+        }
+    }
+
+    localStorage.setItem('information', JSON.stringify(list));
+}
+
+/**
+ * Function for create row table list
+ */
+function createListTableRow(i) {
+                
+    return `
+            <div id='selectedListRow${i}' class='selectedListRow'>
+                <p id='sizeModel${i}'></p>
+                <p id='nameModel${i}'></p>
+                <p id='numberModel${i}'></p>    
+            </div>`;
+}
+
+/**
  * Function for modal when click at send
  */
 function send() {
-    let sendModal = `
-                <div id='sendModal'>
-                    <div id='sendModalJersey'></div>
-                    <div id='sendModalShorts'></div>
-                    <div id='sendModalSock'></div>
-                </div>`;
+    storageList();
 
-    document.body.innerHTML += sendModal;
+    let sendModal =`
+                    <div id='backdrop'></div>
+                    <div id='sendModal'>
+                        <div id='selectedModel'>
+                            <div id='sendModalJersey'>
+                                <div id='sendModalForwardJersey'></div>
+                                <div id='sendModalBackOfJersey'></div>
+                            </div>
+                            <div id='sendModalShorts'></div>
+                            <div id='sendModalSock'></div>
+                        </div>
+                        <div id='selectedList'>
+                            <div id='selectedListHeader'>
+                                <p>Size</p>
+                                <p>Name</p>
+                                <p>Number</p>                            
+                            </div>
+                            <div id='selectedListBody'></div>
+                        </div>
+                        <div id='footer'>
+                            <button id='cancelBtn' onclick='cancel()'>Cancel</button>
+                            <button id='submitBtn' onclick='submit()'>Submit</button>
+                        </div>
+                    </div>`;
+    
+    document.getElementById('body').innerHTML += sendModal;
 
-    if (localStorage.getItem('dres')) {
-        const storageDres = JSON.parse(localStorage.getItem('dres'));
+    for (let i = 0; i < list.length; i++) {
+        document.getElementById('selectedListBody').innerHTML += createListTableRow(i);
 
-        document.getElementById('sendModalJersey').innerHTML = storageDres.jersey;
-        document.getElementById('sendModalShorts').innerHTML = storageDres.shorts;
-        document.getElementById('sendModalSock').innerHTML = storageDres.sock;    
+        if(localStorage.getItem('information')) {
+            const listInfo = JSON.parse(localStorage.getItem('information'));
+            
+            document.getElementById(`sizeModel${i}`).innerHTML += listInfo[i].sizeModel;
+            document.getElementById(`nameModel${i}`).innerHTML += listInfo[i].nameModel;
+            document.getElementById(`numberModel${i}`).innerHTML += listInfo[i].numberModel;
+        }
     }
 
-    // document.getElementById('sendModalJersey').innerHTML = JSON.parse(localStorage.getItem('dres').jersey);
-    // document.getElementById('sendModalShorts').innerHTML = JSON.parse(localStorage.getItem('dres').shorts);
-    // document.getElementById('sendModalSock').innerHTML = JSON.parse(localStorage.getItem('dres').sock);    
+    if (localStorage.getItem('modelForSend')) {
+        const storageSelectedModel = JSON.parse(localStorage.getItem('modelForSend'));
+
+        document.getElementById('sendModalForwardJersey').innerHTML = storageSelectedModel.jersey;
+        document.getElementById('sendModalShorts').innerHTML = storageSelectedModel.shorts;
+        document.getElementById('sendModalSock').innerHTML = storageSelectedModel.sock;   
+        document.getElementById('sendModalBackOfJersey').innerHTML = storageSelectedModel.backOfJersey; 
+    }
 }
 
 /**
@@ -561,6 +629,8 @@ function closeDropdown(dropdown, id, event) {
  */
 
 function rotateJersey(i) {
+    
+    localStorage.setItem('jersey', document.getElementById('modelJersey').innerHTML);
 
     let colorBackOfJerseys = `<div class='colors' id='colorBackOfJerseys'></div></div>`;
     
@@ -578,9 +648,18 @@ function rotateJersey(i) {
     document.getElementById('modelJersey').innerHTML += deleteBtnModel('modelJersey');
 }
 
+/**
+ * Function for cancel modal TODO: 
+ */
+function cancel() {
+    document.getElementById('sendModal').innerHTML = '';
+    document.getElementById('backdrop').style.display = 'none';
+}
 
 /**
- * Object with informations for selected model
+ * Function for submit TODO:
  */
-
-// console.log(localStorage.getItem('color'));
+function submit() {
+    document.getElementById('sendModal').innerHTML = '';
+    document.getElementById('backdrop').style.display = 'none';
+}   

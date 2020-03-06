@@ -463,3 +463,137 @@ button:focus {
     height: 40px;
     width: 20%;
 }
+
+/*** SEND MODAL ***/
+#sendModal {
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px #dadada;
+    display: flex;
+    flex-wrap: wrap;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    transform: translate(-50%, 0);
+    z-index: 100;
+}
+
+#sendModal .deleteModel {
+    display: none;
+}
+
+#selectedModel {
+    display: flex;
+    flex-direction: column;
+}
+
+#selectedModel > div {
+    margin-top: 20px;
+}
+
+#sendModalJersey {
+    display: flex;
+    height: 220px;
+}
+
+#sendModalJersey svg {
+    height: 220px;
+}
+
+#sendModalShorts {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+}
+
+#sendModalShorts {
+    height: 150px;
+}
+
+#sendModalShorts svg {
+    height: 150px;
+}
+
+#sendModalSock {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+}
+
+#sendModalSock svg {
+    height: 200px;
+}
+
+#backdrop {
+    background-color: #ececec;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+#selectedList {
+    /* border: 1px solid gray; */
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+#selectedListHeader {
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+
+#selectedListHeader p {
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 5px;
+    text-align: center;
+    width: 50px;
+}
+
+#selectedListBody {
+    overflow-y: scroll;
+}
+
+.selectedListRow {
+    border-bottom: 1px solid gray;
+    display: flex;
+    margin: 5px 0;
+}
+
+.selectedListRow p {
+    color: gray;
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 2px;
+    text-align: center;
+    width: 50px;
+}
+
+#footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#footer button {
+    background-color: #cc0000;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+}
