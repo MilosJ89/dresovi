@@ -652,7 +652,7 @@ function rotateJersey(i) {
  * Function for cancel modal TODO: 
  */
 function cancel() {
-    document.getElementById('sendModal').innerHTML = '';
+    document.getElementById('sendModal').style.display = 'none';
     document.getElementById('backdrop').style.display = 'none';
 }
 
@@ -660,6 +660,13 @@ function cancel() {
  * Function for submit TODO:
  */
 function submit() {
-    document.getElementById('sendModal').innerHTML = '';
+    document.getElementById('sendModal').style.display = 'none';
     document.getElementById('backdrop').style.display = 'none';
+
+    localStorage.removeItem('information');
+    localStorage.removeItem('jersey');
+    localStorage.removeItem('modelForSend');
+    localStorage.removeItem('color');
+
+    homePage();
 }   

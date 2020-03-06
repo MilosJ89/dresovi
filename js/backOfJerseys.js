@@ -297,13 +297,13 @@ const backOfJersey3 = `<svg id='backOfJersey3' width="321px" height="322px" view
             </g>
         </g>
     </g>
-    <text id="PREZIME" class='backOfJersey1Color' font-family="Copperplate" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#ffffff">
+    <text id="PREZIME" class='backOfJersey3Color' font-family="Copperplate" font-size="21" font-weight="normal" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="115.0555" y="87">PREZIME</tspan>
     </text>
-    <text id="KLUB" class='backOfJersey1Color' font-family="Copperplate-Bold, Copperplate" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#ffffff">
+    <text id="KLUB" class='backOfJersey3Color' font-family="Copperplate-Bold, Copperplate" font-size="21" font-weight="bold" letter-spacing="0.626999974" fill="#ffffff">
         <tspan x="128.9115" y="241">KLUB</tspan>
     </text>
-    <text id="10" class='backOfJersey1Color' font-family="Copperplate-Bold, Copperplate" font-size="86" font-weight="bold" letter-spacing="-3.45433044" fill="#ffffff">
+    <text id="10" class='backOfJersey3Color' font-family="Copperplate-Bold, Copperplate" font-size="86" font-weight="bold" letter-spacing="-3.45433044" fill="#ffffff">
         <tspan x="107.40833" y="176">10</tspan>
     </text>
 </g>
