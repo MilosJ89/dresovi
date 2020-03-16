@@ -442,7 +442,7 @@ function listModels() {
     let add = `<button class='add' onclick='addRow()'></button>`;
     document.getElementById('rightPage').innerHTML += add;
 
-    let send = `<button class='btn btnSend' id='send' onclick='send()'>Send</button>`;
+    let send = `<button class='btn btnSend' id='send' onclick='send()'>Preview</button>`;
     document.getElementById('rightPage').innerHTML += send; 
 }
 
@@ -548,6 +548,7 @@ function createListTableRow(i) {
                 
     return `
             <div id='selectedListRow${i}' class='selectedListRow'>
+                <p id='model${i}' class='serialNumber'></p>
                 <p id='sizeModel${i}'></p>
                 <p id='nameModel${i}'></p>
                 <p id='numberModel${i}'></p>    
@@ -573,15 +574,13 @@ function send() {
                         </div>
                         <div id='selectedList'>
                             <div id='selectedListHeader'>
-                                <p>Size</p>
-                                <p>Name</p>
-                                <p>Number</p>                            
+                                <p>Jersey List</p>                           
                             </div>
                             <div id='selectedListBody'></div>
                         </div>
                         <div id='footer'>
                             <button id='cancelBtn' onclick='cancel()'>Cancel</button>
-                            <button id='submitBtn' onclick='submit()'>Submit</button>
+                            <button id='submitBtn' onclick='submit()'>Send</button>
                         </div>
                     </div>`;
     
@@ -593,6 +592,7 @@ function send() {
         if(localStorage.getItem('information')) {
             const listInfo = JSON.parse(localStorage.getItem('information'));
             
+            document.getElementById(`model${i}`).innerHTML = `${i+1}.`
             document.getElementById(`sizeModel${i}`).innerHTML += listInfo[i].sizeModel;
             document.getElementById(`nameModel${i}`).innerHTML += listInfo[i].nameModel;
             document.getElementById(`numberModel${i}`).innerHTML += listInfo[i].numberModel;

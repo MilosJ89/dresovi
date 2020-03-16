@@ -466,7 +466,7 @@ button:focus {
 
 /*** SEND MODAL ***/
 #sendModal {
-    align-items: center;
+    align-items: flex-start;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 3px 3px #dadada;
@@ -487,6 +487,7 @@ button:focus {
 #selectedModel {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 #selectedModel > div {
@@ -538,14 +539,13 @@ button:focus {
 }
 
 #selectedList {
-    /* border: 1px solid gray; */
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 500px;
+    margin-top: 20px;
 }
 
 #selectedListHeader {
-    border-bottom: 1px solid gray;
     display: flex;
 }
 
@@ -553,9 +553,8 @@ button:focus {
     color: gray;
     font-size: 18px;
     font-weight: bold;
-    margin: 0 5px;
+    margin: 10px;
     text-align: center;
-    width: 50px;
 }
 
 #selectedListBody {
@@ -563,7 +562,6 @@ button:focus {
 }
 
 .selectedListRow {
-    border-bottom: 1px solid gray;
     display: flex;
     margin: 5px 0;
 }
@@ -575,6 +573,10 @@ button:focus {
     padding: 2px;
     text-align: center;
     width: 50px;
+}
+
+.serialNumber {
+    width: 20px;
 }
 
 #footer {
