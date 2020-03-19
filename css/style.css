@@ -274,7 +274,8 @@ button:focus {
     background-color: #ececec;
     display: flex;
     flex-wrap: wrap;
-    height: calc(100% - 105px);
+    /* height: calc(100% - 105px); */
+    height: 100%;
     justify-content: space-around;
     padding: 20px;
 }

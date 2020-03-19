@@ -8,15 +8,6 @@ let socks = [sock1, sock2, sock3];
 let modelsOfSocks = [sockModel1, sockModel2, sockModel3];
 let letters = [letter1, letter2, letter3, letter4];
 
-/**
- * Function for create header
- */
-function createHeader() {
-    let header = `
-        <header id='header'></header>`;
-
-        document.getElementById('body').innerHTML = header;
-};
 
 /**
  * Function for create content
@@ -354,7 +345,6 @@ function createButtonContinue() {
  * Function for open home page
  */
 function homePage() {
-    createHeader();
     createContent();
     createTabs();
     createModelsDiv();
@@ -380,7 +370,7 @@ function nextPage() {
         jersey: localStorage.getItem('jersey'),
         shorts: document.getElementById('modelShort').innerHTML,
         sock: document.getElementById('modelSock').innerHTML,
-        backOfJersey: document.getElementById('modelBackOfJersey').innerHTML
+        backOfJersey: localStorage.getItem('backOfJersey')
     }
 
     localStorage.setItem('modelForSend', JSON.stringify(selectedModel));
@@ -509,9 +499,7 @@ function deleteRow(i) {
  * Function for back page when click on button back
  */
 function back() {
-    document.getElementById('leftPage').innerHTML = '';
-    document.getElementById('rightPage').innerHTML = '';
-
+    document.getElementById('content').outerHTML = '';
     homePage();
 }
 
@@ -646,6 +634,8 @@ function rotateJersey(i) {
     document.getElementById(`backOfJersey${i}Color`).setAttribute('fill', localStorage.getItem('color'));    
 
     document.getElementById('modelJersey').innerHTML += deleteBtnModel('modelJersey');
+
+    localStorage.setItem('backOfJersey', document.getElementById('modelBackOfJersey').innerHTML);
 }
 
 /**
@@ -660,13 +650,12 @@ function cancel() {
  * Function for submit TODO:
  */
 function submit() {
-    document.getElementById('sendModal').style.display = 'none';
-    document.getElementById('backdrop').style.display = 'none';
 
-    localStorage.removeItem('information');
-    localStorage.removeItem('jersey');
-    localStorage.removeItem('modelForSend');
-    localStorage.removeItem('color');
+    document.getElementById('sendModal').outerHTML = '';
+    document.getElementById('backdrop').outerHTML = '';
 
+    localStorage.clear();
+
+    document.getElementById('content').outerHTML = '';
     homePage();
 }   
