@@ -31,6 +31,7 @@ button:focus {
 #content {
     border-top: none;
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
     margin: 0 auto;
     max-width: 1460px;
@@ -38,7 +39,7 @@ button:focus {
 }
 
 #leftPage, #rightPage {
-    height: 100%;
+    height: 550px;
     position: relative;
     width: 50%;
 }
@@ -49,6 +50,7 @@ button:focus {
 #rightPage {
     display: flex;
     flex-direction: column;
+    height: 600px;
 }
 
 #modelPaintJerseys, #modelPaintShorts, #modelPaintSocks, #modelPaintOfJerseys {
@@ -274,7 +276,6 @@ button:focus {
     background-color: #ececec;
     display: flex;
     flex-wrap: wrap;
-    /* height: calc(100% - 105px); */
     height: 100%;
     justify-content: space-around;
     padding: 20px;
@@ -284,28 +285,6 @@ button:focus {
     cursor: pointer;
     height: 100px;
     width: 100px;
-}
-
-.btn {
-    background-color: #cc0000;
-    border: none;
-    border-radius: 20px;
-    bottom: 0;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    height: 40px;
-    letter-spacing: 1px;
-    margin: 10px 0;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-    width: 150px;
-}
-
-.backBtn {
-    left: 0;
 }
 
 /*** SECOND PAGE ***/
@@ -583,6 +562,7 @@ button:focus {
 #footer {
     display: flex;
     justify-content: flex-end;
+    position: relative;
     width: 100%;
 }
 
@@ -600,3 +580,30 @@ button:focus {
     padding: 10px;
     width: 150px;
 }
+
+.backBtn {
+    left: 0;
+    position: absolute;
+}
+
+/* .btn {
+    background-color: #cc0000;
+    border: none;
+    border-radius: 20px;
+    bottom: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    width: 150px;
+}
+
+.backBtn {
+    left: 0;
+} */

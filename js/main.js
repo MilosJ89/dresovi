@@ -17,6 +17,7 @@ function createContent() {
                 <div id='content'>
                     <div id='leftPage'></div>
                     <div id='rightPage'></div>
+                    <div id='footer'><div>
                 </div>`;
     document.body.innerHTML += content;
 }
@@ -338,7 +339,7 @@ function createButtonContinue() {
     let continueBtn = `
                     <button class='btn continueBtn' onclick='nextPage()'>Continue</button>`;
 
-    document.getElementById('rightPage').innerHTML += continueBtn;
+    document.getElementById('footer').innerHTML += continueBtn;
 }
 
 /**
@@ -401,7 +402,7 @@ function contactPage() {
 
     document.getElementById('leftPage').innerHTML = paragraph;
     document.getElementById('leftPage').innerHTML += contact;
-    document.getElementById('leftPage').innerHTML += backBtn;
+    document.getElementById('footer').innerHTML = backBtn;
 }
 
 /**
@@ -433,7 +434,7 @@ function listModels() {
     document.getElementById('rightPage').innerHTML += add;
 
     let send = `<button class='btn btnSend' id='send' onclick='send()'>Preview</button>`;
-    document.getElementById('rightPage').innerHTML += send; 
+    document.getElementById('footer').innerHTML += send; 
 }
 
 /**
