@@ -59,10 +59,6 @@ button:focus {
     justify-content: space-between;
     margin-top: 20px;
 }
-/* 
-#modelPaintJerseys, #modelPaintOfJerseys {
-    margin-top: 50px;
-} */
 
 #modelPaintOfJerseys {
     order: 1;
@@ -559,6 +555,7 @@ button:focus {
     width: 20px;
 }
 
+/*** FOOTER ***/
 #footer {
     display: flex;
     justify-content: flex-end;
@@ -585,25 +582,3 @@ button:focus {
     left: 0;
     position: absolute;
 }
-
-/* .btn {
-    background-color: #cc0000;
-    border: none;
-    border-radius: 20px;
-    bottom: 0;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    height: 40px;
-    letter-spacing: 1px;
-    margin: 10px 0;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-    width: 150px;
-}
-
-.backBtn {
-    left: 0;
-} */
